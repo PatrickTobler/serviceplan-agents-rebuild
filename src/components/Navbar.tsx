@@ -10,8 +10,8 @@ export default function Navbar() {
         <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu">
           <div className="navigation-link-wrap">
             <a href="#" className="nav-menu w-nav-link">Agents</a>
-            <a href="#pricing" className="nav-menu w-nav-link">Pricing</a>
-            <a href="/request-a-demo" className="nav-menu w-nav-link">Contact</a>
+            <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">Pricing</a>
+            <a href="https://www.sokosumi.com/#community" className="nav-menu w-nav-link">Contact</a>
           </div>
           <div className="nav-cta-links">
             <div className="button-group nav-button">

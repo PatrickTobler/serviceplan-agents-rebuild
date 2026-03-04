@@ -11,7 +11,7 @@ export default function Companies() {
               </h2>
               <div className="spacer-small"></div>
 
-              <div className="logo-wrap-grid">
+              <div className="logo-wrap-grid hide">
                 <div className="logo-wrapper">
                   <img src="/images/bmw.svg" loading="lazy" alt="" />
                 </div>
@@ -41,7 +41,7 @@ export default function Companies() {
                 </div>
               </div>
 
-              <div className="spacer-huge"></div>
+              <div className="spacer-huge hide"></div>
 
               <div className="frame-1597884547">
                 <div className="footer-section">
