@@ -27,13 +27,17 @@ export default function HouseOfAI() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path
-                        d="M5 12H19M19 12L12 5M19 12L12 19"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+                      <g clipPath="url(#clip0_39_70_house)">
+                        <path
+                          d="M23.3408 11.0952L23.7314 11.4585L23.3428 11.8247L15.3428 19.3638L14.6572 18.6353L21.6729 12.0229H5.9502C5.71855 13.1641 4.70947 14.0229 3.5 14.0229C2.11931 14.0229 1.00004 12.9036 1 11.5229C1 10.1422 2.11929 9.02295 3.5 9.02295C4.70952 9.02295 5.7186 9.88178 5.9502 11.0229H21.7988L14.6592 4.36475L15.3408 3.63428L23.3408 11.0952ZM3.5 10.0229C2.67157 10.0229 2 10.6945 2 11.5229C2.00004 12.3513 2.67159 13.0229 3.5 13.0229C4.32841 13.0229 4.99996 12.3513 5 11.5229C5 10.6945 4.32843 10.0229 3.5 10.0229Z"
+                          fill="#FF4B4F"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_39_70_house">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
                     </svg>
                   </div>
                   <div>Learn more about House of AI</div>

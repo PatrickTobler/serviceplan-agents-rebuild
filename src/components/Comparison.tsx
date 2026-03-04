@@ -133,7 +133,7 @@ export default function Comparison() {
                             />
                             <div className="text-size-tiny text-style-italic is-white">
                               *By entering your information for a free analysis you
-                              agree and accept our{" "}
+                              sgree and accept our{" "}
                               <a
                                 href="https://www.sokosumi.com/privacy-policy"
                                 target="_blank"
@@ -168,7 +168,7 @@ export default function Comparison() {
                         />
                         <div className="spacer-small"></div>
                         <div className="text-size-tiny text-style-italic is-white">
-                          *By Proceeding you agree and accept our{" "}
+                          *By Proceeding you sgree and accept our{" "}
                           <a
                             href="https://www.sokosumi.com/terms-of-service"
                             target="_blank"
