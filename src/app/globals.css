@@ -1,3 +1,25 @@
+/* Webflow visibility control — keeps IX-animated elements hidden until ready */
+[data-wf-page] .w-ix-emptyfix::after {
+  content: "";
+}
+
+/* Webflow focus outline */
+.wf-force-outline-none[tabindex="-1"]:focus {
+  outline: none;
+}
+
+/* Card fade-in animation from original site */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Embedded styles from original site */
 
 .acc-body {

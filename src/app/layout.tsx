@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-wf-domain="www.serviceplan-agents.com" data-wf-site="6990b006d2c582acd039bf7e">
+    <html lang="en" data-wf-domain="www.serviceplan-agents.com" data-wf-page="6990b008d2c582acd039bfe7" data-wf-site="6990b006d2c582acd039bf7e" className="w-mod-js w-mod-ix w-mod-ix3">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="/images/sp-logo.png" type="image/x-icon" />
