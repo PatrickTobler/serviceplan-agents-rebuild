@@ -1,123 +1,79 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
-    <footer className="border-t border-border py-16">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {/* Logo */}
-          <div>
-            <Image
-              src="/images/sp-logo.png"
-              alt="Serviceplan"
-              width={140}
-              height={28}
-              className="h-7 w-auto mb-6"
-            />
-          </div>
-
-          {/* Agents */}
-          <div>
-            <h4 className="text-sm font-semibold mb-4">Serviceplan Agents</h4>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <a href="#agents" className="text-sm text-muted hover:text-foreground transition-colors">
+    <div className="div-block-38">
+      <div className="padding-global">
+        <div className="padding-section-large">
+          <div className="container-large">
+            <div className="grid-container-3x1">
+              <div className="footer-content-wrat">
+                <div className="fiiter-link-header">Serviceplan Agents</div>
+                <div className="spacer-large"></div>
+                <a href="#hannah" className="footer-links">
                   Hannah
                 </a>
-              </li>
-              <li>
-                <a href="#agents" className="text-sm text-muted hover:text-foreground transition-colors">
+                <a href="#elena" className="footer-links">
                   Elena
                 </a>
-              </li>
-              <li>
-                <a href="#agents" className="text-sm text-muted hover:text-foreground transition-colors">
+                <a href="#alex" className="footer-links">
                   Alex
                 </a>
-              </li>
-              <li>
-                <a href="#pricing" className="text-sm text-muted hover:text-foreground transition-colors">
+                <a href="#pricing" className="footer-links">
                   Pricing
                 </a>
-              </li>
-              <li>
                 <a
-                  href="https://www.sokosumi.com"
+                  href="https://www.sokosumi.com/"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted hover:text-foreground transition-colors"
+                  className="footer-links"
                 >
                   Sokosumi
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-sm font-semibold mb-4">Resources</h4>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <a href="#faq" className="text-sm text-muted hover:text-foreground transition-colors">
+              </div>
+              <div className="footer-content-wrat">
+                <div className="fiiter-link-header">Resources</div>
+                <div className="spacer-large"></div>
+                <a href="#faq" className="footer-links">
                   FAQ
                 </a>
-              </li>
-              <li>
-                <a
-                  href="https://app.sokosumi.com/register"
-                  className="text-sm text-muted hover:text-foreground transition-colors"
-                >
+                <a href="/request-a-demo" className="footer-links">
                   Contact
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="text-sm font-semibold mb-4">Legal</h4>
-            <ul className="flex flex-col gap-2">
-              <li>
+              </div>
+              <div className="footer-content-wrat">
+                <div className="fiiter-link-header">Legal</div>
+                <div className="spacer-large"></div>
                 <a
                   href="https://www.sokosumi.com/imprint"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted hover:text-foreground transition-colors"
+                  className="footer-links"
                 >
                   Imprint
                 </a>
-              </li>
-              <li>
                 <a
                   href="https://www.sokosumi.com/privacy-policy"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted hover:text-foreground transition-colors"
+                  className="footer-links"
                 >
                   Privacy Policy
                 </a>
-              </li>
-              <li>
                 <a
                   href="https://www.sokosumi.com/terms-of-service"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted hover:text-foreground transition-colors"
+                  className="footer-links"
                 >
                   Terms of Service
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="pt-8 border-t border-border">
-          <p className="text-xs text-muted">
+        <div className="container-large">
+          <div className="text-size-regular is-white">
             &copy; 2026 Plan.Net Studios GmbH &amp; Co. KG — A Serviceplan
             Group company
-          </p>
+          </div>
+          <div className="spacer-medium"></div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

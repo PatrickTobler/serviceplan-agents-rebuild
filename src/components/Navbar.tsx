@@ -1,102 +1,40 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
-
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-xl border-b border-border">
-      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-16">
-        <a href="/" className="flex items-center">
-          <Image
-            src="/images/sp-logo.png"
-            alt="Serviceplan"
-            width={140}
-            height={28}
-            className="h-7 w-auto"
-          />
+    <div className="navbar_component up w-nav" role="banner">
+      <div className="nabvar-header">
+        <a href="/" className="logo_sokosumi w-nav-brand">
+          <div className="logo-component">
+            <img src="/images/sp-logo.png" loading="lazy" alt="" className="sp-logo" />
+          </div>
         </a>
-
-        <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#agents"
-            className="text-sm text-muted hover:text-foreground transition-colors"
-          >
-            Agents
-          </a>
-          <a
-            href="#pricing"
-            className="text-sm text-muted hover:text-foreground transition-colors"
-          >
-            Pricing
-          </a>
-          <a
-            href="#faq"
-            className="text-sm text-muted hover:text-foreground transition-colors"
-          >
-            Contact
-          </a>
+        <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu">
+          <div className="navigation-link-wrap">
+            <a href="#" className="nav-menu w-nav-link">Agents</a>
+            <a href="#pricing" className="nav-menu w-nav-link">Pricing</a>
+            <a href="/request-a-demo" className="nav-menu w-nav-link">Contact</a>
+          </div>
+          <div className="nav-cta-links">
+            <div className="button-group nav-button">
+              <a href="https://app.sokosumi.com/register" className="button w-inline-block">
+                <div>Request a Demo</div>
+                <div className="arrow-icon w-embed">
+                  <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="45" height="45" rx="22.5" fill="white" />
+                    <path d="M17.0161 18.1188L18.0536 17.0813C18.3733 17.0914 18.5094 17.048 18.8047 17.0314C19.5267 16.9908 20.2406 16.9114 20.9611 16.8464L26.0857 16.4123L27.6002 16.286C27.7662 16.2728 28.0385 16.2248 28.1915 16.249C28.3582 16.4057 28.6132 16.6207 28.7365 16.8045C28.7458 16.8185 28.7547 16.8313 28.7597 16.8474C28.7846 16.9296 28.5661 19.1708 28.5422 19.4465L28.0473 25.0788C28.0146 25.4404 28.001 25.8053 27.9667 26.1663C27.9563 26.2755 27.9097 26.8805 27.8789 26.934C27.8625 26.9625 27.8463 26.9905 27.8272 27.0173C27.7388 27.1412 26.9701 27.9043 26.8704 27.9214L26.8542 27.9095C26.9352 27.3589 26.9526 26.7569 27.0122 26.199L27.4765 21.4242C27.4875 21.3002 27.4863 21.1763 27.4967 21.054C27.5797 19.9997 27.6873 18.9475 27.8194 17.8983C27.8246 17.8587 27.817 17.8153 27.7922 17.7832C27.7441 17.8122 27.3648 18.1956 27.3001 18.2601L26.0284 19.5295L20.7127 24.845L18.0323 27.5251L17.2723 28.285C17.1426 28.4149 16.9178 28.6277 16.815 28.7685C16.6139 28.581 16.426 28.3748 16.2312 28.1959C16.5431 27.9104 16.911 27.5218 17.2138 27.219L19.0694 25.3634L24.7142 19.7182L26.4694 17.9621L26.9237 17.504C27.0175 17.4092 27.1511 17.2614 27.2578 17.1923C27.0057 17.1792 26.7842 17.239 26.5372 17.2554C26.1008 17.2845 25.6629 17.3409 25.228 17.3762L19.1671 17.9296L17.9339 18.048C17.7746 18.0645 17.1569 18.1339 17.0161 18.1188Z" fill="black" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div className="menu-icon-wrap w-nav-button">
+          <div id="menu-button" className="menu-icon">
+            <div className="menu-line-top blk"></div>
+            <div className="menu-line-middle blk"><div className="menu-inner-line"></div></div>
+            <div className="menu-line-bottom blk"></div>
+          </div>
         </div>
-
-        <div className="hidden md:flex items-center gap-4">
-          <a
-            href="https://app.sokosumi.com/register"
-            className="group inline-flex items-center gap-2 bg-white text-black text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/90 transition-colors"
-          >
-            <span>Request a Demo</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 45 45"
-              fill="none"
-              className="btn-arrow"
-            >
-              <path
-                d="M17 18l1-1c.3 0 .5 0 .8-.1l5.1-.4 1.5-.1c.2 0 .4 0 .5 0 .2.2.4.4.5.6v.1c0 .1-.2 2.3-.2 2.6l-.5 5.6c0 .4 0 .7-.1 1.1 0 .1-.1.7-.1.7l-.1.1c-.1.1-.9.9-1 .9l-.1-.1c.1-.6.1-1.2.2-1.7l.5-4.8v-.3c.1-1.1.2-2.1.3-3.2v-.1c0-.1-.4.3-.5.4l-1.3 1.3-5.3 5.3-2.7 2.7-.8.8c-.1.1-.4.3-.5.5-.2-.2-.4-.4-.6-.6.3-.3.7-.7 1-1l1.9-1.9 5.6-5.6 1.8-1.8.5-.5c.1-.1.2-.2.3-.3-.3 0-.5.1-.7.1-.4 0-.9.1-1.3.1l-6.1.6-1.2.1c-.2 0-.8.1-.9.1z"
-                fill="black"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="menu"
-        >
-          <div
-            className={`w-6 h-0.5 bg-white transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <div
-            className={`w-6 h-0.5 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`}
-          />
-          <div
-            className={`w-6 h-0.5 bg-white transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
-        </button>
       </div>
-
-      {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border px-6 py-6 flex flex-col gap-4">
-          <a href="#agents" className="text-sm text-muted hover:text-foreground">
-            Agents
-          </a>
-          <a href="#pricing" className="text-sm text-muted hover:text-foreground">
-            Pricing
-          </a>
-          <a href="#faq" className="text-sm text-muted hover:text-foreground">
-            Contact
-          </a>
-          <a
-            href="https://app.sokosumi.com/register"
-            className="inline-flex items-center justify-center gap-2 bg-white text-black text-sm font-medium px-5 py-2.5 rounded-full"
-          >
-            Request a Demo
-          </a>
-        </div>
-      )}
-    </nav>
+    </div>
   );
 }

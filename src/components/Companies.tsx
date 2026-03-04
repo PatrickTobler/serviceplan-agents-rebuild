@@ -1,110 +1,134 @@
-import Image from "next/image";
-
-const logoRow1 = [
-  { src: "/images/bmw.svg", alt: "BMW" },
-  { src: "/images/deloitte.svg", alt: "Deloitte" },
-  { src: "/images/amazon.svg", alt: "Amazon" },
-  { src: "/images/EY.svg", alt: "EY" },
-  { src: "/images/toyota.svg", alt: "Toyota" },
-  { src: "/images/airbus.svg", alt: "Airbus" },
-  { src: "/images/frame-18608.svg", alt: "Partner" },
-  { src: "/images/frame-18610.svg", alt: "Partner" },
-  { src: "/images/frame-18611.svg", alt: "Partner" },
-  { src: "/images/frame-18612.svg", alt: "Partner" },
-];
-
-const logoRow2 = [
-  { src: "/images/vector.svg", alt: "Partner" },
-  { src: "/images/vector-1.svg", alt: "Partner" },
-  { src: "/images/vector-2.svg", alt: "Partner" },
-  { src: "/images/vector-3.svg", alt: "Partner" },
-  { src: "/images/vector-5.svg", alt: "Partner" },
-  { src: "/images/vector-6.svg", alt: "Partner" },
-  { src: "/images/path1.svg", alt: "Partner" },
-  { src: "/images/gwi-logo.svg", alt: "GWI" },
-];
-
 export default function Companies() {
   return (
-    <section className="py-24 md:py-32">
-      <div className="max-w-[1200px] mx-auto px-6 text-center mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-          Over 500 companies use agents on Sokosumi.
-        </h2>
-      </div>
+    <div className="section-wrapper">
+      <div className="white-bg-wrap">
+        <div className="logo-wrapper-gradient">
+          <div className="red-gradinet"></div>
+          <div className="container-large">
+            <div className="logo-content-wrap">
+              <h2 className="bentocard-heding max-width-500">
+                Over 500 companies use agents on Sokosumi.
+              </h2>
+              <div className="spacer-small"></div>
 
-      {/* Logo marquee row 1 */}
-      <div className="overflow-hidden mb-6">
-        <div className="flex animate-marquee">
-          {[...logoRow1, ...logoRow1].map((logo, i) => (
-            <div
-              key={`r1-${i}`}
-              className="flex items-center justify-center min-w-[160px] h-16 mx-6 opacity-40 hover:opacity-80 transition-opacity"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={120}
-                height={40}
-                className="h-8 w-auto object-contain invert brightness-0 invert"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+              <div className="logo-wrap-grid">
+                <div className="logo-wrapper">
+                  <img src="/images/bmw.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/vector.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/vector-1.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/vector-3.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/vector-2.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/gwi-logo.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/path1.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/vector-5.svg" loading="lazy" alt="" />
+                </div>
+                <div className="logo-wrapper">
+                  <img src="/images/vector-6.svg" loading="lazy" alt="" />
+                </div>
+              </div>
 
-      {/* Logo marquee row 2 */}
-      <div className="overflow-hidden">
-        <div className="flex animate-marquee-reverse">
-          {[...logoRow2, ...logoRow2].map((logo, i) => (
-            <div
-              key={`r2-${i}`}
-              className="flex items-center justify-center min-w-[160px] h-16 mx-6 opacity-40 hover:opacity-80 transition-opacity"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={120}
-                height={40}
-                className="h-8 w-auto object-contain invert brightness-0 invert"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+              <div className="spacer-huge"></div>
 
-      {/* Stats */}
-      <div className="max-w-[1200px] mx-auto px-6 mt-20">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="glass-card p-8 text-center">
-            <div className="flex items-baseline justify-center gap-1 mb-2">
-              <span className="text-4xl md:text-5xl font-bold">20</span>
-              <span className="text-xl text-muted">min</span>
+              <div className="frame-1597884547">
+                <div className="footer-section">
+                  <div className="container-37">
+                    <div className="footer-text">
+                      <div className="footer-text">
+                        <span className="footer-text-0">20</span>
+                        <span className="footer-text-1">min</span>
+                      </div>
+                    </div>
+                    <div className="footer-subtext">
+                      Average delivery time for research
+                    </div>
+                  </div>
+                  <img
+                    src="/images/Line-326.svg"
+                    loading="lazy"
+                    width={63}
+                    alt=""
+                    className="line-325"
+                  />
+                  <div className="container-37">
+                    <div className="footer-text">
+                      <div className="footer-text">
+                        <span className="footer-text-0">9</span>
+                        <span className="footer-text-1">+</span>
+                      </div>
+                    </div>
+                    <div className="footer-subtext">
+                      Premium data sources, no extra contracts
+                    </div>
+                  </div>
+                  <img
+                    src="/images/Line-326.svg"
+                    loading="lazy"
+                    width={63}
+                    alt=""
+                    className="line-325"
+                  />
+                  <div className="container-38 no-border">
+                    <div className="footer-text">
+                      <div className="footer-text">
+                        <span className="footer-text-0">from 10</span>
+                        <span className="footer-text-1">EUR</span>
+                      </div>
+                    </div>
+                    <div className="footer-subtext">
+                      vs. 5,000 &euro; agency retainer
+                    </div>
+                  </div>
+                </div>
+                <div className="container-39">
+                  <div className="bottom-text">
+                    New to agents? <br />
+                    Download the Quick Start Guide.
+                  </div>
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="link-with-arrow is-white w-inline-block"
+                  >
+                    <div className="icon w-embed">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12H19M19 12L12 5M19 12L12 19"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div className="text-size-regular">Download guide</div>
+                  </a>
+                </div>
+              </div>
             </div>
-            <p className="text-sm text-muted">
-              Average delivery time for research
-            </p>
-          </div>
-          <div className="glass-card p-8 text-center">
-            <div className="flex items-baseline justify-center gap-1 mb-2">
-              <span className="text-4xl md:text-5xl font-bold">9</span>
-              <span className="text-xl text-muted">+</span>
-            </div>
-            <p className="text-sm text-muted">
-              Premium data sources, no extra contracts
-            </p>
-          </div>
-          <div className="glass-card p-8 text-center">
-            <div className="flex items-baseline justify-center gap-1 mb-2">
-              <span className="text-2xl md:text-3xl font-bold">from 10</span>
-              <span className="text-xl text-muted">EUR</span>
-            </div>
-            <p className="text-sm text-muted">
-              vs. 5,000 &euro; agency retainer
-            </p>
           </div>
         </div>
+        <div className="bg-red w-embed"></div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -28,11 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-wf-domain="www.serviceplan-agents.com" data-wf-site="6990b006d2c582acd039bf7e">
       <head>
-        <link rel="icon" href="/images/sp-logo.png" type="image/png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="/images/sp-logo.png" type="image/x-icon" />
+        <link href="/styles/webflow.css" rel="stylesheet" type="text/css" />
       </head>
-      <body className="antialiased">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
