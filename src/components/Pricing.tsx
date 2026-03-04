@@ -45,6 +45,7 @@ const plans = [
       "3x more Credits for Agents",
       "Schedule recurring Co-Worker tasks",
     ],
+    cta: true,
   },
   {
     name: "PRO",
@@ -78,45 +79,89 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <div className="pricing-plan-wrap">
-      {plans.map((plan) => (
-        <div key={plan.name} className={`pricing-card ${plan.variant}`}>
-          <div>
-            <div className="step">{plan.name}</div>
-            <div className="spacer-24"></div>
-            <div className="price-detail">
-              <div className="number">{plan.price}</div>
-              {plan.period && <div className="sub-text-price">{plan.period}</div>}
-            </div>
-            {plan.credits && (
-              <div className="credit-info text-style-italic">{plan.credits}</div>
-            )}
-            <div className="spacer-medium"></div>
-            <div className="credit-info">{plan.description}</div>
-          </div>
-          <div className="listing-prices">
-            {plan.features.map((feature) => (
-              <div key={feature} className="feature">
-                <img
-                  src="/images/Plus.svg"
-                  loading="lazy"
-                  width={10}
-                  height={10}
-                  alt=""
-                  className="plus"
-                />
-                <div className="sub-text-price">{feature}</div>
+    <div id="pricing" className="div-block-16">
+      <div className="padding-global">
+        <div className="padding-section-large bottom-match">
+          <div className="container-large">
+            <div className="header-wrapper">
+              <h2>
+                <strong>Plans That Grow with Your Business.</strong>
+              </h2>
+              <div className="sub-text-heading">
+                One subscription. All agents included. Try it free and upgrade
+                when you want more.
               </div>
-            ))}
-          </div>
-          <a href="#" className="button is-transparent hide w-inline-block">
-            <div>View Details</div>
-            <div>
-              <PlusIcon />
             </div>
-          </a>
+            <div className="frame-1597884548">
+              <a href="#free-analysis" className="button is-red">
+                <div className="send">Compare all plans in detail</div>
+              </a>
+              <div className="pricing-plan-wrap">
+                {plans.map((plan) => (
+                  <div
+                    key={plan.name}
+                    className={`pricing-card ${plan.variant}`}
+                  >
+                    <div>
+                      <div className="step">{plan.name}</div>
+                      <div className="spacer-24"></div>
+                      <div className="price-detail">
+                        <div className="number">{plan.price}</div>
+                        {plan.period && (
+                          <div className="sub-text-price">{plan.period}</div>
+                        )}
+                      </div>
+                      {plan.credits && (
+                        <div className="credit-info text-style-italic">
+                          {plan.credits}
+                        </div>
+                      )}
+                      <div className="spacer-medium"></div>
+                      <div className="credit-info">{plan.description}</div>
+                    </div>
+                    <div className="listing-prices">
+                      {plan.features.map((feature) => (
+                        <div key={feature} className="feature">
+                          <img
+                            src="/images/Plus.svg"
+                            loading="lazy"
+                            width={10}
+                            height={10}
+                            alt=""
+                            className="plus"
+                          />
+                          <div className="sub-text-price">{feature}</div>
+                        </div>
+                      ))}
+                    </div>
+                    {plan.cta ? (
+                      <a
+                        href="#get-free-analysis"
+                        className="button is-red hide w-inline-block"
+                      >
+                        <div>Free analysis</div>
+                        <div className="w-embed">
+                          <PlusIcon />
+                        </div>
+                      </a>
+                    ) : (
+                      <a
+                        href="#"
+                        className="button is-transparent hide w-inline-block"
+                      >
+                        <div>View Details</div>
+                        <div className="w-embed">
+                          <PlusIcon />
+                        </div>
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 }

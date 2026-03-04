@@ -8,6 +8,9 @@ export default function Footer() {
               <div className="footer-content-wrat">
                 <div className="fiiter-link-header">Serviceplan Agents</div>
                 <div className="spacer-large"></div>
+                <a href="#" className="footer-links hide">
+                  About
+                </a>
                 <a href="#hannah" className="footer-links">
                   Hannah
                 </a>
@@ -31,6 +34,12 @@ export default function Footer() {
               <div className="footer-content-wrat">
                 <div className="fiiter-link-header">Resources</div>
                 <div className="spacer-large"></div>
+                <a href="#" className="footer-links hide">
+                  Blog
+                </a>
+                <a href="#" className="footer-links hide">
+                  Webinar
+                </a>
                 <a href="#faq" className="footer-links">
                   FAQ
                 </a>

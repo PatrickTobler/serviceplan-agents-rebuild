@@ -99,7 +99,7 @@ export default function Companies() {
                     Download the Quick Start Guide.
                   </div>
                   <a
-                    href="#"
+                    href="https://cdn.prod.website-files.com/6990b006d2c582acd039bf7e/699bdf2d60e7f039bd38487e_260218%20-%20Plan_Net_Hannah_User%20Guide_EN.pdf"
                     target="_blank"
                     className="link-with-arrow is-white w-inline-block"
                   >
