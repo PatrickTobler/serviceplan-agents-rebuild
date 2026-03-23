@@ -1,17 +1,22 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="navbar_component up w-nav" role="banner">
+    <div className="navbar_component up w-nav" data-collapse="medium" role="banner">
       <div className="nabvar-header">
         <a href="/" className="logo_sokosumi w-nav-brand">
           <div className="logo-component">
-            <img src="/images/sp-logo.png" loading="lazy" alt="" className="sp-logo" />
+            <img src="/images/sp-logo.png" loading="lazy" alt="Serviceplan Group logo" className="sp-logo" />
           </div>
         </a>
-        <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu">
+        <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
           <div className="navigation-link-wrap">
             <a href="#" className="nav-menu w-nav-link">Agents</a>
             <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">Pricing</a>
-            <a href="https://www.sokosumi.com/#community" className="nav-menu w-nav-link">Contact</a>
           </div>
           <div className="nav-cta-links">
             <div className="button-group nav-button">
@@ -27,7 +32,11 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
-        <div className="menu-icon-wrap w-nav-button">
+        <div
+          className={`menu-icon-wrap w-nav-button${menuOpen ? " w--open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          style={{ cursor: "pointer" }}
+        >
           <div id="menu-button" className="menu-icon">
             <div className="menu-line-top blk"></div>
             <div className="menu-line-middle blk"><div className="menu-inner-line"></div></div>

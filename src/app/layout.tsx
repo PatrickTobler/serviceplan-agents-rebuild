@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "AI coworkers built by Serviceplan - Europe's leading agency. Get competitive research, market analysis & project plans delivered to your inbox. Try Hannah free.",
     type: "website",
+    images: [{ url: "/images/og-img.png" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -19,6 +20,12 @@ export const metadata: Metadata = {
       "AI Marketing Agents by Serviceplan | Research, Strategy & Project Management",
     description:
       "AI coworkers built by Serviceplan - Europe's leading agency. Get competitive research, market analysis & project plans delivered to your inbox. Try Hannah free.",
+    images: ["/images/og-img.png"],
+  },
+  icons: {
+    icon: "/images/favicon-32.png",
+    shortcut: "/images/favicon-32.png",
+    apple: "/images/apple-touch-icon-256.png",
   },
 };
 
@@ -31,7 +38,6 @@ export default function RootLayout({
     <html lang="en" data-wf-domain="www.serviceplan-agents.com" data-wf-page="6990b008d2c582acd039bfe7" data-wf-site="6990b006d2c582acd039bf7e" className="w-mod-js w-mod-ix w-mod-ix3">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="/images/sp-logo.png" type="image/x-icon" />
         <link href="/styles/webflow.css" rel="stylesheet" type="text/css" />
       </head>
       <body>{children}</body>

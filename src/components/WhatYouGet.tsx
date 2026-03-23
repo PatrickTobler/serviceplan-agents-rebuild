@@ -94,10 +94,9 @@ export default function WhatYouGet() {
               <div className="grid-container-2x1">
                 <div className="elena-wrap-with-text">
                   <img
-                    src="/images/hannah.webp"
+                    src="/images/hannah-accordian-img.avif"
                     loading="lazy"
-                    sizes="(max-width: 2142px) 100vw, 2142px, 100vw"
-                    alt=""
+                    alt="Hannah AI Marketing Agent accordion section image"
                     className="elena-bg-image"
                   />
                   <div className="glass-wrapper">

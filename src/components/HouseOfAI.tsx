@@ -43,7 +43,7 @@ export default function HouseOfAI() {
                   <div>Learn more about House of AI</div>
                 </a>
               </div>
-              <img src="/images/cta-image.png" loading="lazy" alt="" />
+              <img src="/images/cta-image.avif" loading="lazy" sizes="100vw" alt="Call to action section image" className="max-width-full" />
             </div>
           </div>
         </div>

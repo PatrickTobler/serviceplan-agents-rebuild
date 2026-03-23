@@ -1,3 +1,8 @@
+"use client";
+
+import { FormEvent } from "react";
+import { submitAnalysisForm } from "@/lib/submitForm";
+
 const DashIcon = () => (
   <svg width="21" height="2" viewBox="0 0 21 2" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 1H5" stroke="#060606" strokeWidth="2" />
@@ -43,6 +48,18 @@ const features = [
 ];
 
 export default function Comparison() {
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    await submitAnalysisForm(
+      formData.get("Email") as string,
+      formData.get("URL") as string,
+    );
+    window.dispatchEvent(new Event("showThankYouModal"));
+    form.reset();
+  };
+
   return (
     <>
       <div className="container-40">
@@ -75,17 +92,14 @@ export default function Comparison() {
                 <div className="description-3">{feature.description}</div>
               </div>
               <div className={feature.isLast ? "table-item-5" : "table-item-4"}>
-                <img
-                  src="/images/check.svg"
-                  loading="lazy"
-                  width={16}
-                  height={13.390558242797852}
-                  alt=""
-                  className="plus"
-                />
+                <div className="plus w-embed">
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M16 2.1143L5.33333 13.3906L0 7.75243L2 5.63813L5.33333 9.16196L14 0L16 2.1143Z" fill="#8FC49F"/>
+                  </svg>
+                </div>
               </div>
               <div className={feature.isLast ? "table-item-5" : "table-item-4"}>
-                <div className="dash">
+                <div className="dash w-embed">
                   <DashIcon />
                 </div>
               </div>
@@ -111,6 +125,7 @@ export default function Comparison() {
                 name="wf-form-Get-Free-Analysis-mid-2"
                 method="get"
                 className="form"
+                onSubmit={handleSubmit}
               >
                 <div>
                   <div>

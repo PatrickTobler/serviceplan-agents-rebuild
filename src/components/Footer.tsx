@@ -71,6 +71,13 @@ export default function Footer() {
                 >
                   Terms of Service
                 </a>
+                <a
+                  href="https://www.sokosumi.com/cookie-policy"
+                  target="_blank"
+                  className="footer-links"
+                >
+                  Cookie Policy
+                </a>
               </div>
             </div>
           </div>

@@ -68,12 +68,12 @@ export default function FAQ() {
                       style={{ cursor: "pointer" }}
                     >
                       <div className="question-inner">
-                        <h5
+                        <h4
                           style={{ color: "rgb(0,0,0)" }}
                           className="what-question"
                         >
                           {faq.question}
-                        </h5>
+                        </h4>
                       </div>
                       <img
                         loading="lazy"

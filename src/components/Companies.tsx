@@ -44,6 +44,72 @@ export default function Companies() {
               <div className="spacer-huge hide"></div>
 
               <div className="frame-1597884547">
+                <div className="testimonials-wrap">
+                  <div className="testimonial-grid-bento">
+                    <div className="testimonial-wrapper">
+                      <div className="test-text-wrapper">
+                        <div>
+                          <div>
+                            <div className="testimonial-info">
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src="/images/florian-von-keyserlingk.webp"
+                                loading="lazy"
+                                alt="Man in a black t-shirt looking thoughtfully out of a window with his hand resting on his chin."
+                                className="testimonial-img"
+                              />
+                              <div>
+                                <p className="testimonial-name">Florian von Keyserlingk</p>
+                                <p className="testimonial-author-role">Owner and Sound Engineer, iftyfour audio post production</p>
+                              </div>
+                            </div>
+                            <p className="testimonial-text">&quot;For a small business like mine who would never do the research myself and never pay someone to do it, I think this is the best tool to develop an actionable and effective online strategy.&quot;</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/testimonial-chat-img.avif"
+                      loading="lazy"
+                      sizes="100vw"
+                      alt="Screenshot of a chat conversation about analyzing the premium pet food market in France, discussing market size, growth, demographics, and a shared PDF report titled Premium_Pet_Food_FR.pdf."
+                      className="chat-screens"
+                    />
+                  </div>
+                  <div className="testimonial-grid-bento">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/testimonial-chat-img-2.avif"
+                      loading="lazy"
+                      sizes="100vw"
+                      alt="Chat conversation about coordinating a product launch timeline and marketing asset production with a Risk_Assessment.pdf attachment."
+                      className="chat-screens"
+                    />
+                    <div className="testimonial-wrapper">
+                      <div className="test-text-wrapper">
+                        <div>
+                          <div>
+                            <div className="testimonial-info">
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src="/images/michael-trautmann.webp"
+                                loading="lazy"
+                                alt="Smiling middle-aged man with short gray hair wearing a blue blazer and white shirt."
+                                className="testimonial-img"
+                              />
+                              <div className="div-block-59">
+                                <p className="testimonial-name">Michael Trautmann</p>
+                                <p className="testimonial-author-role">Former Global CMO of Audi, entrepreneur, author, and podcaster</p>
+                              </div>
+                            </div>
+                            <p className="testimonial-text">&quot;What Plan.Net Studios are doing is exactly the mindset our industry needs right now: Instead of complaining that &quot;advertising is dead&quot; or that AI will ruin everything, they&apos;re building real tools that make us better, faster, smarter.&quot;</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="footer-section">
                   <div className="container-37">
                     <div className="footer-text">
@@ -60,7 +126,7 @@ export default function Companies() {
                     src="/images/Line-326.svg"
                     loading="lazy"
                     width={63}
-                    alt=""
+                    alt="divider-line"
                     className="line-325"
                   />
                   <div className="container-37">
@@ -78,10 +144,10 @@ export default function Companies() {
                     src="/images/Line-326.svg"
                     loading="lazy"
                     width={63}
-                    alt=""
+                    alt="divider-line"
                     className="line-325"
                   />
-                  <div className="container-38 no-border">
+                  <div className="number-wrap no-border">
                     <div className="footer-text">
                       <div className="footer-text">
                         <span className="footer-text-0">from 10</span>

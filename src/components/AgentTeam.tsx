@@ -37,8 +37,8 @@ export default function AgentTeam() {
               <img
                 src="/images/hannah-transp.webp"
                 loading="lazy"
-                sizes="(max-width: 1500px) 100vw, 1500px, 100vw"
-                alt=""
+                sizes="100vw"
+                alt="Marketing Research Partner"
                 className="hannah-ai"
               />
               <div className="glass-chip sub-text">
@@ -77,8 +77,8 @@ export default function AgentTeam() {
               <img
                 src="/images/he-groupe-transp.webp"
                 loading="lazy"
-                sizes="(max-width: 1374px) 100vw, 1374px, 100vw"
-                alt=""
+                sizes="100vw"
+                alt="Elena- AI Operations &amp; Project Management Partner"
                 className="elena-ai"
               />
               <div className="ai-cowrker-header">
@@ -89,8 +89,8 @@ export default function AgentTeam() {
                   <div className="spacer-xsmall"></div>
                   <div className="step is-white">by Serviceplan</div>
                 </div>
-                <a href="#" className="button-round is-gray w-button">
-                  Coming 2026<br />
+                <a href="#" className="button-round w-button">
+                  Available now<br />
                 </a>
               </div>
               <div className="ai-cowrker-header">
@@ -123,8 +123,8 @@ export default function AgentTeam() {
               <img
                 src="/images/alex-img.webp"
                 loading="lazy"
-                sizes="(max-width: 1400px) 100vw, 1400px, 100vw"
-                alt=""
+                sizes="100vw"
+                alt="Alex AI Marketing Agent portrait"
                 className="alex-ai"
               />
               <div className="ai-cowrker-header">

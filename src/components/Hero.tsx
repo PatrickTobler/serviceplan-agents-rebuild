@@ -1,22 +1,26 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitAnalysisForm } from "@/lib/submitForm";
 
-export default function Hero() {
+export default function Hero({ children }: { children?: React.ReactNode }) {
   const [email, setEmail] = useState("");
   const [websiteUrl, setWebsiteUrl] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    await submitAnalysisForm(email, websiteUrl);
+    window.dispatchEvent(new Event("showThankYouModal"));
+    setEmail("");
+    setWebsiteUrl("");
   };
 
   return (
     <div className="section_demo-hero">
       <div className="hero-section-wrapper">
         {/* Hero Navbar */}
-        <div className="navbar_component jhn w-nav" role="banner">
+        <div className="navbar_component jhn w-nav" data-collapse="medium" role="banner">
           <div className="nabvar-header">
             <a href="/?r=0" className="logo_sokosumi w-nav-brand">
               <div className="logo-component">
@@ -109,7 +113,7 @@ export default function Hero() {
                 </div>
               </div>
             </a>
-            <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu">
+            <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
               <div className="navigation-link-wrap">
                 <div className="uui-navbar08_menu-dropdown-2 w-dropdown">
                   <div className="uui-navbar08_dropdown-toggle-2 w-dropdown-toggle">
@@ -177,7 +181,7 @@ export default function Hero() {
                   </nav>
                 </div>
                 <a href="#pricing" className="nav-menu is-white w-nav-link">Pricing</a>
-                <a href="#" className="nav-menu is-white w-nav-link">Contact</a>
+
               </div>
               <div className="nav-cta-links">
                 <div className="button-group nav-button">
@@ -193,7 +197,11 @@ export default function Hero() {
                 </div>
               </div>
             </nav>
-            <div className="menu-icon-wrap w-nav-button">
+            <div
+              className={`menu-icon-wrap w-nav-button${menuOpen ? " w--open" : ""}`}
+              onClick={() => setMenuOpen(!menuOpen)}
+              style={{ cursor: "pointer" }}
+            >
               <div id="menu-button" className="menu-icon">
                 <div className="menu-line-top"></div>
                 <div className="menu-line-middle"><div className="menu-inner-line"></div></div>
@@ -300,7 +308,6 @@ export default function Hero() {
                   {/* Form */}
                   <div id="free-analysis" className="form-glass-wrap">
                     <div className="glass-effect-form w-form">
-                      {!submitted ? (
                         <form
                           id="wf-form-Get-Free-Analysis"
                           name="wf-form-Get-Free-Analysis"
@@ -366,16 +373,12 @@ export default function Hero() {
                             </div>
                           </div>
                         </form>
-                      ) : (
-                        <div className="w-form-done" style={{ display: 'block' }}>
+                        <div className="w-form-done" style={{ display: 'none' }}>
                           <div>Thank you! Your submission has been received!</div>
                         </div>
-                      )}
-                      {!submitted && (
                         <div className="w-form-fail" style={{ display: 'none' }}>
                           <div>Oops! Something went wrong while submitting the form.</div>
                         </div>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -460,6 +463,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        {children}
       </div>
     </div>
   );
