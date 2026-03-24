@@ -84,6 +84,11 @@ export default function Footer() {
         </div>
         <div className="container-large">
           <div className="text-size-regular is-white">
+            Serviceplan Agents – Ihre KI-gest&uuml;tzten Agenten f&uuml;r smarte
+            Kommunikation und digitale Transformation.
+          </div>
+          <div className="spacer-medium"></div>
+          <div className="text-size-regular is-white">
             &copy; 2026 Plan.Net Studios GmbH &amp; Co. KG — A Serviceplan
             Group company
           </div>
