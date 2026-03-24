@@ -148,6 +148,10 @@ export const translations = {
       coming2026: "Coming 2026",
     },
     sokosumi: {
+      heading: "No new tools. One clear dashboard.",
+      headingLine2: "One shared workspace",
+      subheading: "Open source shared workspace, built by Serviceplan.",
+      description: "Reach your agents via email, WhatsApp, or Teams \u2013 whatever works best. Sokosumi is your shared workspace, where every task is organized and even more agents are ready to help.",
       learnMore: "Learn more about Sokosumi",
     },
     companies: {
@@ -543,6 +547,10 @@ export const translations = {
       coming2026: "Kommt 2026",
     },
     sokosumi: {
+      heading: "Keine neuen Tools. Ein \u00fcbersichtliches Dashboard.",
+      headingLine2: "Ein gemeinsamer Workspace",
+      subheading: "Open-Source-Workspace, entwickelt von Serviceplan.",
+      description: "Schreiben Sie Ihren Agenten per E-Mail, WhatsApp oder Teams \u2013 wie Sie m\u00f6chten. In Sokosumi l\u00e4uft alles zusammen: Hier sind alle Aufgaben organisiert und weitere Agenten verf\u00fcgbar.",
       learnMore: "Mehr \u00fcber Sokosumi erfahren",
     },
     companies: {
@@ -728,11 +736,6 @@ export const translations = {
           question: "Sind Serviceplan Agents DSGVO-konform?",
           answer:
             "Ja. Alle Agenten laufen vollst\u00e4ndig in einem deutschen Microsoft Azure Rechenzentrum. Daten werden in Europa verarbeitet und gespeichert. Die Architektur ist by Design EU AI Act-konform, mit vollst\u00e4ndiger Nachvollziehbarkeit aller Agent-Entscheidungen \u00fcber das Masumi Protokoll.",
-        },
-        {
-          question: "Wie schnell werden Ergebnisse geliefert?",
-          answer:
-            "Eine typische Wettbewerbsanalyse dauert 15-20 Minuten. Komplexe Research-Aufgaben mit mehreren Datenquellen brauchen 20-30 Minuten. Ihr Agent benachrichtigt Sie per E-Mail, sobald die Ergebnisse fertig sind.",
         },
       ],
     },
