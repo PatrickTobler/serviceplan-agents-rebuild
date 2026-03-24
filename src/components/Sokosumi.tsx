@@ -1,4 +1,7 @@
-export default function Sokosumi() {
+import { Locale, t } from "@/lib/translations";
+
+export default function Sokosumi({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).sokosumi;
   return (
     <div className="sokosumi-content">
       <div className="w-embed">
@@ -44,7 +47,7 @@ export default function Sokosumi() {
             </defs>
           </svg>
         </div>
-        <div>Learn more about Sokosumi</div>
+        <div>{tt.learnMore}</div>
       </a>
     </div>
   );

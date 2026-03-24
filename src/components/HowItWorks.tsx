@@ -1,4 +1,8 @@
-export default function HowItWorks() {
+import { Locale, t } from "@/lib/translations";
+
+export default function HowItWorks({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).howItWorks;
+
   return (
     <div className="section_howit-works">
       <div className="padding-global">
@@ -6,11 +10,9 @@ export default function HowItWorks() {
           <div className="container-large">
             <div className="hiw-header">
               <div className="header-wrapper">
-                <h2>How Serviceplan Agents Work</h2>
+                <h2>{tt.heading}</h2>
                 <div className="sub-text-heading">
-                  No new tools. No onboarding. Serviceplan Agents work where you
-                  already work – via email and Microsoft Teams. Here&apos;s what
-                  working together looks like:
+                  {tt.subheading}
                 </div>
               </div>
             </div>
@@ -32,17 +34,17 @@ export default function HowItWorks() {
                         <div className="step-text-wrapper">
                           <div className="step-1-text">
                             <div className="text-size-tiny text-weight-medium">
-                              How can I improve my Google ranking?
+                              {tt.questionBubble1}
                             </div>
                           </div>
                           <div className="step-1-text _2">
                             <div className="text-size-tiny text-weight-medium">
-                              Are my competitors running paid ads?
+                              {tt.questionBubble2}
                             </div>
                           </div>
                           <div className="step-1-text _3">
                             <div className="text-size-tiny text-weight-medium">
-                              Is my competitor changing their pricing?
+                              {tt.questionBubble3}
                             </div>
                           </div>
                           <div className="bottom-gradinet-below"></div>
@@ -54,13 +56,11 @@ export default function HowItWorks() {
                       <div className="step-heading">
                         <div className="step">Step 1</div>
                         <div className="heading-style-h5">
-                          Describe what you need{" "}
+                          {tt.step1Heading}{" "}
                         </div>
                       </div>
                       <div className="explanation">
-                        Just send an email or Teams message in plain language. No
-                        prompt engineering required. The right agent picks up your
-                        request and asks follow-up questions if needed.{" "}
+                        {tt.step1Description}{" "}
                       </div>
                       <div className="arrow w-embed">
                         <svg
@@ -86,55 +86,55 @@ export default function HowItWorks() {
                         <div className="bg-main-text-wrap step-first">
                           <div className="step-header">
                             <div className="sub-header-text is-black-20">
-                              Priority
+                              {tt.kanbanPriority}
                             </div>
                             <div className="bottom-liner light"></div>
                           </div>
                           <div className="bg-text-wrap">
                             <div className="feature-wrap new">
-                              <div className="text-size-small">SEO audit</div>
+                              <div className="text-size-small">{tt.kanbanSeoAudit}</div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Instagram review
+                                {tt.kanbanInstagramReview}
                               </div>
                             </div>
                             <div className="feature-wrap new">
-                              <div className="text-size-small">Keyword gaps</div>
+                              <div className="text-size-small">{tt.kanbanKeywordGaps}</div>
                             </div>
                           </div>
                         </div>
                         <div className="bg-main-text-wrap step-second">
                           <div className="step-header">
                             <div className="sub-header-text is-black-20">
-                              In Progress
+                              {tt.kanbanInProgress}
                             </div>
                             <div className="bottom-liner light"></div>
                           </div>
                           <div className="bg-text-wrap">
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Homepage SEO audit
+                                {tt.kanbanHomepageSeo}
                               </div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Competitor pricing review
+                                {tt.kanbanCompetitorPricing}
                               </div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Q2 keyword research
+                                {tt.kanbanQ2Keyword}
                               </div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Backlink gap analysis
+                                {tt.kanbanBacklinkGap}
                               </div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Social sentiment report
+                                {tt.kanbanSocialSentiment}
                               </div>
                             </div>
                           </div>
@@ -142,24 +142,24 @@ export default function HowItWorks() {
                         <div className="bg-main-text-wrap step-third">
                           <div className="step-header">
                             <div className="sub-header-text is-black-20">
-                              Done
+                              {tt.kanbanDone}
                             </div>
                             <div className="bottom-liner light"></div>
                           </div>
                           <div className="bg-text-wrap">
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Brand mention tracking
+                                {tt.kanbanBrandMention}
                               </div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Customer review analysis
+                                {tt.kanbanCustomerReview}
                               </div>
                             </div>
                             <div className="feature-wrap new">
                               <div className="text-size-small">
-                                Sustainability messaging
+                                {tt.kanbanSustainability}
                               </div>
                             </div>
                           </div>
@@ -273,7 +273,7 @@ export default function HowItWorks() {
                       <div className="step-heading">
                         <div className="step">Step 2</div>
                         <div className="heading-style-h5">
-                          Agents get to work{" "}
+                          {tt.step2Heading}{" "}
                         </div>
                       </div>
                       <div className="arrow w-embed">
@@ -291,10 +291,7 @@ export default function HowItWorks() {
                         </svg>
                       </div>
                       <div className="explanation">
-                        Your agent does the research, pulls from specialized data
-                        sources, and puts together your reports – without you
-                        having to step in. Complex tasks get broken down and
-                        handed off to other agents automatically.
+                        {tt.step2Description}
                         <br />
                       </div>
                     </div>
@@ -318,15 +315,12 @@ export default function HowItWorks() {
                       <div className="step-heading">
                         <div className="step">Step 3</div>
                         <div className="heading-style-h5">
-                          Results in your inbox
+                          {tt.step3Heading}
                           <br />
                         </div>
                       </div>
                       <div className="explanation">
-                        Polished documents land right in your inbox: PDF,
-                        PowerPoint, Excel, or interactive dashboards. With
-                        structured findings, clear recommendations, and an honest
-                        take on data quality.
+                        {tt.step3Description}
                       </div>
                     </div>
                   </div>

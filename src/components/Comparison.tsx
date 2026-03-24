@@ -2,6 +2,7 @@
 
 import { FormEvent } from "react";
 import { submitAnalysisForm } from "@/lib/submitForm";
+import { Locale, t } from "@/lib/translations";
 
 const DashIcon = () => (
   <svg width="21" height="2" viewBox="0 0 21 2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,43 +12,9 @@ const DashIcon = () => (
   </svg>
 );
 
-const features = [
-  {
-    name: "Opinionated analysis",
-    description: '"My Take" with honest recommendations',
-  },
-  {
-    name: "Domain expertise",
-    description: "Serviceplan marketing & research knowledge",
-  },
-  {
-    name: "Premium data sources",
-    description: "GWI, DataForSEO, Statista, Social APls",
-  },
-  {
-    name: "Email access",
-    description: "Send requests without logging into anything",
-  },
-  {
-    name: "Task board",
-    description: "Single source of truth for all work and files",
-  },
-  {
-    name: "Active project management",
-    description: "Organized: Programmes, Projects, Work Packages, Tasks",
-  },
-  {
-    name: "Learns your preferences",
-    description: "Improves based on your feedback over time",
-  },
-  {
-    name: "Human escalation",
-    description: "Routes to real people when needed",
-    isLast: true,
-  },
-];
+export default function Comparison({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).comparison;
 
-export default function Comparison() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -65,58 +32,59 @@ export default function Comparison() {
       <div className="container-40">
         <div className="header-style">
           <div className="title-style-3">
-            <strong>What Sets Serviceplan Agents Apart</strong>
+            <strong>{tt.heading}</strong>
           </div>
           <div className="sub-text-price">
-            One subscription. More benefits. Access to all Serviceplan Agents.
+            {tt.subheading}
           </div>
         </div>
         <div className="table-style">
           <div className="row">
             <div className="table-item">
-              <div className="column-title">FEATURE</div>
+              <div className="column-title">{tt.columnFeature}</div>
             </div>
             <div className="table-item-2">
-              <div className="column-title">Serviceplan AI Partners</div>
+              <div className="column-title">{tt.columnServiceplan}</div>
             </div>
             <div className="table-item-2">
               <div className="column-title">
-                ChatGPT/ Claude<br />
+                {tt.columnChatgpt}<br />
               </div>
             </div>
           </div>
-          {features.map((feature) => (
-            <div key={feature.name} className="row-2">
-              <div className={feature.isLast ? "table-item-3" : "table-item-3"}>
-                <div className="column-title">{feature.name}</div>
-                <div className="description-3">{feature.description}</div>
-              </div>
-              <div className={feature.isLast ? "table-item-5" : "table-item-4"}>
-                <div className="plus w-embed">
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M16 2.1143L5.33333 13.3906L0 7.75243L2 5.63813L5.33333 9.16196L14 0L16 2.1143Z" fill="#8FC49F"/>
-                  </svg>
+          {tt.features.map((feature, index) => {
+            const isLast = index === tt.features.length - 1;
+            return (
+              <div key={feature.name} className="row-2">
+                <div className={isLast ? "table-item-3" : "table-item-3"}>
+                  <div className="column-title">{feature.name}</div>
+                  <div className="description-3">{feature.description}</div>
+                </div>
+                <div className={isLast ? "table-item-5" : "table-item-4"}>
+                  <div className="plus w-embed">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M16 2.1143L5.33333 13.3906L0 7.75243L2 5.63813L5.33333 9.16196L14 0L16 2.1143Z" fill="#8FC49F"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className={isLast ? "table-item-5" : "table-item-4"}>
+                  <div className="dash w-embed">
+                    <DashIcon />
+                  </div>
                 </div>
               </div>
-              <div className={feature.isLast ? "table-item-5" : "table-item-4"}>
-                <div className="dash w-embed">
-                  <DashIcon />
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
       <div className="spacer-xlarge"></div>
       <div className="mid-cta-wrapper">
         <div className="mid-cta-text-wrap">
           <h3 className="heading-style-h2 is-white">
-            Ready for your free analysis – no strings attached?
+            {tt.midCtaHeading}
           </h3>
           <div className="text-size-regular is-white">
-            Enter your URL and Hannah analyzes your competition – in just a few
-            minutes. Free, no strings attached. The fastest way to see what
-            Serviceplan Agents can do.<br />
+            {tt.midCtaDescription}<br />
           </div>
           <div className="form-glass-wrap mid-cta">
             <div id="get-free-analysis" className="glass-effect-form-new">
@@ -135,20 +103,19 @@ export default function Comparison() {
                         <div className="email-form-content-wrap">
                           <div className="form-input-wrap">
                             <label htmlFor="URL" className="form_label">
-                              Your website URL
+                              {tt.midCtaUrlLabel}
                             </label>
                             <input
                               className="form_input w-input"
                               maxLength={256}
                               name="URL"
-                              placeholder="https://your-website.com"
+                              placeholder={tt.midCtaUrlPlaceholder}
                               type="url"
                               id="URL"
                               required
                             />
                             <div className="text-size-tiny text-style-italic is-white">
-                              *By entering your information for a free analysis you
-                              sgree and accept our{" "}
+                              {tt.midCtaPrivacyText}{" "}
                               <a
                                 href="https://www.sokosumi.com/privacy-policy"
                                 target="_blank"
@@ -161,13 +128,13 @@ export default function Comparison() {
                           </div>
                           <div className="form-input-wrap">
                             <label htmlFor="Email" className="form_label">
-                              Your email address
+                              {tt.midCtaEmailLabel}
                             </label>
                             <input
                               className="form_input w-input"
                               maxLength={256}
                               name="Email"
-                              placeholder="name@company.com"
+                              placeholder={tt.midCtaEmailPlaceholder}
                               type="email"
                               id="Email"
                               required
@@ -179,11 +146,11 @@ export default function Comparison() {
                         <input
                           type="submit"
                           className="button is-red w-button"
-                          value="Get your free analysis"
+                          value={tt.midCtaButton}
                         />
                         <div className="spacer-small"></div>
                         <div className="text-size-tiny text-style-italic is-white">
-                          *By Proceeding you sgree and accept our{" "}
+                          {tt.midCtaTosText}{" "}
                           <a
                             href="https://www.sokosumi.com/terms-of-service"
                             target="_blank"

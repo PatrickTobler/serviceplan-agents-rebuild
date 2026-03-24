@@ -1,4 +1,8 @@
-export default function HouseOfAI() {
+import { Locale, t } from "@/lib/translations";
+
+export default function HouseOfAI({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).houseOfAI;
+
   return (
     <div className="section-bottom-cta">
       <div className="padding-global">
@@ -6,13 +10,9 @@ export default function HouseOfAI() {
           <div className="container-large">
             <div className="div-block-36">
               <div className="house-of-ai-contetn">
-                <h3 className="heading-style-h3">House of AI</h3>
+                <h3 className="heading-style-h3">{tt.heading}</h3>
                 <div className="text-size-regular is-white">
-                  AI is changing how we work, think, and grow. It&apos;s not
-                  just a tool &ndash; it&apos;s a mindset shaping the future of
-                  our Group. That&apos;s why we bring everything AI at the
-                  Serviceplan Group under one roof &ndash; our tools, agents, and
-                  experts.
+                  {tt.description}
                 </div>
                 <a
                   href="https://www.house-of-communication.com/de/en.html"
@@ -40,7 +40,7 @@ export default function HouseOfAI() {
                       </defs>
                     </svg>
                   </div>
-                  <div>Learn more about House of AI</div>
+                  <div>{tt.linkText}</div>
                 </a>
               </div>
               <img src="/images/cta-image.avif" loading="lazy" sizes="100vw" alt="Call to action section image" className="max-width-full" />

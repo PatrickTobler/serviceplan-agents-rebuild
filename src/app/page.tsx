@@ -14,9 +14,11 @@ import Comparison from "@/components/Comparison";
 import FAQ from "@/components/FAQ";
 import HouseOfAI from "@/components/HouseOfAI";
 import Footer from "@/components/Footer";
+import { Locale, t } from "@/lib/translations";
 
-export default function Home() {
+export default function Home({ locale = "en" }: { locale?: Locale }) {
   const [showModal, setShowModal] = useState(false);
+  const tt = t(locale).modal;
 
   useEffect(() => {
     const handler = () => setShowModal(true);
@@ -32,43 +34,43 @@ export default function Home() {
     <div className="page-wrapper">
       <div className="global-styles w-embed"></div>
       <div className="main-wrapper">
-        <Navbar />
-        <Hero>
-          <TrustIndicators />
+        <Navbar locale={locale} />
+        <Hero locale={locale}>
+          <TrustIndicators locale={locale} />
         </Hero>
         <div className="section-wrapper top-0">
           <div className="bg-white-wrap">
-            <HowItWorks />
-            <WhatYouGet />
+            <HowItWorks locale={locale} />
+            <WhatYouGet locale={locale} />
             <div className="hide">
               <div className="spacer-xlarge"></div>
               <h2 className="text-weight-semibold">50+ Years of Serviceplan Marketing Expertise. <br/>Built into Every Agent.</h2>
             </div>
           </div>
         </div>
-        <AgentTeam />
-        <Sokosumi />
+        <AgentTeam locale={locale} />
+        <Sokosumi locale={locale} />
         <div className="spacer-medium hide"></div>
-        <Companies />
-        <Pricing>
-          <Comparison />
+        <Companies locale={locale} />
+        <Pricing locale={locale}>
+          <Comparison locale={locale} />
         </Pricing>
-        <FAQ />
-        <HouseOfAI />
-        <Footer />
+        <FAQ locale={locale} />
+        <HouseOfAI locale={locale} />
+        <Footer locale={locale} />
       </div>
       <div className="modal-wrapper" style={{ display: showModal ? "flex" : "none" }}>
         <div className="modal-content">
           <div className="modal">
             <div className="hannah-bg">
               <div className="div-block-56">
-                <h2 className="heading-style-h2 is-white modl">Thank you!</h2>
-                <div className="text-size-medium is-white text-align-center">Hannah&apos;s already on it.</div>
+                <h2 className="heading-style-h2 is-white modl">{tt.heading}</h2>
+                <div className="text-size-medium is-white text-align-center">{tt.subheading}</div>
               </div>
             </div>
             <div className="thankyou-text-wrap">
               <div className="text-size-regular text-weight-light text-align-center">
-                <strong>After confirming your email address,</strong> you&apos;ll get a free competitive analysis in your inbox – based on the URL you just shared. You&apos;ll see where you stand vs. the competition, plus a few concrete ideas for improvement. <br/><br/>No follow-up calls, no pressure, no fine print. Just a straight look at your competitive position.
+                {tt.body} <br/><br/>{tt.bodyLine2}
               </div>
             </div>
             <div className="close-icon" onClick={handleCloseModal} style={{ cursor: "pointer" }}>

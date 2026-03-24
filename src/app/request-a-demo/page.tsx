@@ -3,8 +3,13 @@
 import { useState, FormEvent } from "react";
 import Footer from "@/components/Footer";
 import { sendDemoNotification } from "@/lib/submitForm";
+import { Locale, t } from "@/lib/translations";
 
-export default function RequestADemo() {
+export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).demoPage;
+  const navTt = t(locale).navbar;
+  const modalTt = t(locale).demoPage;
+  const hiwTt = t(locale).howItWorks;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,7 +39,7 @@ export default function RequestADemo() {
             {/* Navbar */}
             <div className="navbar_component jhn w-nav" data-collapse="medium" role="banner">
               <div className="nabvar-header">
-                <a href="/?r=0" className="logo_sokosumi w-nav-brand">
+                <a href={locale === "de" ? "/de?r=0" : "/?r=0"} className="logo_sokosumi w-nav-brand">
                   <div className="logo-component">
                     <div className="code-embed-4 w-embed">
                       <svg width="426" height="38" viewBox="0 0 426 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -197,13 +202,13 @@ export default function RequestADemo() {
                         </div>
                       </nav>
                     </div>
-                    <a href="#pricing" className="nav-menu is-white w-nav-link">Pricing</a>
+                    <a href="#pricing" className="nav-menu is-white w-nav-link">{navTt.pricing}</a>
 
                   </div>
                   <div className="nav-cta-links">
                     <div className="button-group nav-button">
-                      <a href="/request-a-demo" className="button navigation w-inline-block">
-                        <div>Request a Demo</div>
+                      <a href={navTt.requestDemoHref} className="button navigation w-inline-block">
+                        <div>{navTt.requestDemo}</div>
                         <div className="arrow-icon w-embed">
                           <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="45" height="45" rx="22.5" fill="white" />
@@ -229,8 +234,8 @@ export default function RequestADemo() {
               <div className="padding-global">
                 <div className="hero-demo">
                   <div className="demo-contet-wrap">
-                    <div className="step is-white">by Serviceplan</div>
-                    <h1>Request a demo</h1>
+                    <div className="step is-white">{tt.heroLabel}</div>
+                    <h1>{tt.heroHeading}</h1>
                   </div>
                   <img
                     src="/images/demo-header.png"
@@ -246,37 +251,37 @@ export default function RequestADemo() {
                         <div className="agents-work-wrap second">
                           <div className="bg-main-text-wrap step-first">
                             <div className="step-header">
-                              <div className="sub-header-text is-black-20">Priority</div>
+                              <div className="sub-header-text is-black-20">{hiwTt.kanbanPriority}</div>
                               <div className="bottom-liner light"></div>
                             </div>
                             <div className="bg-text-wrap">
-                              <div className="feature-wrap new"><div className="text-size-small">SEO audit</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Instagram review</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Keyword gaps</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanSeoAudit}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanInstagramReview}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanKeywordGaps}</div></div>
                             </div>
                           </div>
                           <div className="bg-main-text-wrap step-second">
                             <div className="step-header">
-                              <div className="sub-header-text is-black-20">In Progress</div>
+                              <div className="sub-header-text is-black-20">{hiwTt.kanbanInProgress}</div>
                               <div className="bottom-liner light"></div>
                             </div>
                             <div className="bg-text-wrap">
-                              <div className="feature-wrap new"><div className="text-size-small">Homepage SEO audit</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Competitor pricing review</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Q2 keyword research</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Backlink gap analysis</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Social sentiment report</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanHomepageSeo}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanCompetitorPricing}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanQ2Keyword}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanBacklinkGap}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanSocialSentiment}</div></div>
                             </div>
                           </div>
                           <div className="bg-main-text-wrap step-third">
                             <div className="step-header">
-                              <div className="sub-header-text is-black-20">Done</div>
+                              <div className="sub-header-text is-black-20">{hiwTt.kanbanDone}</div>
                               <div className="bottom-liner light"></div>
                             </div>
                             <div className="bg-text-wrap">
-                              <div className="feature-wrap new"><div className="text-size-small">Brand mention tracking</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Customer review analysis</div></div>
-                              <div className="feature-wrap new"><div className="text-size-small">Sustainability messaging</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanBrandMention}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanCustomerReview}</div></div>
+                              <div className="feature-wrap new"><div className="text-size-small">{hiwTt.kanbanSustainability}</div></div>
                             </div>
                           </div>
                           {/* Green BG SVG */}
@@ -318,13 +323,13 @@ export default function RequestADemo() {
                       {/* Step text wrapper */}
                       <div className="step-text-wrapper new">
                         <div className="step-1-text">
-                          <div className="text-size-tiny text-weight-medium">How can I improve my Google ranking?</div>
+                          <div className="text-size-tiny text-weight-medium">{hiwTt.questionBubble1}</div>
                         </div>
                         <div className="step-1-text _2">
-                          <div className="text-size-tiny text-weight-medium">Are my competitors running paid ads?</div>
+                          <div className="text-size-tiny text-weight-medium">{hiwTt.questionBubble2}</div>
                         </div>
                         <div className="step-1-text _3">
-                          <div className="text-size-tiny text-weight-medium">Is my competitor changing their pricing?</div>
+                          <div className="text-size-tiny text-weight-medium">{hiwTt.questionBubble3}</div>
                         </div>
                       </div>
                       {/* Agents image */}
@@ -597,17 +602,17 @@ export default function RequestADemo() {
             <div className="padding-section-large">
               <div className="container-large">
                 <div className="header-wrapper">
-                  <h2>See What Serviceplan Agents Can Do in Your Real Workflow</h2>
-                  <div className="sub-text-heading">Request a live demo tailored to your brand, your team, and your current marketing challenges.</div>
+                  <h2>{tt.sectionHeading}</h2>
+                  <div className="sub-text-heading">{tt.sectionSubheading}</div>
                 </div>
                 <div className="grid-container-2x1 demo-page">
                   <div>
                     <div className="text-wrapper-demo">
-                      <h4>Tell us what you&apos;re interested in and we&apos;ll shape the demo around it.</h4>
+                      <h4>{tt.contentHeading}</h4>
                       <div className="spacer-medium"></div>
                       <div className="text-size-regular text-weight-light is-gray">
-                        We&apos;ll show you how Serviceplan Agents work with your existing tools, handle research and project work via email, and keep your brand front and center.<br /><br />
-                        You&apos;ll see real use cases, concrete examples, and actual results your team could use right away. No sales pitch, no pressure &ndash; just an honest look at whether Serviceplan Agents make sense for your team.<br />
+                        {tt.contentParagraph1}<br /><br />
+                        {tt.contentParagraph2}<br />
                       </div>
                     </div>
                   </div>
@@ -620,13 +625,13 @@ export default function RequestADemo() {
                       onSubmit={handleSubmit}
                     >
                       <div className="form-input-wrap">
-                        <label htmlFor="name" className="form_label is-black">Name</label>
+                        <label htmlFor="name" className="form_label is-black">{tt.formNameLabel}</label>
                         <input
                           className="form_input is-black w-input"
                           maxLength={256}
                           name="name"
                           data-name="Name"
-                          placeholder="John Smith"
+                          placeholder={tt.formNamePlaceholder}
                           type="text"
                           id="name"
                           required
@@ -635,13 +640,13 @@ export default function RequestADemo() {
                         />
                       </div>
                       <div className="form-input-wrap">
-                        <label htmlFor="Email" className="form_label is-black">Your email address</label>
+                        <label htmlFor="Email" className="form_label is-black">{tt.formEmailLabel}</label>
                         <input
                           className="form_input is-black w-input"
                           maxLength={256}
                           name="Email"
                           data-name="Email"
-                          placeholder="name@company.com"
+                          placeholder={tt.formEmailPlaceholder}
                           type="text"
                           id="Email"
                           value={formData.email}
@@ -649,13 +654,13 @@ export default function RequestADemo() {
                         />
                       </div>
                       <div className="form-input-wrap">
-                        <label htmlFor="website-url" className="form_label is-black">Your website address</label>
+                        <label htmlFor="website-url" className="form_label is-black">{tt.formWebsiteLabel}</label>
                         <input
                           className="form_input is-black w-input"
                           maxLength={256}
                           name="website-url"
                           data-name="Website URL"
-                          placeholder="https://your-website.com"
+                          placeholder={tt.formWebsitePlaceholder}
                           type="url"
                           id="website-url"
                           value={formData.websiteUrl}
@@ -663,13 +668,13 @@ export default function RequestADemo() {
                         />
                       </div>
                       <div className="form-input-wrap">
-                        <label htmlFor="Categoty" className="form_label is-black">Where does your team need the most support?</label>
+                        <label htmlFor="Categoty" className="form_label is-black">{tt.formCategoryLabel}</label>
                         <input
                           className="form_input is-black w-input"
                           maxLength={256}
                           name="Categoty"
                           data-name="Categoty"
-                          placeholder="Market analysis, project management, social media audits..."
+                          placeholder={tt.formCategoryPlaceholder}
                           type="text"
                           id="Categoty"
                           required
@@ -677,16 +682,16 @@ export default function RequestADemo() {
                           onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                         />
                       </div>
-                      <input type="submit" data-wait="Please wait..." className="button is-red w-button" value="Send" />
+                      <input type="submit" data-wait="Please wait..." className="button is-red w-button" value={tt.formButton} />
                       <div className="spacer-small"></div>
                       <div className="text-size-tiny text-style-italic is-grey">
-                        By clicking &quot;Continue&quot;, you confirm that you agree to our{" "}
-                        <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal is-black">Terms of Service</a>
-                        {" "}and have taken note of the
+                        {tt.legalText}{" "}
+                        <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal is-black">{tt.legalTos}</a>
+                        {" "}{tt.legalAndNote}
                         <span className="links-legal"> </span>
-                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank"><span className="links-legal is-black">Privacy Statements</span></a>
-                        {" "}of our{" "}
-                        <a href="https://www.sokosumi.com/" target="_blank" className="links-legal is-black">Sokosumi Marketplace</a>.
+                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank"><span className="links-legal is-black">{tt.legalPrivacy}</span></a>
+                        {" "}{tt.legalOfOur}{" "}
+                        <a href="https://www.sokosumi.com/" target="_blank" className="links-legal is-black">{tt.legalSokosumi}</a>{tt.legalSuffix}
                       </div>
                     </form>
                   </div>
@@ -698,7 +703,7 @@ export default function RequestADemo() {
 
         {/* Footer */}
         <div className="section-wrapper">
-          <Footer />
+          <Footer locale={locale} />
         </div>
       </div>
 
@@ -708,14 +713,15 @@ export default function RequestADemo() {
           <div className="modal">
             <div className="hannah-bg">
               <div className="div-block-56">
-                <h2 className="heading-style-h2 is-white modl">Thank you!</h2>
-                <div className="text-size-medium is-white text-align-center">We&apos;ve received your details.</div>
+                <h2 className="heading-style-h2 is-white modl">{modalTt.modalHeading}</h2>
+                <div className="text-size-medium is-white text-align-center">{modalTt.modalSubheading}</div>
               </div>
             </div>
             <div className="thankyou-text-wrap">
               <div className="text-size-regular text-weight-light text-align-center">
-                We&apos;ll review what you shared and prepare the demo based on your needs.<br /><br />
-                In the session, we&apos;ll show you how it works, how it fits into your current setup, and answer your questions.We&apos;ll get back to you shortly with the next steps.
+                {modalTt.modalBody.split("\n\n").map((paragraph, i) => (
+                  <span key={i}>{i > 0 && <><br /><br /></>}{paragraph}</span>
+                ))}
               </div>
             </div>
             <div className="close-icon" onClick={handleCloseModal}>

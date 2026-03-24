@@ -1,54 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-const accordionItems = [
-  {
-    title: "Competitive Analyses",
-    titleTag: "h3" as const,
-    text: "Who are your real competitors – and where do you stand? Market positions, digital presence, and competitive gaps. Based on Statista, GWI, and social media data. No extra contracts needed. ",
-    delivery: "~15 minutes ",
-    cost: "< 20 EUR ",
-    output: "GEO & AI Visibility Analysis",
-    extraClass: "",
-  },
-  {
-    title: "GEO & AI Visibility Analysis ",
-    titleTag: "h4" as const,
-    text: "How visible is your company on Google, ChatGPT, and other AI search engines? Local rankings, AI mentions, and visibility gaps vs. competitors. So you know where your customers find you – and where they don't. ",
-    delivery: "~15 minutes ",
-    cost: "< 20 EUR ",
-    output: "PDF or PowerPoint",
-    extraClass: "",
-  },
-  {
-    title: "Content & Social Media Audit ",
-    titleTag: "h4" as const,
-    text: "How does your content stack up against the competition? Social media presence, content strategy, and engagement rates – across all relevant competitors. ",
-    delivery: "~15 minutes ",
-    cost: "approx. 12 EUR ",
-    output: "PDF or PowerPoint",
-    extraClass: "",
-  },
-  {
-    title: "Market Overview & Trends ",
-    titleTag: "h4" as const,
-    text: "How big is your market and where is it headed? Market volume, growth forecasts, and trend analysis. Every estimate documented and traceable. ",
-    delivery: "~15 minutes ",
-    cost: "< 20 EUR ",
-    output: "PDF or PowerPoint",
-    extraClass: "bottom",
-  },
-  {
-    title: "Audience Insights ",
-    titleTag: "h4" as const,
-    text: "Who buys your products – and why? Demographics, attitudes, and purchasing behavior based on global consumer data from GWI and Statista. ",
-    delivery: "~15 minutes ",
-    cost: "approx. 15 EUR ",
-    output: "PDF or PowerPoint",
-    extraClass: "bottom",
-  },
-];
+import { Locale, t } from "@/lib/translations";
 
 const ToggleArrowSvg = () => (
   <svg
@@ -70,12 +23,16 @@ const ToggleArrowSvg = () => (
   </svg>
 );
 
-export default function WhatYouGet() {
+export default function WhatYouGet({ locale = "en" }: { locale?: Locale }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const tt = t(locale).whatYouGet;
 
   const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? -1 : index);
   };
+
+  const titleTags = ["h3", "h4", "h4", "h4", "h4"] as const;
+  const extraClasses = ["", "", "", "bottom", "bottom"];
 
   return (
     <div className="section-what-you-get">
@@ -84,11 +41,9 @@ export default function WhatYouGet() {
           <div className="container-large">
             <div className="div-block-13">
               <div className="header-wrapper">
-                <h2>What You Get. In Minutes.</h2>
+                <h2>{tt.heading}</h2>
                 <div className="sub-text-heading">
-                  Serviceplan Agents deliver ready-to-use results – not raw data,
-                  not chat logs. Documents you can walk into your next meeting
-                  with.
+                  {tt.subheading}
                 </div>
               </div>
               <div className="grid-container-2x1">
@@ -101,24 +56,22 @@ export default function WhatYouGet() {
                   />
                   <div className="glass-wrapper">
                     <div className="text-size-regular text-align-center">
-                      &ldquo;I get excited when high-quality data starts to
-                      reveal something true. I get less excited when someone asks
-                      me to make weak findings look convincing.&rdquo;
+                      {tt.hannahQuote}
                     </div>
                   </div>
                 </div>
                 <div className="faq-item-wrap">
-                  {accordionItems.map((item, index) => {
+                  {tt.accordionItems.map((item, index) => {
                     const isActive = activeIndex === index;
                     const accItemClass = [
                       "acc-item",
                       isActive ? "active" : "",
-                      item.extraClass,
+                      extraClasses[index],
                     ]
                       .filter(Boolean)
                       .join(" ");
 
-                    const TitleTag = item.titleTag;
+                    const TitleTag = titleTags[index];
 
                     return (
                       <div key={item.title} className={accItemClass}>
@@ -155,7 +108,7 @@ export default function WhatYouGet() {
                             <div className="faq-grid">
                               <div>
                                 <div className="text-size-regular is-gray">
-                                  Delivery
+                                  {tt.deliveryLabel}
                                 </div>
                                 <div className="spacer-small"></div>
                                 <div className="text-size-regular text-weight-medium">
@@ -164,7 +117,7 @@ export default function WhatYouGet() {
                               </div>
                               <div>
                                 <div className="text-size-regular is-gray">
-                                  Cost
+                                  {tt.costLabel}
                                 </div>
                                 <div className="spacer-small"></div>
                                 <div className="text-size-regular text-weight-medium">
@@ -173,7 +126,7 @@ export default function WhatYouGet() {
                               </div>
                               <div>
                                 <div className="text-size-regular is-gray">
-                                  Output
+                                  {tt.outputLabel}
                                 </div>
                                 <div className="spacer-small"></div>
                                 <div className="text-size-regular text-weight-medium">
@@ -246,17 +199,15 @@ export default function WhatYouGet() {
                   </div>
                   <div className="spacer-medium"></div>
                   <h3 className="heading-style-h3">
-                    Project Planning &amp; Operations
+                    {tt.elenaHeading}
                   </h3>
                   <div className="spacer-small"></div>
                   <div className="text-size-regular is-white">
-                    Elena turns complex initiatives into actionable work
-                    packages. She defines scope, sequence, and dependencies – and
-                    spots risks before they become problems.
+                    {tt.elenaDescription}
                   </div>
                   <div className="spacer-medium"></div>
                   <a href="#free-analysis" className="button is-red w-button">
-                    Get your free analysis &gt; Where should things go?
+                    {tt.elenaCta}
                   </a>
                 </div>
                 <div className="div-block-50">

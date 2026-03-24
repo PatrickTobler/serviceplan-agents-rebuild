@@ -1,3 +1,5 @@
+import { Locale, t } from "@/lib/translations";
+
 const HannahNameSvg = () => (
   <svg width="195" height="56" viewBox="0 0 195 56" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M-8.77008e-05 55.0195V0.419529H4.19991V16.3795H30.5899V0.419529H34.7899V55.0195H30.5899V20.2295H4.19991V55.0195H-8.77008e-05ZM40.6081 55.0195V0.419529H53.0681V55.0195H48.8681V39.4795C48.2381 39.6895 47.5381 39.8295 46.8381 39.8295C46.1381 39.8295 45.4381 39.6895 44.8081 39.4795V55.0195H40.6081ZM44.8081 34.0195C44.8081 35.1395 45.6481 36.0495 46.8381 36.0495C47.9581 36.0495 48.8681 35.1395 48.8681 34.0195C48.8681 32.8995 47.9581 31.9895 46.8381 31.9895C45.6481 31.9895 44.8081 32.8995 44.8081 34.0195ZM44.8081 28.5595C45.4381 28.3495 46.1381 28.2095 46.8381 28.2095C47.5381 28.2095 48.2381 28.3495 48.8681 28.5595V4.19953H44.8081V28.5595ZM85.0412 14.7695C85.0412 8.67953 80.1412 3.77953 74.0512 3.77953C68.0312 3.77953 63.1312 8.67953 63.1312 14.7695V55.0195H58.9312V0.419529H63.1312V5.31953C65.7212 2.02953 69.7112 -0.000469685 74.3312 -0.000469685C82.7312 -0.000469685 89.2412 6.50953 89.2412 14.4895V55.0195H85.0412V14.7695ZM95.096 55.0195V0.419529H99.296L125.616 46.5495V0.419529H129.816V55.0195H125.616L99.296 8.88953V55.0195H95.096ZM133.674 55.0195L139.344 0.419529H143.544L149.214 55.0195H144.944L144.244 47.6695C143.474 48.1595 142.564 48.4395 141.444 48.4395C140.394 48.4395 139.414 48.1595 138.644 47.5995L137.944 55.0195H133.674ZM139.134 42.3495C139.134 43.6095 140.184 44.6595 141.444 44.6595C142.774 44.6595 143.754 43.6095 143.754 42.3495C143.754 41.0195 142.774 40.0395 141.444 40.0395C140.184 40.0395 139.134 41.0195 139.134 42.3495ZM139.624 36.5395C140.184 36.3995 140.814 36.2595 141.444 36.2595C142.074 36.2595 142.704 36.3995 143.264 36.5395L141.444 16.3795L139.624 36.5395ZM190.66 55.0195V29.6095H157.27V55.0195H153.07V0.419529H157.27V25.7595H190.66V0.419529H194.86V55.0195H190.66Z" fill="white"/>
@@ -16,18 +18,18 @@ const AlexNameSvg = () => (
   </svg>
 );
 
-export default function AgentTeam() {
+export default function AgentTeam({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).agentTeam;
+
   return (
     <div id="agents" className="marketing-team-contetn">
       <div className="padding-global">
         <div className="padding-section-large">
           <div className="container-large">
             <div className="header-wrapper">
-              <h2><strong>Your AI Marketing Team</strong></h2>
+              <h2><strong>{tt.heading}</strong></h2>
               <div className="sub-text-heading">
-                Serviceplan Agents are specialized AI partners – each with a clear role, real
-                expertise, and the confidence to push back when something doesn&apos;t add up. A
-                team that works together, knows your business, and grows with you.
+                {tt.subheading}
               </div>
             </div>
 
@@ -42,7 +44,7 @@ export default function AgentTeam() {
                 className="hannah-ai"
               />
               <div className="glass-chip sub-text">
-                <div>What is actually true?</div>
+                <div>{tt.hannahTagline}</div>
                 <div className="w-embed"></div>
               </div>
               <div className="ai-cowrker-header">
@@ -51,21 +53,20 @@ export default function AgentTeam() {
                     <HannahNameSvg />
                   </div>
                   <div className="spacer-xsmall"></div>
-                  <div className="step is-white">by Serviceplan</div>
+                  <div className="step is-white">{tt.hannahByLabel}</div>
                 </div>
-                <a href="#" className="button-round w-button">Available now</a>
+                <a href="#" className="button-round w-button">{tt.hannahAvailability}</a>
               </div>
               <div className="ai-cowrker-header">
                 <div className="ai-coworker-details">
-                  <h3 className="heading-style-h3">Marketing Research Partner</h3>
+                  <h3 className="heading-style-h3">{tt.hannahRole}</h3>
                   <div className="spacer-small"></div>
                   <div className="text-size-regular is-white">
-                    Hannah analyzes markets, competitors, and audiences. She works data-driven,
-                    has a point of view, and delivers insights – not data graveyards.<br />
+                    {tt.hannahDescription}<br />
                   </div>
                   <div className="spacer-large"></div>
                   <a href="#free-analysis" className="button is-red w-button">
-                    Try Hannah free
+                    {tt.hannahCta}
                   </a>
                 </div>
               </div>
@@ -87,31 +88,30 @@ export default function AgentTeam() {
                     <ElenaNameSvg />
                   </div>
                   <div className="spacer-xsmall"></div>
-                  <div className="step is-white">by Serviceplan</div>
+                  <div className="step is-white">{tt.elenaByLabel}</div>
                 </div>
                 <a href="#" className="button-round w-button">
-                  Available now<br />
+                  {tt.elenaAvailability}<br />
                 </a>
               </div>
               <div className="ai-cowrker-header">
                 <div className="ai-coworker-details">
                   <h3 className="heading-style-h3">
-                    AI Operations &amp; Project Management Partner
+                    {tt.elenaRole}
                   </h3>
                   <div className="spacer-small"></div>
                   <div className="text-size-regular is-white">
-                    Elena turns ambitious plans into actionable steps. She calls out unrealistic
-                    assumptions and makes sure projects actually get delivered.
+                    {tt.elenaDescription}
                   </div>
                   <div className="spacer-large"></div>
                   <a href="#free-analysis" className="button is-red w-button">
-                    Get your free analysis
+                    {tt.elenaCta}
                   </a>
                 </div>
               </div>
               <div className="glass-chip sub-text-elena">
                 <div className="text-size-small text-weight-medium is-white">
-                  What is actually doable?
+                  {tt.elenaTagline}
                 </div>
                 <div className="w-embed"></div>
               </div>
@@ -133,29 +133,28 @@ export default function AgentTeam() {
                     <AlexNameSvg />
                   </div>
                   <div className="spacer-xsmall"></div>
-                  <div className="step is-white">by Serviceplan</div>
+                  <div className="step is-white">{tt.alexByLabel}</div>
                 </div>
                 <a href="#" className="button-round is-gray w-button">
-                  Coming 2026<br />
+                  {tt.alexAvailability}<br />
                 </a>
               </div>
               <div className="ai-cowrker-header">
                 <div className="ai-coworker-details">
-                  <h3 className="heading-style-h3">Coding Partner</h3>
+                  <h3 className="heading-style-h3">{tt.alexRole}</h3>
                   <div className="spacer-small"></div>
                   <div className="text-size-regular is-white">
-                    Alex turns data into dashboards, visuals, and interactive micro-sites. He is
-                    making information dynamic, accessible, and easy to share.
+                    {tt.alexDescription}
                   </div>
                   <div className="spacer-large"></div>
                   <a href="#free-analysis" className="button is-red w-button">
-                    Get your free analysis
+                    {tt.alexCta}
                   </a>
                 </div>
               </div>
               <div className="glass-chip sub-text">
                 <div className="text-size-small text-weight-medium is-white">
-                  How does data come alive?
+                  {tt.alexTagline}
                 </div>
                 <div className="w-embed"></div>
               </div>
@@ -175,16 +174,15 @@ export default function AgentTeam() {
               <div className="div-block-22">
                 <div className="div-block-21">
                   <h5>
-                    The Serviceplan Agents team is growing. Specialized AI partners for
-                    additional marketing disciplines are in development.
+                    {tt.growingTeam}
                   </h5>
                   <div className="spacer-medium"></div>
                   <a href="#free-analysis" className="button is-red secondary w-button">
-                    Get notified
+                    {tt.getNotified}
                   </a>
                 </div>
                 <a href="#" className="button-round is-gray w-button">
-                  Coming 2026
+                  {tt.coming2026}
                 </a>
               </div>
             </div>

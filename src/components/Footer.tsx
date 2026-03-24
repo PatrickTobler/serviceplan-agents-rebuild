@@ -1,4 +1,8 @@
-export default function Footer() {
+import { Locale, t } from "@/lib/translations";
+
+export default function Footer({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).footer;
+
   return (
     <div className="div-block-38">
       <div className="padding-global">
@@ -6,10 +10,10 @@ export default function Footer() {
           <div className="container-large">
             <div className="grid-container-3x1">
               <div className="footer-content-wrat">
-                <div className="fiiter-link-header">Serviceplan Agents</div>
+                <div className="fiiter-link-header">{tt.column1Header}</div>
                 <div className="spacer-large"></div>
                 <a href="#" className="footer-links hide">
-                  About
+                  {tt.about}
                 </a>
                 <a href="#hannah" className="footer-links">
                   Hannah
@@ -21,7 +25,7 @@ export default function Footer() {
                   Alex
                 </a>
                 <a href="#pricing" className="footer-links">
-                  Pricing
+                  {tt.pricing}
                 </a>
                 <a
                   href="https://www.sokosumi.com/"
@@ -32,7 +36,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="footer-content-wrat">
-                <div className="fiiter-link-header">Resources</div>
+                <div className="fiiter-link-header">{tt.column2Header}</div>
                 <div className="spacer-large"></div>
                 <a href="#" className="footer-links hide">
                   Blog
@@ -43,40 +47,40 @@ export default function Footer() {
                 <a href="#faq" className="footer-links">
                   FAQ
                 </a>
-                <a href="/request-a-demo" className="footer-links">
-                  Contact
+                <a href={tt.contactHref} className="footer-links">
+                  {tt.contact}
                 </a>
               </div>
               <div className="footer-content-wrat">
-                <div className="fiiter-link-header">Legal</div>
+                <div className="fiiter-link-header">{tt.column3Header}</div>
                 <div className="spacer-large"></div>
                 <a
                   href="https://www.sokosumi.com/imprint"
                   target="_blank"
                   className="footer-links"
                 >
-                  Imprint
+                  {tt.imprint}
                 </a>
                 <a
                   href="https://www.sokosumi.com/privacy-policy"
                   target="_blank"
                   className="footer-links"
                 >
-                  Privacy Policy
+                  {tt.privacyPolicy}
                 </a>
                 <a
                   href="https://www.sokosumi.com/terms-of-service"
                   target="_blank"
                   className="footer-links"
                 >
-                  Terms of Service
+                  {tt.termsOfService}
                 </a>
                 <a
                   href="https://www.sokosumi.com/cookie-policy"
                   target="_blank"
                   className="footer-links"
                 >
-                  Cookie Policy
+                  {tt.cookiePolicy}
                 </a>
               </div>
             </div>

@@ -1,27 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import { Locale, t } from "@/lib/translations";
 
-export default function Navbar() {
+export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const tt = t(locale).navbar;
 
   return (
     <div className="navbar_component up w-nav" data-collapse="medium" role="banner">
       <div className="nabvar-header">
-        <a href="/" className="logo_sokosumi w-nav-brand">
+        <a href={locale === "de" ? "/de" : "/"} className="logo_sokosumi w-nav-brand">
           <div className="logo-component">
             <img src="/images/sp-logo.png" loading="lazy" alt="Serviceplan Group logo" className="sp-logo" />
           </div>
         </a>
         <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
           <div className="navigation-link-wrap">
-            <a href="#" className="nav-menu w-nav-link">Agents</a>
-            <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">Pricing</a>
+            <a href="#" className="nav-menu w-nav-link">{tt.agents}</a>
+            <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">{tt.pricing}</a>
           </div>
           <div className="nav-cta-links">
             <div className="button-group nav-button">
               <a href="https://app.sokosumi.com/register" className="button w-inline-block">
-                <div>Request a Demo</div>
+                <div>{tt.requestDemo}</div>
                 <div className="arrow-icon w-embed">
                   <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="45" height="45" rx="22.5" fill="white" />

@@ -1,4 +1,8 @@
-export default function Companies() {
+import { Locale, t } from "@/lib/translations";
+
+export default function Companies({ locale = "en" }: { locale?: Locale }) {
+  const tt = t(locale).companies;
+
   return (
     <div className="section-wrapper">
       <div className="white-bg-wrap">
@@ -7,7 +11,7 @@ export default function Companies() {
           <div className="container-large">
             <div className="logo-content-wrap">
               <h2 className="bentocard-heding max-width-500">
-                Over 500 companies use agents on Sokosumi.
+                {tt.heading}
               </h2>
               <div className="spacer-small"></div>
 
@@ -59,11 +63,11 @@ export default function Companies() {
                                 className="testimonial-img"
                               />
                               <div>
-                                <p className="testimonial-name">Florian von Keyserlingk</p>
-                                <p className="testimonial-author-role">Owner and Sound Engineer, iftyfour audio post production</p>
+                                <p className="testimonial-name">{tt.testimonial1Name}</p>
+                                <p className="testimonial-author-role">{tt.testimonial1Role}</p>
                               </div>
                             </div>
-                            <p className="testimonial-text">&quot;For a small business like mine who would never do the research myself and never pay someone to do it, I think this is the best tool to develop an actionable and effective online strategy.&quot;</p>
+                            <p className="testimonial-text">&quot;{tt.testimonial1Quote}&quot;</p>
                           </div>
                         </div>
                       </div>
@@ -99,11 +103,11 @@ export default function Companies() {
                                 className="testimonial-img"
                               />
                               <div className="div-block-59">
-                                <p className="testimonial-name">Michael Trautmann</p>
-                                <p className="testimonial-author-role">Former Global CMO of Audi, entrepreneur, author, and podcaster</p>
+                                <p className="testimonial-name">{tt.testimonial2Name}</p>
+                                <p className="testimonial-author-role">{tt.testimonial2Role}</p>
                               </div>
                             </div>
-                            <p className="testimonial-text">&quot;What Plan.Net Studios are doing is exactly the mindset our industry needs right now: Instead of complaining that &quot;advertising is dead&quot; or that AI will ruin everything, they&apos;re building real tools that make us better, faster, smarter.&quot;</p>
+                            <p className="testimonial-text">&quot;{tt.testimonial2Quote}&quot;</p>
                           </div>
                         </div>
                       </div>
@@ -114,12 +118,12 @@ export default function Companies() {
                   <div className="container-37">
                     <div className="footer-text">
                       <div className="footer-text">
-                        <span className="footer-text-0">20</span>
-                        <span className="footer-text-1">min</span>
+                        <span className="footer-text-0">{tt.stat1Value}</span>
+                        <span className="footer-text-1">{tt.stat1Label}</span>
                       </div>
                     </div>
                     <div className="footer-subtext">
-                      Average delivery time for research
+                      {tt.stat1Description}
                     </div>
                   </div>
                   <img
@@ -132,12 +136,12 @@ export default function Companies() {
                   <div className="container-37">
                     <div className="footer-text">
                       <div className="footer-text">
-                        <span className="footer-text-0">9</span>
-                        <span className="footer-text-1">+</span>
+                        <span className="footer-text-0">{tt.stat2Value}</span>
+                        <span className="footer-text-1">{tt.stat2Label}</span>
                       </div>
                     </div>
                     <div className="footer-subtext">
-                      Premium data sources, no extra contracts
+                      {tt.stat2Description}
                     </div>
                   </div>
                   <img
@@ -150,19 +154,19 @@ export default function Companies() {
                   <div className="number-wrap no-border">
                     <div className="footer-text">
                       <div className="footer-text">
-                        <span className="footer-text-0">from 10</span>
-                        <span className="footer-text-1">EUR</span>
+                        <span className="footer-text-0">{tt.stat3Value}</span>
+                        <span className="footer-text-1">{tt.stat3Label}</span>
                       </div>
                     </div>
                     <div className="footer-subtext">
-                      vs. 5,000 &euro; agency retainer
+                      {tt.stat3Description}
                     </div>
                   </div>
                 </div>
                 <div className="container-39">
                   <div className="bottom-text">
-                    New to agents? <br />
-                    Download the Quick Start Guide.
+                    {tt.downloadHeading} <br />
+                    {tt.downloadSubheading}
                   </div>
                   <a
                     href="https://cdn.prod.website-files.com/6990b006d2c582acd039bf7e/699bdf2d60e7f039bd38487e_260218%20-%20Plan_Net_Hannah_User%20Guide_EN.pdf"
@@ -190,7 +194,7 @@ export default function Companies() {
                         </defs>
                       </svg>
                     </div>
-                    <div className="text-size-regular">Download guide</div>
+                    <div className="text-size-regular">{tt.downloadButton}</div>
                   </a>
                 </div>
               </div>

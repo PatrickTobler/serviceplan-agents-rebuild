@@ -2,8 +2,11 @@
 
 import { useState, FormEvent } from "react";
 import { submitAnalysisForm } from "@/lib/submitForm";
+import { Locale, t } from "@/lib/translations";
 
-export default function Hero({ children }: { children?: React.ReactNode }) {
+export default function Hero({ children, locale = "en" }: { children?: React.ReactNode; locale?: Locale }) {
+  const tt = t(locale).hero;
+  const navTt = t(locale).navbar;
   const [email, setEmail] = useState("");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +25,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         {/* Hero Navbar */}
         <div className="navbar_component jhn w-nav" data-collapse="medium" role="banner">
           <div className="nabvar-header">
-            <a href="/?r=0" className="logo_sokosumi w-nav-brand">
+            <a href={locale === "de" ? "/de?r=0" : "/?r=0"} className="logo_sokosumi w-nav-brand">
               <div className="logo-component">
                 <div className="code-embed-4 w-embed">
                   <svg width="426" height="38" viewBox="0 0 426 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,13 +183,13 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                     </div>
                   </nav>
                 </div>
-                <a href="#pricing" className="nav-menu is-white w-nav-link">Pricing</a>
+                <a href="#pricing" className="nav-menu is-white w-nav-link">{navTt.pricing}</a>
 
               </div>
               <div className="nav-cta-links">
                 <div className="button-group nav-button">
-                  <a href="/request-a-demo" className="button navigation w-inline-block">
-                    <div>Request a Demo</div>
+                  <a href={tt.requestDemoHref} className="button navigation w-inline-block">
+                    <div>{navTt.requestDemo}</div>
                     <div className="arrow-icon w-embed">
                       <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="45" height="45" rx="22.5" fill="white" />
@@ -218,11 +221,11 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
               <div className="hero-content">
                 <div className="hero-text-wrap">
                   <div className="margin-bottom margin-large">
-                    <h1>AI Coworkers for <br />Your Marketing. <br />By Serviceplan.</h1>
+                    <h1>{tt.heading} <br />{tt.headingLine2} <br />{tt.headingLine3}</h1>
                   </div>
                   <div className="hero-description">
                     <div className="text-size-regular is-white">
-                      Europe&apos;s leading agency &ndash; now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy &ndash; built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.
+                      {tt.description}
                     </div>
                   </div>
 
@@ -316,10 +319,10 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                         >
                           <div className="form-grid">
                             <div className="div-block-46">
-                              <h3 className="heading-style-h3">Try Hannah free &ndash; no strings attached<br /></h3>
+                              <h3 className="heading-style-h3">{tt.formHeading}<br /></h3>
                               <div className="spacer-medium"></div>
                               <div className="text-size-regular is-white">
-                                Enter your website URL and our research specialist Hannah will deliver a free competitive analysis straight to your inbox.<br />
+                                {tt.formDescription}<br />
                               </div>
                             </div>
                             <div>
@@ -328,7 +331,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                                 <div>
                                   <div className="email-form-content-wrap">
                                     <div className="form-input-wrap">
-                                      <label htmlFor="email" className="form_label">Your email address</label>
+                                      <label htmlFor="email" className="form_label">{tt.emailLabel}</label>
                                       <input
                                         className="form_input w-input"
                                         maxLength={256}
@@ -341,12 +344,12 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                                         onChange={(e) => setEmail(e.target.value)}
                                       />
                                       <div className="text-size-tiny text-style-italic is-white">
-                                        *By entering your information for a free analysis you agree and accept our{" "}
-                                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank" className="links-legal" rel="noopener noreferrer">Privacy Policy.</a>
+                                        {tt.privacyText}{" "}
+                                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.privacyLink}</a>
                                       </div>
                                     </div>
                                     <div className="form-input-wrap">
-                                      <label htmlFor="website_url" className="form_label">Your website URL</label>
+                                      <label htmlFor="website_url" className="form_label">{tt.websiteLabel}</label>
                                       <input
                                         className="form_input w-input"
                                         maxLength={256}
@@ -362,11 +365,11 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                                   </div>
                                 </div>
                                 <div className="div-block-10">
-                                  <input type="submit" className="button is-red w-button" value="Get your free analysis " />
+                                  <input type="submit" className="button is-red w-button" value={tt.submitButton} />
                                   <div className="spacer-small"></div>
                                   <div className="text-size-tiny text-style-italic is-white">
-                                    *By Proceeding you sgree and accept our{" "}
-                                    <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal" rel="noopener noreferrer">Terms of Service</a>.
+                                    {tt.tosText}{" "}
+                                    <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.tosLink}</a>.
                                   </div>
                                 </div>
                               </div>
