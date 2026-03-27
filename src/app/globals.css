@@ -2240,3 +2240,11 @@ margin: 0rem !important;
     top: 30%;
   }
 }
+
+.quote-attribution {
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.75rem;
+  font-style: italic;
+}

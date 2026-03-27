@@ -72,6 +72,7 @@ export const translations = {
         "Serviceplan Agents deliver ready-to-use results \u2013 not raw data, not chat logs. Documents you can walk into your next meeting with.",
       hannahQuote:
         "\u201cI get excited when high-quality data starts to reveal something true. I get less excited when someone asks me to make weak findings look convincing.\u201d",
+      hannahQuoteAttribution: "— Hannah, Research Partner, AI Coworker",
       accordionItems: [
         {
           title: "Competitive Analyses",
@@ -471,6 +472,7 @@ export const translations = {
         "Serviceplan Agents liefern fertige Ergebnisse \u2013 keine Rohdaten, keine Chat-Protokolle. Dokumente, die Sie direkt im Meeting nutzen k\u00f6nnen.",
       hannahQuote:
         "\u201eIch bin begeistert, wenn hochwertige Daten zu echten Erkenntnissen f\u00fchren. Weniger begeistert bin ich, wenn mich jemand bittet schwache Ergebnisse \u00fcberzeugend darzustellen.\u201c",
+      hannahQuoteAttribution: "— Hannah, Research Partnerin, AI Coworker",
       accordionItems: [
         {
           title: "Wettbewerbsanalysen",
