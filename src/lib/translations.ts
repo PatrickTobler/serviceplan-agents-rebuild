@@ -6,8 +6,10 @@ export const translations = {
       agents: "Agents",
       pricing: "Pricing",
       requestDemo: "Request a Demo",
+      freeAnalysis: "Free Analysis",
       pricingHref: "#pricing",
       requestDemoHref: "/request-a-demo",
+      freeAnalysisHref: "/free-analysis",
     },
     hero: {
       heading: "AI Coworkers for",
@@ -404,8 +406,10 @@ export const translations = {
       agents: "Agents",
       pricing: "Preise",
       requestDemo: "Demo anfragen",
+      freeAnalysis: "Kostenlose Analyse",
       pricingHref: "#pricing",
       requestDemoHref: "/de/request-a-demo",
+      freeAnalysisHref: "/de/free-analysis",
     },
     hero: {
       heading: "AI Coworker f\u00fcr",
