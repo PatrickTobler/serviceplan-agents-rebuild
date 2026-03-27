@@ -2240,3 +2240,25 @@ margin: 0rem !important;
     top: 30%;
   }
 }
+
+/* Language toggle: show desktop version by default, hide mobile version */
+.language-toggle-mobile {
+  display: none;
+}
+
+.language-toggle-desktop {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .language-toggle-desktop {
+    display: none;
+  }
+
+  .language-toggle-mobile {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+}

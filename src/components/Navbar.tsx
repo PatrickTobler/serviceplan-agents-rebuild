@@ -3,6 +3,65 @@
 import { useState } from "react";
 import { Locale, t } from "@/lib/translations";
 
+function LanguageToggle({ locale, style }: { locale: Locale; style?: React.CSSProperties }) {
+  const handleSwitch = (newLocale: Locale) => {
+    if (newLocale === locale) return;
+    document.cookie = "locale=" + newLocale + ";path=/;max-age=31536000";
+    const pathname = window.location.pathname;
+    if (newLocale === "de") {
+      // Going from EN to DE
+      window.location.href = "/de" + pathname;
+    } else {
+      // Going from DE to EN: strip /de prefix
+      const stripped = pathname.replace(/^\/de(\/|$)/, "/");
+      window.location.href = stripped || "/";
+    }
+  };
+
+  const baseStyle: React.CSSProperties = {
+    fontFamily: "var(--_serviceplan-styles---demi)",
+    fontSize: "14px",
+    color: "#000",
+    background: "transparent",
+    border: "none",
+    cursor: "pointer",
+    padding: 0,
+    transition: "opacity 0.2s ease",
+  };
+
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "6px", ...style }}>
+      <button
+        onClick={() => handleSwitch("en")}
+        style={{
+          ...baseStyle,
+          opacity: locale === "en" ? 1 : 0.5,
+          fontWeight: locale === "en" ? 600 : 400,
+        }}
+        onMouseEnter={(e) => { if (locale !== "en") e.currentTarget.style.opacity = "0.7"; }}
+        onMouseLeave={(e) => { if (locale !== "en") e.currentTarget.style.opacity = "0.5"; }}
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+      <span style={{ ...baseStyle, cursor: "default", opacity: 0.4 }}>|</span>
+      <button
+        onClick={() => handleSwitch("de")}
+        style={{
+          ...baseStyle,
+          opacity: locale === "de" ? 1 : 0.5,
+          fontWeight: locale === "de" ? 600 : 400,
+        }}
+        onMouseEnter={(e) => { if (locale !== "de") e.currentTarget.style.opacity = "0.7"; }}
+        onMouseLeave={(e) => { if (locale !== "de") e.currentTarget.style.opacity = "0.5"; }}
+        aria-label="Switch to German"
+      >
+        DE
+      </button>
+    </div>
+  );
+}
+
 export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const tt = t(locale).navbar;
@@ -19,8 +78,14 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
           <div className="navigation-link-wrap">
             <a href="#" className="nav-menu w-nav-link">{tt.agents}</a>
             <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">{tt.pricing}</a>
+            <div className="language-toggle-mobile">
+              <LanguageToggle locale={locale} />
+            </div>
           </div>
           <div className="nav-cta-links">
+            <div className="language-toggle-desktop">
+              <LanguageToggle locale={locale} style={{ marginRight: "16px" }} />
+            </div>
             <div className="button-group nav-button">
               <a href="https://app.sokosumi.com/register" className="button w-inline-block">
                 <div>{tt.requestDemo}</div>
