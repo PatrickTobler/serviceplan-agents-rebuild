@@ -58,6 +58,9 @@ export default function WhatYouGet({ locale = "en" }: { locale?: Locale }) {
                     <div className="text-size-regular text-align-center">
                       {tt.hannahQuote}
                     </div>
+                    <div className="text-size-small text-align-center" style={{ marginTop: '0.75rem', opacity: 0.8, fontWeight: 500 }}>
+                      {tt.hannahAttribution}
+                    </div>
                   </div>
                 </div>
                 <div className="faq-item-wrap">
