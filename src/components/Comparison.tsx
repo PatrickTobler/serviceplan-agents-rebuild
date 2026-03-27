@@ -19,9 +19,14 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const rawUrl = formData.get("URL") as string;
+    const normalizedUrl =
+      rawUrl && !/^https?:\/\//i.test(rawUrl)
+        ? `https://${rawUrl}`
+        : rawUrl;
     await submitAnalysisForm(
       formData.get("Email") as string,
-      formData.get("URL") as string,
+      normalizedUrl,
     );
     window.dispatchEvent(new Event("showThankYouModal"));
     form.reset();
@@ -110,7 +115,7 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                               maxLength={256}
                               name="URL"
                               placeholder={tt.midCtaUrlPlaceholder}
-                              type="url"
+                              type="text"
                               id="URL"
                               required
                             />

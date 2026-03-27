@@ -13,7 +13,11 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    await submitAnalysisForm(email, websiteUrl);
+    const normalizedUrl =
+      websiteUrl && !/^https?:\/\//i.test(websiteUrl)
+        ? `https://${websiteUrl}`
+        : websiteUrl;
+    await submitAnalysisForm(email, normalizedUrl);
     window.dispatchEvent(new Event("showThankYouModal"));
     setEmail("");
     setWebsiteUrl("");
