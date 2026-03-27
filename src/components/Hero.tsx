@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { submitAnalysisForm } from "@/lib/submitForm";
 import { Locale, t } from "@/lib/translations";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export default function Hero({ children, locale = "en" }: { children?: React.ReactNode; locale?: Locale }) {
   const tt = t(locale).hero;
@@ -187,6 +188,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
 
               </div>
               <div className="nav-cta-links">
+                <LanguageToggle locale={locale} />
                 <div className="button-group nav-button">
                   <a href={tt.requestDemoHref} className="button navigation w-inline-block">
                     <div>{navTt.requestDemo}</div>
@@ -200,6 +202,9 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                 </div>
               </div>
             </nav>
+            <div className="language-toggle-mobile" style={{ display: 'none' }}>
+              <LanguageToggle locale={locale} />
+            </div>
             <div
               className={`menu-icon-wrap w-nav-button${menuOpen ? " w--open" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}

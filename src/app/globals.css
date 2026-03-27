@@ -1,3 +1,56 @@
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 16px;
+  font-size: 14px;
+  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+}
+
+.language-toggle a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.language-toggle a.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.language-toggle a.inactive {
+  opacity: 0.5;
+}
+
+.language-toggle a.inactive:hover {
+  opacity: 0.8;
+}
+
+.language-toggle .separator {
+  opacity: 0.5;
+  color: #000;
+  user-select: none;
+}
+
+/* On mobile (medium breakpoint and below), hide desktop toggle in nav-cta-links, show mobile toggle */
+@media screen and (max-width: 991px) {
+  .nav-cta-links > .language-toggle {
+    display: none;
+  }
+  .language-toggle-mobile {
+    display: flex !important;
+    align-items: center;
+    margin-right: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .language-toggle-mobile {
+    display: none !important;
+  }
+}
+
 /* Webflow visibility control — keeps IX-animated elements hidden until ready */
 [data-wf-page] .w-ix-emptyfix::after {
   content: "";
