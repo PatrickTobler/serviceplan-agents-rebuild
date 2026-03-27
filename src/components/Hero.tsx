@@ -360,6 +360,12 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                                         required
                                         value={websiteUrl}
                                         onChange={(e) => setWebsiteUrl(e.target.value)}
+                                        onBlur={(e) => {
+                                          const val = e.target.value.trim();
+                                          if (val && !/^https?:\/\//i.test(val)) {
+                                            setWebsiteUrl(`https://${val}`);
+                                          }
+                                        }}
                                       />
                                     </div>
                                   </div>

@@ -110,7 +110,7 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                               maxLength={256}
                               name="URL"
                               placeholder={tt.midCtaUrlPlaceholder}
-                              type="url"
+                              type="text"
                               id="URL"
                               required
                             />

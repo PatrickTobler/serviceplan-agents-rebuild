@@ -4,6 +4,13 @@ declare global {
   }
 }
 
+function ensureProtocol(url: string): string {
+  const trimmed = url.trim();
+  if (!trimmed) return trimmed;
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
 function pushDataLayerEvent(event: string) {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event });
@@ -17,7 +24,7 @@ export async function submitAnalysisForm(
     const res = await fetch("/api/analysis", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, website_url: websiteUrl }),
+      body: JSON.stringify({ email, website_url: ensureProtocol(websiteUrl) }),
     });
     const data = await res.json();
     if (data.ok) pushDataLayerEvent("free_analysis_request");
@@ -37,7 +44,7 @@ export async function sendDemoNotification(formData: {
     const res = await fetch("/api/demo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ ...formData, websiteUrl: ensureProtocol(formData.websiteUrl) }),
     });
     const data = await res.json();
     if (data.ok) pushDataLayerEvent("demo_request");
