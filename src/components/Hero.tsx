@@ -220,7 +220,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
             <div>
               <div className="hero-content">
                 <div className="hero-text-wrap">
-                  <div className="margin-bottom margin-large">
+                  <div className="margin-bottom margin-small">
                     <h1>{tt.heading} <br />{tt.headingLine2} <br />{tt.headingLine3}</h1>
                   </div>
                   <div className="hero-description">

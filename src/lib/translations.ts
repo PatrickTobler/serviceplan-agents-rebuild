@@ -20,12 +20,12 @@ export const translations = {
       formDescription:
         "Enter your website URL and our research specialist Hannah will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
-      websiteLabel: "Your website URL",
+      websiteLabel: "Your website URL (for your free analysis)",
       submitButton: "Get your free analysis ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you sgree and accept our",
+      tosText: "*By proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/request-a-demo",
     },
@@ -299,8 +299,8 @@ export const translations = {
       midCtaEmailPlaceholder: "name@company.com",
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you sgree and accept our",
-      midCtaTosText: "*By Proceeding you sgree and accept our",
+        "*By entering your information for a free analysis you agree and accept our",
+      midCtaTosText: "*By proceeding you agree and accept our",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -364,7 +364,7 @@ export const translations = {
     },
     modal: {
       heading: "Thank you!",
-      subheading: "Hannah\u2019s already on it.",
+      subheading: "Your AI Coworker is already on it.",
       body: 'After confirming your email address, you\u2019ll get a free competitive analysis in your inbox \u2013 based on the URL you just shared. You\u2019ll see where you stand vs. the competition, plus a few concrete ideas for improvement.',
       bodyLine2:
         "No follow-up calls, no pressure, no fine print. Just a straight look at your competitive position.",
@@ -384,7 +384,7 @@ export const translations = {
         "You\u2019ll see real use cases, concrete examples, and actual results your team could use right away. No sales pitch, no pressure \u2013 just an honest look at whether Serviceplan Agents make sense for your team.",
       formNameLabel: "Name",
       formEmailLabel: "Your email address",
-      formWebsiteLabel: "Your website address",
+      formWebsiteLabel: "Your website URL (for your free analysis)",
       formCategoryLabel:
         "Where does your team need the most support?",
       formNamePlaceholder: "John Smith",
@@ -426,12 +426,12 @@ export const translations = {
       formDescription:
         "Geben Sie Ihre Website-URL ein und unsere Research-Spezialistin Hannah liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
-      websiteLabel: "Ihre Website-Adresse",
+      websiteLabel: "Ihre Website-URL (f\u00fcr Ihre kostenlose Analyse)",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you sgree and accept our",
+      tosText: "*By proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/de/request-a-demo",
     },
@@ -716,8 +716,8 @@ export const translations = {
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you sgree and accept our",
-      midCtaTosText: "*By Proceeding you sgree and accept our",
+        "*By entering your information for a free analysis you agree and accept our",
+      midCtaTosText: "*By proceeding you agree and accept our",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
@@ -749,9 +749,14 @@ export const translations = {
             "Ja. Alle Agenten laufen vollst\u00e4ndig in einem deutschen Microsoft Azure Rechenzentrum. Daten werden in Europa verarbeitet und gespeichert. Die Architektur ist by Design EU AI Act-konform, mit vollst\u00e4ndiger Nachvollziehbarkeit aller Agent-Entscheidungen \u00fcber das Masumi Protokoll.",
         },
         {
-          question: "Was kann ich tun, wenn etwas nicht funktioniert?",
+          question: "Wie schnell werden Ergebnisse geliefert?",
           answer:
-            "Falls Probleme auftreten, wenden Sie sich gerne an Elena oder kontaktieren Sie uns direkt unter support@serviceplan-agents.com \u2013 wir helfen Ihnen gerne weiter!",
+            "Eine typische Wettbewerbsanalyse dauert 15\u201320 Minuten. Komplexere Recherchen mit mehreren Datenquellen dauern 20\u201330 Minuten. Ihr Agent benachrichtigt Sie per E-Mail, sobald die Ergebnisse bereit sind.",
+        },
+        {
+          question: "Was soll ich tun, wenn etwas nicht funktioniert?",
+          answer:
+            "Wenn etwas nicht wie erwartet funktioniert, k\u00f6nnen Sie Elena \u2013 unsere Partnerin f\u00fcr Projektplanung & Operations \u2013 um Hilfe bitten. Alternativ erreichen Sie uns direkt unter support@serviceplan-agents.com und wir melden uns schnellstm\u00f6glich.",
         },
       ],
     },
@@ -776,7 +781,7 @@ export const translations = {
     },
     modal: {
       heading: "Danke.",
-      subheading: "Hannah ist schon dran.",
+      subheading: "Ihr AI Coworker ist schon dran.",
       body: "Nach Best\u00e4tigung Ihrer E-Mail-Adresse erhalten Sie eine kostenlose Wettbewerbsanalyse in Ihr Postfach \u2013 basierend auf der URL, die Sie gerade geteilt haben. Sie bekommen einen klaren \u00dcberblick, wo Sie im Vergleich zum Wettbewerb stehen, und ein paar konkrete Verbesserungsideen.",
       bodyLine2:
         "Keine Follow-up-Anrufe, kein Druck, kein Kleingedrucktes. Nur ein klarer Blick auf Ihre Firmenpositionierung.",
@@ -796,7 +801,7 @@ export const translations = {
         "Sie sehen echte Anwendungsf\u00e4lle, konkrete Beispiele und reale Ergebnisse, die Ihr Team direkt nutzen k\u00f6nnte. Kein Verkaufsgespr\u00e4ch, kein Druck \u2013 nur ein ehrlicher Blick darauf, ob Serviceplan Agents f\u00fcr Ihr Team Sinn machen.",
       formNameLabel: "Name",
       formEmailLabel: "Ihre E-Mail-Adresse",
-      formWebsiteLabel: "Ihre Website-Adresse",
+      formWebsiteLabel: "Ihre Website-URL (f\u00fcr Ihre kostenlose Analyse)",
       formCategoryLabel:
         "Wo braucht Ihr Team die meiste Unterst\u00fctzung?",
       formNamePlaceholder: "John Smith",
@@ -814,7 +819,7 @@ export const translations = {
       legalSokosumi: "Sokosumi Marktplatzes",
       legalSuffix: "zur Kenntnis genommen haben.",
       modalHeading: "Danke.",
-      modalSubheading: "Hannah ist schon dran.",
+      modalSubheading: "Ihr AI Coworker ist schon dran.",
       modalBody:
         "Nach Best\u00e4tigung Ihrer E-Mail-Adresse erhalten Sie eine kostenlose Wettbewerbsanalyse in Ihr Postfach \u2013 basierend auf der URL, die Sie gerade geteilt haben. Sie bekommen einen klaren \u00dcberblick, wo Sie im Vergleich zum Wettbewerb stehen, und ein paar konkrete Verbesserungsideen.\n\nKeine Follow-up-Anrufe, kein Druck, kein Kleingedrucktes. Nur ein klarer Blick auf Ihre\nWettbewerbsposition.",
     },
