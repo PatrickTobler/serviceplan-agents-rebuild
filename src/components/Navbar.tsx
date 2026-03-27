@@ -21,12 +21,12 @@ function LanguageToggle({ locale, style }: { locale: Locale; style?: React.CSSPr
   const baseStyle: React.CSSProperties = {
     fontFamily: "var(--_serviceplan-styles---demi)",
     fontSize: "14px",
-    color: "#000",
+    color: "#fff",
     background: "transparent",
     border: "none",
     cursor: "pointer",
     padding: 0,
-    transition: "opacity 0.2s ease",
+    transition: "opacity 0.2s",
   };
 
   return (
@@ -36,7 +36,7 @@ function LanguageToggle({ locale, style }: { locale: Locale; style?: React.CSSPr
         style={{
           ...baseStyle,
           opacity: locale === "en" ? 1 : 0.5,
-          fontWeight: locale === "en" ? 600 : 400,
+          fontWeight: locale === "en" ? "bold" : 400,
         }}
         onMouseEnter={(e) => { if (locale !== "en") e.currentTarget.style.opacity = "0.7"; }}
         onMouseLeave={(e) => { if (locale !== "en") e.currentTarget.style.opacity = "0.5"; }}
@@ -44,13 +44,13 @@ function LanguageToggle({ locale, style }: { locale: Locale; style?: React.CSSPr
       >
         EN
       </button>
-      <span style={{ ...baseStyle, cursor: "default", opacity: 0.4 }}>|</span>
+      <span style={{ ...baseStyle, cursor: "default", opacity: 0.3 }}>|</span>
       <button
         onClick={() => handleSwitch("de")}
         style={{
           ...baseStyle,
           opacity: locale === "de" ? 1 : 0.5,
-          fontWeight: locale === "de" ? 600 : 400,
+          fontWeight: locale === "de" ? "bold" : 400,
         }}
         onMouseEnter={(e) => { if (locale !== "de") e.currentTarget.style.opacity = "0.7"; }}
         onMouseLeave={(e) => { if (locale !== "de") e.currentTarget.style.opacity = "0.5"; }}
@@ -82,10 +82,10 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
               <LanguageToggle locale={locale} />
             </div>
           </div>
+          <div className="language-toggle-desktop" style={{ display: "flex", alignItems: "center", gap: "6px", marginRight: "1rem" }}>
+            <LanguageToggle locale={locale} />
+          </div>
           <div className="nav-cta-links">
-            <div className="language-toggle-desktop">
-              <LanguageToggle locale={locale} style={{ marginRight: "16px" }} />
-            </div>
             <div className="button-group nav-button">
               <a href="https://app.sokosumi.com/register" className="button w-inline-block">
                 <div>{tt.requestDemo}</div>

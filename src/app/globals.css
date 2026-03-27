@@ -2247,13 +2247,13 @@ margin: 0rem !important;
 }
 
 .language-toggle-desktop {
-  display: flex;
+  display: flex !important;
   align-items: center;
 }
 
 @media screen and (max-width: 991px) {
   .language-toggle-desktop {
-    display: none;
+    display: none !important;
   }
 
   .language-toggle-mobile {
