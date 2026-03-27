@@ -19,9 +19,20 @@ export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
   const [showModal, setShowModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const normalizeUrl = (url: string): string => {
+    const trimmed = url.trim();
+    if (!trimmed) return trimmed;
+    if (/^https?:\/\//i.test(trimmed)) return trimmed;
+    return `https://${trimmed}`;
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    await sendDemoNotification(formData);
+    const normalizedData = {
+      ...formData,
+      websiteUrl: normalizeUrl(formData.websiteUrl),
+    };
+    await sendDemoNotification(normalizedData);
     setShowModal(true);
   };
 
@@ -661,7 +672,7 @@ export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
                           name="website-url"
                           data-name="Website URL"
                           placeholder={tt.formWebsitePlaceholder}
-                          type="url"
+                          type="text"
                           id="website-url"
                           value={formData.websiteUrl}
                           onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
