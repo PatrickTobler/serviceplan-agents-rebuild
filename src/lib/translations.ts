@@ -15,7 +15,7 @@ export const translations = {
       headingLine3: "By Serviceplan.",
       description:
         "Europe\u2019s leading agency \u2013 now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
-      formHeading: "Try Hannah free \u2013 no strings attached",
+      formHeading: "Try your AI Coworker free \u2013 no strings attached",
       formDescription:
         "Enter your website URL and our research specialist Hannah will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
@@ -72,6 +72,8 @@ export const translations = {
         "Serviceplan Agents deliver ready-to-use results \u2013 not raw data, not chat logs. Documents you can walk into your next meeting with.",
       hannahQuote:
         "\u201cI get excited when high-quality data starts to reveal something true. I get less excited when someone asks me to make weak findings look convincing.\u201d",
+      hannahQuoteAttribution:
+        "\u2014 Hannah, Research Partner, AI Coworker",
       accordionItems: [
         {
           title: "Competitive Analyses",
@@ -333,6 +335,11 @@ export const translations = {
           answer:
             "A typical competitive analysis takes 15\u201320 minutes. More complex research involving multiple data sources takes 20\u201330 minutes. Your agent pings you by email as soon as the results are ready.",
         },
+        {
+          question: "What should I do if something doesn't work?",
+          answer:
+            "If you run into any issues, feel free to reach out to Elena or contact us directly at support@serviceplan-agents.com \u2013 we're happy to help!",
+        },
       ],
     },
     houseOfAI: {
@@ -413,7 +420,7 @@ export const translations = {
       headingLine3: "Von Serviceplan.",
       description:
         "Europas f\u00fchrende Agentur \u2013 jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
-      formHeading: "Hannah kostenlos testen \u2013 ganz unverbindlich",
+      formHeading: "Ihren AI Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
         "Geben Sie Ihre Website-URL ein und unsere Research-Spezialistin Hannah liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
@@ -471,6 +478,8 @@ export const translations = {
         "Serviceplan Agents liefern fertige Ergebnisse \u2013 keine Rohdaten, keine Chat-Protokolle. Dokumente, die Sie direkt im Meeting nutzen k\u00f6nnen.",
       hannahQuote:
         "\u201eIch bin begeistert, wenn hochwertige Daten zu echten Erkenntnissen f\u00fchren. Weniger begeistert bin ich, wenn mich jemand bittet schwache Ergebnisse \u00fcberzeugend darzustellen.\u201c",
+      hannahQuoteAttribution:
+        "\u2014 Hannah, Research Partner, AI Coworker",
       accordionItems: [
         {
           title: "Wettbewerbsanalysen",
@@ -736,6 +745,11 @@ export const translations = {
           question: "Sind Serviceplan Agents DSGVO-konform?",
           answer:
             "Ja. Alle Agenten laufen vollst\u00e4ndig in einem deutschen Microsoft Azure Rechenzentrum. Daten werden in Europa verarbeitet und gespeichert. Die Architektur ist by Design EU AI Act-konform, mit vollst\u00e4ndiger Nachvollziehbarkeit aller Agent-Entscheidungen \u00fcber das Masumi Protokoll.",
+        },
+        {
+          question: "Was kann ich tun, wenn etwas nicht funktioniert?",
+          answer:
+            "Falls Probleme auftreten, wenden Sie sich gerne an Elena oder kontaktieren Sie uns direkt unter support@serviceplan-agents.com \u2013 wir helfen Ihnen gerne weiter!",
         },
       ],
     },
