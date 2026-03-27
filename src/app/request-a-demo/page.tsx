@@ -21,8 +21,7 @@ export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
 
   const normalizeUrl = (url: string): string => {
     const trimmed = url.trim();
-    if (!trimmed) return trimmed;
-    if (!/^https?:\/\//i.test(trimmed)) {
+    if (trimmed && !/^https?:\/\//i.test(trimmed)) {
       return `https://${trimmed}`;
     }
     return trimmed;
@@ -679,9 +678,9 @@ export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
                           value={formData.websiteUrl}
                           onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
                           onBlur={(e) => {
-                            const val = e.target.value.trim();
-                            if (val && !/^https?:\/\//i.test(val)) {
-                              setFormData({ ...formData, websiteUrl: `https://${val}` });
+                            const normalized = normalizeUrl(e.target.value);
+                            if (normalized !== formData.websiteUrl) {
+                              setFormData({ ...formData, websiteUrl: normalized });
                             }
                           }}
                         />
