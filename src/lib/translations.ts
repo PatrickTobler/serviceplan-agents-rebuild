@@ -15,16 +15,17 @@ export const translations = {
       headingLine3: "By Serviceplan.",
       description:
         "Europe\u2019s leading agency \u2013 now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
-      formHeading: "Try Hannah free \u2013 no strings attached",
+      formHeading: "Try your AI Coworker free \u2013 no strings attached",
       formDescription:
-        "Enter your website URL and our research specialist Hannah will deliver a free competitive analysis straight to your inbox.",
+        "Enter your website URL and your AI Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
       websiteLabel: "Your website URL",
+      websiteHelper: "So we can analyze your competitive landscape",
       submitButton: "Get your free analysis ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you sgree and accept our",
+      tosText: "*By Proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/request-a-demo",
     },
@@ -289,15 +290,15 @@ export const translations = {
       midCtaHeading:
         "Ready for your free analysis \u2013 no strings attached?",
       midCtaDescription:
-        "Enter your URL and Hannah analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
+        "Enter your URL and your AI Coworker analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
       midCtaUrlLabel: "Your website URL",
       midCtaEmailLabel: "Your email address",
       midCtaUrlPlaceholder: "https://your-website.com",
       midCtaEmailPlaceholder: "name@company.com",
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you sgree and accept our",
-      midCtaTosText: "*By Proceeding you sgree and accept our",
+        "*By entering your information for a free analysis you agree and accept our",
+      midCtaTosText: "*By Proceeding you agree and accept our",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -333,6 +334,11 @@ export const translations = {
           answer:
             "A typical competitive analysis takes 15\u201320 minutes. More complex research involving multiple data sources takes 20\u201330 minutes. Your agent pings you by email as soon as the results are ready.",
         },
+        {
+          question: "What should I do if something doesn't work?",
+          answer:
+            "Just ask Elena \u2014 she\u2019s your project management agent and can help troubleshoot. You can also reach our support team at support@serviceplan-agents.com",
+        },
       ],
     },
     houseOfAI: {
@@ -356,7 +362,7 @@ export const translations = {
     },
     modal: {
       heading: "Thank you!",
-      subheading: "Hannah\u2019s already on it.",
+      subheading: "Your AI Coworker is already on it.",
       body: 'After confirming your email address, you\u2019ll get a free competitive analysis in your inbox \u2013 based on the URL you just shared. You\u2019ll see where you stand vs. the competition, plus a few concrete ideas for improvement.',
       bodyLine2:
         "No follow-up calls, no pressure, no fine print. Just a straight look at your competitive position.",
@@ -377,6 +383,7 @@ export const translations = {
       formNameLabel: "Name",
       formEmailLabel: "Your email address",
       formWebsiteLabel: "Your website address",
+      formWebsiteHelper: "So we can analyze your competitive landscape",
       formCategoryLabel:
         "Where does your team need the most support?",
       formNamePlaceholder: "John Smith",
@@ -413,17 +420,18 @@ export const translations = {
       headingLine3: "Von Serviceplan.",
       description:
         "Europas f\u00fchrende Agentur \u2013 jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
-      formHeading: "Hannah kostenlos testen \u2013 ganz unverbindlich",
+      formHeading: "Ihren AI Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
-        "Geben Sie Ihre Website-URL ein und unsere Research-Spezialistin Hannah liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
+        "Geben Sie Ihre Website-URL ein und Ihr AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
       websiteLabel: "Ihre Website-Adresse",
+      websiteHelper: "Damit wir Ihre Wettbewerbslandschaft analysieren k\u00f6nnen",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you sgree and accept our",
-      tosLink: "Terms of Service",
+        "*Mit der Eingabe Ihrer Daten f\u00fcr eine kostenlose Analyse stimmen Sie unserer",
+      privacyLink: "Datenschutzerkl\u00e4rung zu.",
+      tosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      tosLink: "Nutzungsbedingungen zu",
       requestDemoHref: "/de/request-a-demo",
     },
     trustIndicators: {
@@ -512,9 +520,9 @@ export const translations = {
       elenaDescription:
         "Elena macht aus komplexen Vorhaben umsetzbare Arbeitspakete. Sie definiert Umfang, Reihenfolge und Abh\u00e4ngigkeiten und identifiziert Risiken, bevor sie zum Problem werden.",
       elenaCta: "Kostenlose Analyse starten > Wohin soll der f\u00fchren?",
-      deliveryLabel: "Delivery",
-      costLabel: "Cost",
-      outputLabel: "Output",
+      deliveryLabel: "Lieferzeit",
+      costLabel: "Kosten",
+      outputLabel: "Ausgabe",
     },
     agentTeam: {
       heading: "Ihr KI-Marketing-Team",
@@ -554,7 +562,7 @@ export const translations = {
       learnMore: "Mehr \u00fcber Sokosumi erfahren",
     },
     companies: {
-      heading: "Over 500 companies use agents on Sokosumi.",
+      heading: "\u00dcber 500 Unternehmen nutzen Agents auf Sokosumi.",
       testimonial1Name: "Florian von Keyserlingk",
       testimonial1Role:
         "Florian von Keyserlingk, Inhaber und Sound Engineer, iftyfour audio post production",
@@ -698,15 +706,15 @@ export const translations = {
       midCtaHeading:
         "Bereit f\u00fcr Ihre kostenlose Analyse \u2013 ganz unverbindlich?",
       midCtaDescription:
-        "URL eingeben und Hannah analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
+        "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
       midCtaUrlLabel: "Ihre E-Mail-Adresse",
       midCtaEmailLabel: "Ihre Website-URL",
       midCtaUrlPlaceholder: "https://ihre-website.de",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you sgree and accept our",
-      midCtaTosText: "*By Proceeding you sgree and accept our",
+        "*Mit der Eingabe Ihrer Daten f\u00fcr eine kostenlose Analyse stimmen Sie unserer",
+      midCtaTosText: "*Mit dem Fortfahren stimmen Sie unseren",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
@@ -737,6 +745,11 @@ export const translations = {
           answer:
             "Ja. Alle Agenten laufen vollst\u00e4ndig in einem deutschen Microsoft Azure Rechenzentrum. Daten werden in Europa verarbeitet und gespeichert. Die Architektur ist by Design EU AI Act-konform, mit vollst\u00e4ndiger Nachvollziehbarkeit aller Agent-Entscheidungen \u00fcber das Masumi Protokoll.",
         },
+        {
+          question: "Was soll ich tun, wenn etwas nicht funktioniert?",
+          answer:
+            "Fragen Sie einfach Elena \u2013 sie ist Ihre Projektmanagement-Agentin und kann bei der Fehlerbehebung helfen. Sie k\u00f6nnen unser Support-Team auch unter support@serviceplan-agents.com erreichen.",
+        },
       ],
     },
     houseOfAI: {
@@ -749,10 +762,10 @@ export const translations = {
       column1Header: "Serviceplan Agents",
       about: "\u00dcber uns",
       pricing: "Preise",
-      column2Header: "Resources",
+      column2Header: "Ressourcen",
       contact: "Kontakt",
       contactHref: "/de/request-a-demo",
-      column3Header: "Legal",
+      column3Header: "Rechtliches",
       imprint: "Impressum",
       privacyPolicy: "Datenschutzerkl\u00e4rung",
       termsOfService: "Nutzungsbedingungen",
@@ -760,7 +773,7 @@ export const translations = {
     },
     modal: {
       heading: "Danke.",
-      subheading: "Hannah ist schon dran.",
+      subheading: "Ihr AI Coworker ist schon dran.",
       body: "Nach Best\u00e4tigung Ihrer E-Mail-Adresse erhalten Sie eine kostenlose Wettbewerbsanalyse in Ihr Postfach \u2013 basierend auf der URL, die Sie gerade geteilt haben. Sie bekommen einen klaren \u00dcberblick, wo Sie im Vergleich zum Wettbewerb stehen, und ein paar konkrete Verbesserungsideen.",
       bodyLine2:
         "Keine Follow-up-Anrufe, kein Druck, kein Kleingedrucktes. Nur ein klarer Blick auf Ihre Firmenpositionierung.",
@@ -781,6 +794,7 @@ export const translations = {
       formNameLabel: "Name",
       formEmailLabel: "Ihre E-Mail-Adresse",
       formWebsiteLabel: "Ihre Website-Adresse",
+      formWebsiteHelper: "Damit wir Ihre Wettbewerbslandschaft analysieren k\u00f6nnen",
       formCategoryLabel:
         "Wo braucht Ihr Team die meiste Unterst\u00fctzung?",
       formNamePlaceholder: "John Smith",
@@ -798,7 +812,7 @@ export const translations = {
       legalSokosumi: "Sokosumi Marktplatzes",
       legalSuffix: "zur Kenntnis genommen haben.",
       modalHeading: "Danke.",
-      modalSubheading: "Hannah ist schon dran.",
+      modalSubheading: "Ihr AI Coworker ist schon dran.",
       modalBody:
         "Nach Best\u00e4tigung Ihrer E-Mail-Adresse erhalten Sie eine kostenlose Wettbewerbsanalyse in Ihr Postfach \u2013 basierend auf der URL, die Sie gerade geteilt haben. Sie bekommen einen klaren \u00dcberblick, wo Sie im Vergleich zum Wettbewerb stehen, und ein paar konkrete Verbesserungsideen.\n\nKeine Follow-up-Anrufe, kein Druck, kein Kleingedrucktes. Nur ein klarer Blick auf Ihre\nWettbewerbsposition.",
     },

@@ -666,6 +666,9 @@ export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
                           value={formData.websiteUrl}
                           onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
                         />
+                        <div className="text-size-tiny text-style-italic">
+                          {tt.formWebsiteHelper}
+                        </div>
                       </div>
                       <div className="form-input-wrap">
                         <label htmlFor="Categoty" className="form_label is-black">{tt.formCategoryLabel}</label>

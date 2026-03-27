@@ -215,7 +215,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
         </div>
 
         {/* Hero Content */}
-        <div className="margin-top margin-xlarge">
+        <div className="margin-top margin-medium">
           <div className="padding-global">
             <div>
               <div className="hero-content">
@@ -361,6 +361,9 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                                         value={websiteUrl}
                                         onChange={(e) => setWebsiteUrl(e.target.value)}
                                       />
+                                      <div className="text-size-tiny text-style-italic is-white">
+                                        {tt.websiteHelper}
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
