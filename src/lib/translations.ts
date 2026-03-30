@@ -137,7 +137,7 @@ export const translations = {
       elenaCta: "Get your free analysis",
       alexTagline: "How does data come alive?",
       alexByLabel: "by Serviceplan",
-      alexAvailability: "Coming 2026",
+      alexAvailability: "Available now",
       alexRole: "Coding Partner",
       alexDescription:
         "Alex turns data into dashboards, visuals, and interactive micro-sites. He is making information dynamic, accessible, and easy to share.",
@@ -536,7 +536,7 @@ export const translations = {
       elenaCta: "Kostenlose Analyse starten",
       alexTagline: "Wie werden Daten lebendig?",
       alexByLabel: "by Serviceplan",
-      alexAvailability: "Kommt 2026",
+      alexAvailability: "Jetzt verfügbar",
       alexRole: "Coding Partner",
       alexDescription:
         "Alex verwandelt Daten in Dashboards, Visualisierungen und interaktive Micro-Sites. Er macht Informationen dynamisch, zug\u00e4nglich und leicht teilbar.",
