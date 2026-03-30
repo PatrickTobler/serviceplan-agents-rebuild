@@ -15,7 +15,7 @@ export const translations = {
       headingLine3: "By Serviceplan.",
       description:
         "Europe\u2019s leading agency \u2013 now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
-      formHeading: "Try your AI Coworker free \u2013 no strings attached",
+      formHeading: "Try AI Coworker free \u2013 no strings attached",
       formDescription:
         "Enter your website URL and your AI Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
@@ -73,6 +73,7 @@ export const translations = {
         "Serviceplan Agents deliver ready-to-use results \u2013 not raw data, not chat logs. Documents you can walk into your next meeting with.",
       hannahQuote:
         "\u201cI get excited when high-quality data starts to reveal something true. I get less excited when someone asks me to make weak findings look convincing.\u201d",
+      hannahQuoteAttribution: "\u2014 Hannah, AI COWORKER (Research Partner)",
       accordionItems: [
         {
           title: "Competitive Analyses",
@@ -420,7 +421,7 @@ export const translations = {
       headingLine3: "Von Serviceplan.",
       description:
         "Europas f\u00fchrende Agentur \u2013 jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
-      formHeading: "Ihren AI Coworker kostenlos testen \u2013 ganz unverbindlich",
+      formHeading: "AI Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
         "Geben Sie Ihre Website-URL ein und Ihr AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
@@ -479,6 +480,7 @@ export const translations = {
         "Serviceplan Agents liefern fertige Ergebnisse \u2013 keine Rohdaten, keine Chat-Protokolle. Dokumente, die Sie direkt im Meeting nutzen k\u00f6nnen.",
       hannahQuote:
         "\u201eIch bin begeistert, wenn hochwertige Daten zu echten Erkenntnissen f\u00fchren. Weniger begeistert bin ich, wenn mich jemand bittet schwache Ergebnisse \u00fcberzeugend darzustellen.\u201c",
+      hannahQuoteAttribution: "\u2014 Hannah, AI COWORKER (Research Partner)",
       accordionItems: [
         {
           title: "Wettbewerbsanalysen",
