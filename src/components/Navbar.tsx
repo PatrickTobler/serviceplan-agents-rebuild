@@ -1,70 +1,38 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Locale, t } from "@/lib/translations";
 
-function LanguageToggle({ locale, style }: { locale: Locale; style?: React.CSSProperties }) {
-  const handleSwitch = (newLocale: Locale) => {
-    if (newLocale === locale) return;
-    document.cookie = "locale=" + newLocale + ";path=/;max-age=31536000";
-    const pathname = window.location.pathname;
-    if (newLocale === "de") {
-      // Going from EN to DE
-      window.location.href = "/de" + pathname;
-    } else {
-      // Going from DE to EN: strip /de prefix
-      const stripped = pathname.replace(/^\/de(\/|$)/, "/");
-      window.location.href = stripped || "/";
-    }
-  };
-
-  const baseStyle: React.CSSProperties = {
-    fontFamily: "var(--_serviceplan-styles---demi)",
-    fontSize: "14px",
-    color: "#fff",
-    background: "transparent",
-    border: "none",
-    cursor: "pointer",
-    padding: 0,
-    transition: "opacity 0.2s",
-  };
-
+function GlobeIcon() {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "6px", ...style }}>
-      <button
-        onClick={() => handleSwitch("en")}
-        style={{
-          ...baseStyle,
-          opacity: locale === "en" ? 1 : 0.5,
-          fontWeight: locale === "en" ? "bold" : 400,
-        }}
-        onMouseEnter={(e) => { if (locale !== "en") e.currentTarget.style.opacity = "0.7"; }}
-        onMouseLeave={(e) => { if (locale !== "en") e.currentTarget.style.opacity = "0.5"; }}
-        aria-label="Switch to English"
-      >
-        EN
-      </button>
-      <span style={{ ...baseStyle, cursor: "default", opacity: 0.3 }}>|</span>
-      <button
-        onClick={() => handleSwitch("de")}
-        style={{
-          ...baseStyle,
-          opacity: locale === "de" ? 1 : 0.5,
-          fontWeight: locale === "de" ? "bold" : 400,
-        }}
-        onMouseEnter={(e) => { if (locale !== "de") e.currentTarget.style.opacity = "0.7"; }}
-        onMouseLeave={(e) => { if (locale !== "de") e.currentTarget.style.opacity = "0.5"; }}
-        aria-label="Switch to German"
-      >
-        DE
-      </button>
-    </div>
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
   );
 }
 
 export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
   const tt = t(locale).navbar;
+
+  const switchLanguage = () => {
+    const newLocale = locale === "en" ? "de" : "en";
+    document.cookie = `locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 365}`;
+    router.push(newLocale === "de" ? "/de" : "/");
+  };
 
   return (
     <div className="navbar_component up w-nav" data-collapse="medium" role="banner">
@@ -78,15 +46,25 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
           <div className="navigation-link-wrap">
             <a href="#" className="nav-menu w-nav-link">{tt.agents}</a>
             <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">{tt.pricing}</a>
-            <div className="language-toggle-mobile">
-              <LanguageToggle locale={locale} />
-            </div>
-          </div>
-          <div className="language-toggle-desktop" style={{ display: "flex", alignItems: "center", gap: "6px", marginRight: "1rem" }}>
-            <LanguageToggle locale={locale} />
+            <button
+              onClick={switchLanguage}
+              className="language-selector language-selector--mobile"
+              aria-label={locale === "en" ? "Switch to German" : "Auf Englisch wechseln"}
+            >
+              <GlobeIcon />
+              <span>{locale === "en" ? "EN" : "DE"}</span>
+            </button>
           </div>
           <div className="nav-cta-links">
             <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+              <button
+                onClick={switchLanguage}
+                className="language-selector"
+                aria-label={locale === "en" ? "Switch to German" : "Auf Englisch wechseln"}
+              >
+                <GlobeIcon />
+                <span>{locale === "en" ? "EN" : "DE"}</span>
+              </button>
               <a href={tt.freeAnalysisHref} className="button is-secondary navigation w-inline-block" style={{ border: "1px solid var(--base-color-brand--red, #e60000)", whiteSpace: "nowrap" }}>
                 <div>{tt.freeAnalysis}</div>
               </a>
