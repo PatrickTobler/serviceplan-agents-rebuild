@@ -142,45 +142,6 @@ export default function WhatYouGet({ locale = "en" }: { locale?: Locale }) {
                 </div>
               </div>
               <div className="spacer-large"></div>
-              <div className="elena-content-wrap hide">
-                <div className="div-block-14">
-                  <div className="w-embed">
-                    <svg
-                      width="141"
-                      height="56"
-                      viewBox="0 0 141 56"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M-8.77008e-05 55.02V0.420017H34.1599V4.20002H4.19991V16.31H34.1599V20.09H4.19991V51.24H34.1599V55.02H-8.77008e-05ZM39.1726 55.02V0.420017H43.3726V51.24H49.8826V55.02H39.1726ZM52.9839 55.02V0.420017H87.1439V4.20002H57.1839V16.31H87.1439V20.09H57.1839V51.24H87.1439V55.02H52.9839ZM118.267 14.77C118.267 8.68002 113.367 3.78002 107.277 3.78002C101.257 3.78002 96.3566 8.68002 96.3566 14.77V55.02H92.1566V0.420017H96.3566V5.32002C98.9466 2.03002 102.937 1.85966e-05 107.557 1.85966e-05C115.957 1.85966e-05 122.467 6.51002 122.467 14.49V55.02H118.267V14.77ZM128.321 55.02V0.420017H140.781V55.02H136.581V39.48C135.951 39.69 135.251 39.83 134.551 39.83C133.851 39.83 133.151 39.69 132.521 39.48V55.02H128.321ZM132.521 34.02C132.521 35.14 133.361 36.05 134.551 36.05C135.671 36.05 136.581 35.14 136.581 34.02C136.581 32.9 135.671 31.99 134.551 31.99C133.361 31.99 132.521 32.9 132.521 34.02ZM132.521 28.56C133.151 28.35 133.851 28.21 134.551 28.21C135.251 28.21 135.951 28.35 136.581 28.56V4.20002H132.521V28.56Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                  <div className="spacer-medium"></div>
-                  <h3 className="heading-style-h3">
-                    Project Planning &amp; Operations
-                  </h3>
-                  <div className="spacer-small"></div>
-                  <div className="text-size-regular is-white">
-                    Elena breaks down complex initiatives into executable
-                    workstreams. She defines scope, sequence, and dependencies —
-                    and identifies risks before they become problems.
-                  </div>
-                  <div className="spacer-medium"></div>
-                  <a href="#" className="button is-red w-button">
-                    Get your free analysis
-                  </a>
-                </div>
-                <img
-                  src="/images/elena.png"
-                  loading="lazy"
-                  sizes="100vw"
-                  alt=""
-                  className="elena-mid-img"
-                />
-              </div>
               <div className="elena-content">
                 <div className="div-block-14">
                   <div className="text-icon w-embed">
