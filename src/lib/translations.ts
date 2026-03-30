@@ -580,7 +580,7 @@ export const translations = {
       downloadButton: "Guide laden",
     },
     pricing: {
-      heading: "Pakete, die mit Ihnen wachsen.",
+      heading: "Pakete, die zu Ihnen passen.",
       subheading:
         "Ein Abo. Alle Agents dabei. Kostenlos testen und upgraden, wenn Sie mehr wollen.",
       ctaButton: "Kostenlose Analyse starten",
