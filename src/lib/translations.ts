@@ -67,7 +67,7 @@ export const translations = {
       kanbanSustainability: "Sustainability messaging",
     },
     whatYouGet: {
-      heading: "What You Get. In Minutes.",
+      heading: "Popular Use Cases",
       subheading:
         "Serviceplan Agents deliver ready-to-use results \u2013 not raw data, not chat logs. Documents you can walk into your next meeting with.",
       hannahQuote:
@@ -466,7 +466,7 @@ export const translations = {
       kanbanSustainability: "Nachhaltigkeits-Messaging",
     },
     whatYouGet: {
-      heading: "Alles aus einer Hand. In Minuten.",
+      heading: "Beliebte Anwendungsbeispiele",
       subheading:
         "Serviceplan Agents liefern fertige Ergebnisse \u2013 keine Rohdaten, keine Chat-Protokolle. Dokumente, die Sie direkt im Meeting nutzen k\u00f6nnen.",
       hannahQuote:

@@ -40,8 +40,8 @@ export default function Home({ locale = "en" }: { locale?: Locale }) {
         </Hero>
         <div className="section-wrapper top-0">
           <div className="bg-white-wrap">
-            <HowItWorks locale={locale} />
             <WhatYouGet locale={locale} />
+            <HowItWorks locale={locale} />
             <div className="hide">
               <div className="spacer-xlarge"></div>
               <h2 className="text-weight-semibold">50+ Years of Serviceplan Marketing Expertise. <br/>Built into Every Agent.</h2>
