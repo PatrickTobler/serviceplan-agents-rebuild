@@ -144,11 +144,6 @@ export default function WhatYouGet({ locale = "en" }: { locale?: Locale }) {
                   })}
                 </div>
               </div>
-              <div className="spacer-xlarge"></div>
-              <h2 className="text-weight-semibold">
-                50+ Years of Serviceplan Marketing Expertise. <br />
-                Built into Every Agent.
-              </h2>
             </div>
           </div>
         </div>
