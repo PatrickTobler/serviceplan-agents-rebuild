@@ -15,16 +15,16 @@ export const translations = {
       headingLine3: "By Serviceplan.",
       description:
         "Europe\u2019s leading agency \u2013 now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
-      formHeading: "Try Hannah free \u2013 no strings attached",
+      formHeading: "Try your AI Coworker free \u2013 no strings attached",
       formDescription:
-        "Enter your website URL and our research specialist Hannah will deliver a free competitive analysis straight to your inbox.",
+        "Enter your website URL and our AI Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
-      websiteLabel: "Your website URL",
+      websiteLabel: "Your website URL (for competitive analysis)",
       submitButton: "Get your free analysis ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you sgree and accept our",
+      tosText: "*By Proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/request-a-demo",
     },
@@ -72,6 +72,7 @@ export const translations = {
         "Serviceplan Agents deliver ready-to-use results \u2013 not raw data, not chat logs. Documents you can walk into your next meeting with.",
       hannahQuote:
         "\u201cI get excited when high-quality data starts to reveal something true. I get less excited when someone asks me to make weak findings look convincing.\u201d",
+      hannahQuoteAttribution: "Hannah, Research Partner, AI Coworker",
       accordionItems: [
         {
           title: "Competitive Analyses",
@@ -289,15 +290,15 @@ export const translations = {
       midCtaHeading:
         "Ready for your free analysis \u2013 no strings attached?",
       midCtaDescription:
-        "Enter your URL and Hannah analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
+        "Enter your URL and your AI Coworker analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
       midCtaUrlLabel: "Your website URL",
       midCtaEmailLabel: "Your email address",
       midCtaUrlPlaceholder: "https://your-website.com",
       midCtaEmailPlaceholder: "name@company.com",
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you sgree and accept our",
-      midCtaTosText: "*By Proceeding you sgree and accept our",
+        "*By entering your information for a free analysis you agree and accept our",
+      midCtaTosText: "*By Proceeding you agree and accept our",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -332,6 +333,11 @@ export const translations = {
           question: "How fast are results delivered?",
           answer:
             "A typical competitive analysis takes 15\u201320 minutes. More complex research involving multiple data sources takes 20\u201330 minutes. Your agent pings you by email as soon as the results are ready.",
+        },
+        {
+          question: "What do I do when something doesn't work?",
+          answer:
+            "If you run into any issues, reach out to Elena or contact us at support@serviceplan-agents.com \u2014 we're happy to help.",
         },
       ],
     },
@@ -413,16 +419,16 @@ export const translations = {
       headingLine3: "Von Serviceplan.",
       description:
         "Europas f\u00fchrende Agentur \u2013 jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
-      formHeading: "Hannah kostenlos testen \u2013 ganz unverbindlich",
+      formHeading: "AI Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
-        "Geben Sie Ihre Website-URL ein und unsere Research-Spezialistin Hannah liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
+        "Geben Sie Ihre Website-URL ein und unser AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
-      websiteLabel: "Ihre Website-Adresse",
+      websiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you sgree and accept our",
+      tosText: "*By Proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/de/request-a-demo",
     },
@@ -470,7 +476,8 @@ export const translations = {
       subheading:
         "Serviceplan Agents liefern fertige Ergebnisse \u2013 keine Rohdaten, keine Chat-Protokolle. Dokumente, die Sie direkt im Meeting nutzen k\u00f6nnen.",
       hannahQuote:
-        "\u201eIch bin begeistert, wenn hochwertige Daten zu echten Erkenntnissen f\u00fchren. Weniger begeistert bin ich, wenn mich jemand bittet schwache Ergebnisse \u00fcberzeugend darzustellen.\u201c",
+        "\u201eIch bin begeistert, wenn hochwertige Daten zu echten Erkenntnissen f\u00fchren. Weniger begeistert bin ich, wenn mich jemand bittet, schwache Ergebnisse \u00fcberzeugend darzustellen.\u201c",
+      hannahQuoteAttribution: "Hannah, Research Partnerin, AI Coworker",
       accordionItems: [
         {
           title: "Wettbewerbsanalysen",
@@ -698,15 +705,15 @@ export const translations = {
       midCtaHeading:
         "Bereit f\u00fcr Ihre kostenlose Analyse \u2013 ganz unverbindlich?",
       midCtaDescription:
-        "URL eingeben und Hannah analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
-      midCtaUrlLabel: "Ihre E-Mail-Adresse",
-      midCtaEmailLabel: "Ihre Website-URL",
+        "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
+      midCtaUrlLabel: "Ihre Website-URL",
+      midCtaEmailLabel: "Ihre E-Mail-Adresse",
       midCtaUrlPlaceholder: "https://ihre-website.de",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you sgree and accept our",
-      midCtaTosText: "*By Proceeding you sgree and accept our",
+        "*By entering your information for a free analysis you agree and accept our",
+      midCtaTosText: "*By Proceeding you agree and accept our",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
@@ -736,6 +743,11 @@ export const translations = {
           question: "Sind Serviceplan Agents DSGVO-konform?",
           answer:
             "Ja. Alle Agenten laufen vollst\u00e4ndig in einem deutschen Microsoft Azure Rechenzentrum. Daten werden in Europa verarbeitet und gespeichert. Die Architektur ist by Design EU AI Act-konform, mit vollst\u00e4ndiger Nachvollziehbarkeit aller Agent-Entscheidungen \u00fcber das Masumi Protokoll.",
+        },
+        {
+          question: "Was mache ich, wenn etwas nicht funktioniert?",
+          answer:
+            "Wenn etwas nicht wie erwartet funktioniert, wenden Sie sich einfach an Elena oder schreiben Sie uns an support@serviceplan-agents.com \u2013 wir helfen Ihnen gerne weiter.",
         },
       ],
     },
@@ -773,14 +785,14 @@ export const translations = {
       sectionSubheading:
         "Vereinbaren Sie eine Live-Demo, zugeschnitten auf Ihre Marke, Ihr Team und Ihre aktuellen Marketing-Herausforderungen.",
       contentHeading:
-        "Sagen Sie uns, was Sie interessiert und wir gestalten ihre Demo individuell.",
+        "Sagen Sie uns, was Sie interessiert, und wir gestalten Ihre Demo individuell.",
       contentParagraph1:
         "Wir zeigen Ihnen, wie Serviceplan Agents mit Ihren bestehenden Tools arbeiten, Research und Projektarbeit per E-Mail erledigen und dabei Ihre Marke im Blick behalten.",
       contentParagraph2:
         "Sie sehen echte Anwendungsf\u00e4lle, konkrete Beispiele und reale Ergebnisse, die Ihr Team direkt nutzen k\u00f6nnte. Kein Verkaufsgespr\u00e4ch, kein Druck \u2013 nur ein ehrlicher Blick darauf, ob Serviceplan Agents f\u00fcr Ihr Team Sinn machen.",
       formNameLabel: "Name",
       formEmailLabel: "Ihre E-Mail-Adresse",
-      formWebsiteLabel: "Ihre Website-Adresse",
+      formWebsiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
       formCategoryLabel:
         "Wo braucht Ihr Team die meiste Unterst\u00fctzung?",
       formNamePlaceholder: "John Smith",
@@ -790,7 +802,7 @@ export const translations = {
         "Marktanalyse, Projektmanagement, Social-Media-Analysen...",
       formButton: "Senden",
       legalText:
-        "Mit dem Absenden des Formulars best\u00e4tigen Sie, dass sie den",
+        "Mit dem Absenden des Formulars best\u00e4tigen Sie, dass Sie den",
       legalTos: "Nutzungsbedingungen",
       legalAndNote: "zustimmen und die",
       legalPrivacy: "Datenschutzhinweise",
