@@ -19,7 +19,7 @@ export const translations = {
       formDescription:
         "Enter your website URL and your AI Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
-      websiteLabel: "Your website URL",
+      websiteLabel: "Website for analysis:",
       websiteHelper: "So we can analyze your competitive landscape",
       submitButton: "Get your free analysis ",
       privacyText:
@@ -292,7 +292,7 @@ export const translations = {
         "Ready for your free analysis \u2013 no strings attached?",
       midCtaDescription:
         "Enter your URL and your AI Coworker analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
-      midCtaUrlLabel: "Your website URL",
+      midCtaUrlLabel: "Website for analysis:",
       midCtaEmailLabel: "Your email address",
       midCtaUrlPlaceholder: "https://your-website.com",
       midCtaEmailPlaceholder: "name@company.com",
@@ -383,7 +383,7 @@ export const translations = {
         "You\u2019ll see real use cases, concrete examples, and actual results your team could use right away. No sales pitch, no pressure \u2013 just an honest look at whether Serviceplan Agents make sense for your team.",
       formNameLabel: "Name",
       formEmailLabel: "Your email address",
-      formWebsiteLabel: "Your website address",
+      formWebsiteLabel: "Website for analysis:",
       formWebsiteHelper: "So we can analyze your competitive landscape",
       formCategoryLabel:
         "Where does your team need the most support?",
@@ -425,7 +425,7 @@ export const translations = {
       formDescription:
         "Geben Sie Ihre Website-URL ein und Ihr AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
-      websiteLabel: "Ihre Website-Adresse",
+      websiteLabel: "Website für Analyse:",
       websiteHelper: "Damit wir Ihre Wettbewerbslandschaft analysieren k\u00f6nnen",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
@@ -710,7 +710,7 @@ export const translations = {
       midCtaDescription:
         "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
       midCtaUrlLabel: "Ihre E-Mail-Adresse",
-      midCtaEmailLabel: "Ihre Website-URL",
+      midCtaEmailLabel: "Website für Analyse:",
       midCtaUrlPlaceholder: "https://ihre-website.de",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
@@ -795,7 +795,7 @@ export const translations = {
         "Sie sehen echte Anwendungsf\u00e4lle, konkrete Beispiele und reale Ergebnisse, die Ihr Team direkt nutzen k\u00f6nnte. Kein Verkaufsgespr\u00e4ch, kein Druck \u2013 nur ein ehrlicher Blick darauf, ob Serviceplan Agents f\u00fcr Ihr Team Sinn machen.",
       formNameLabel: "Name",
       formEmailLabel: "Ihre E-Mail-Adresse",
-      formWebsiteLabel: "Ihre Website-Adresse",
+      formWebsiteLabel: "Website für Analyse:",
       formWebsiteHelper: "Damit wir Ihre Wettbewerbslandschaft analysieren k\u00f6nnen",
       formCategoryLabel:
         "Wo braucht Ihr Team die meiste Unterst\u00fctzung?",
