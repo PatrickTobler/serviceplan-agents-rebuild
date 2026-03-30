@@ -86,7 +86,10 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
             <LanguageToggle locale={locale} />
           </div>
           <div className="nav-cta-links">
-            <div className="button-group nav-button">
+            <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+              <a href={tt.freeAnalysisHref} className="button is-secondary navigation w-inline-block" style={{ border: "1px solid var(--base-color-brand--red, #e60000)", whiteSpace: "nowrap" }}>
+                <div>{tt.freeAnalysis}</div>
+              </a>
               <a href="https://app.sokosumi.com/register" className="button w-inline-block">
                 <div>{tt.requestDemo}</div>
                 <div className="arrow-icon w-embed">
