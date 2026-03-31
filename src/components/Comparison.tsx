@@ -15,13 +15,25 @@ const DashIcon = () => (
 export default function Comparison({ locale = "en" }: { locale?: Locale }) {
   const tt = t(locale).comparison;
 
+  const normalizeUrl = (url: string): string => {
+    const trimmed = url.trim();
+    if (trimmed && !/^https?:\/\//i.test(trimmed)) {
+      return `https://${trimmed}`;
+    }
+    return trimmed;
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    let websiteUrl = formData.get("URL") as string;
+    if (websiteUrl) {
+      websiteUrl = normalizeUrl(websiteUrl);
+    }
     await submitAnalysisForm(
       formData.get("Email") as string,
-      formData.get("URL") as string,
+      websiteUrl,
     );
     window.dispatchEvent(new Event("showThankYouModal"));
     form.reset();
@@ -110,7 +122,7 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                               maxLength={256}
                               name="URL"
                               placeholder={tt.midCtaUrlPlaceholder}
-                              type="url"
+                              type="text"
                               id="URL"
                               required
                             />
