@@ -135,7 +135,7 @@ export default function AgentTeam({ locale = "en" }: { locale?: Locale }) {
                   <div className="spacer-xsmall"></div>
                   <div className="step is-white">{tt.alexByLabel}</div>
                 </div>
-                <a href="#" className="button-round is-gray w-button">
+                <a href="#" className="button-round w-button">
                   {tt.alexAvailability}<br />
                 </a>
               </div>
