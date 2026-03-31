@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Locale, t } from "@/lib/translations";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
             <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">{tt.pricing}</a>
           </div>
           <div className="nav-cta-links">
+            <LanguageToggle locale={locale} />
             <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <a href={tt.freeAnalysisHref} className="button is-secondary navigation w-inline-block" style={{ border: "1px solid var(--base-color-brand--red, #e60000)", whiteSpace: "nowrap" }}>
                 <div>{tt.freeAnalysis}</div>
@@ -37,6 +39,9 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
             </div>
           </div>
         </nav>
+        <div className="language-toggle-mobile" style={{ display: 'none' }}>
+          <LanguageToggle locale={locale} />
+        </div>
         <div
           className={`menu-icon-wrap w-nav-button${menuOpen ? " w--open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
