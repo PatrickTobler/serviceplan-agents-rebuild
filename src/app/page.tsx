@@ -42,10 +42,6 @@ export default function Home({ locale = "en" }: { locale?: Locale }) {
           <div className="bg-white-wrap">
             <WhatYouGet locale={locale} />
             <HowItWorks locale={locale} />
-            <div className="hide">
-              <div className="spacer-xlarge"></div>
-              <h2 className="text-weight-semibold">50+ Years of Serviceplan Marketing Expertise. <br/>Built into Every Agent.</h2>
-            </div>
           </div>
         </div>
         <AgentTeam locale={locale} />

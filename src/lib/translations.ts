@@ -121,7 +121,7 @@ export const translations = {
       outputLabel: "Output",
     },
     agentTeam: {
-      heading: "Your AI Marketing Team",
+      heading: "Included: 50+ Years of Serviceplan Marketing Expertise.",
       subheading:
         "Serviceplan Agents are specialized AI partners \u2013 each with a clear role, real expertise, and the confidence to push back when something doesn\u2019t add up. A team that works together, knows your business, and grows with you.",
       hannahTagline: "What is actually true?",
@@ -528,7 +528,7 @@ export const translations = {
       outputLabel: "Output",
     },
     agentTeam: {
-      heading: "Ihr KI-Marketing-Team",
+      heading: "Inklusive: 50+ Jahre Serviceplan Marketing Expertise.",
       subheading:
         "Serviceplan Agents sind spezialisierte KI-Partner \u2013 jede:r mit einer klaren Rolle, echter Expertise und dem Selbstbewusstsein, R\u00fcckfragen zu stellen, wenn etwas unklar ist. Ein Team, das zusammenarbeitet, Ihr Business versteht und mit Ihnen w\u00e4chst.",
       hannahTagline: "Was stimmt wirklich?",
