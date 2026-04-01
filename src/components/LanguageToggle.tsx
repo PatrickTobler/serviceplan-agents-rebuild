@@ -20,21 +20,27 @@ export default function LanguageToggle({ locale = "en" }: { locale?: Locale }) {
     }
   };
 
+  const handleSwitch = (targetLocale: Locale) => {
+    document.cookie = `locale=${targetLocale}; path=/; max-age=31536000`;
+    window.location.href = getTargetPath(targetLocale);
+  };
+
   return (
     <div className="language-toggle">
-      <a
-        href={getTargetPath("en")}
+      <button
+        type="button"
+        onClick={() => handleSwitch("en")}
         className={locale === "en" ? "active" : "inactive"}
       >
         EN
-      </a>
-      <span className="separator">|</span>
-      <a
-        href={getTargetPath("de")}
+      </button>
+      <button
+        type="button"
+        onClick={() => handleSwitch("de")}
         className={locale === "de" ? "active" : "inactive"}
       >
         DE
-      </a>
+      </button>
     </div>
   );
 }

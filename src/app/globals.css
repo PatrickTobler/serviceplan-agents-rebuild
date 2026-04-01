@@ -1,36 +1,41 @@
 .language-toggle {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
   margin-right: 16px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.6);
 }
 
-.language-toggle a {
-  text-decoration: none;
-  color: #000;
+.language-toggle button {
+  all: unset;
   cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.language-toggle a.active {
-  opacity: 1;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-family: inherit;
   font-weight: 600;
+  line-height: 1;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-align: center;
 }
 
-.language-toggle a.inactive {
-  opacity: 0.5;
+.language-toggle button.active {
+  background: #000;
+  color: #fff;
 }
 
-.language-toggle a.inactive:hover {
-  opacity: 0.8;
+.language-toggle button.inactive {
+  background: transparent;
+  color: #333;
 }
 
-.language-toggle .separator {
-  opacity: 0.5;
-  color: #000;
-  user-select: none;
+.language-toggle button.inactive:hover {
+  background: rgba(0, 0, 0, 0.08);
 }
 
 @media screen and (max-width: 991px) {

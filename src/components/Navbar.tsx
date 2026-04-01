@@ -39,7 +39,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
             </div>
           </div>
         </nav>
-        <div className="language-toggle-mobile" style={{ display: 'none' }}>
+        <div className="language-toggle-mobile">
           <LanguageToggle locale={locale} />
         </div>
         <div
