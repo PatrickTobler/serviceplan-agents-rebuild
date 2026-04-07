@@ -27,7 +27,7 @@ export const translations = {
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you agree and accept our",
+      tosText: "*By proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/request-a-demo",
     },
@@ -302,7 +302,7 @@ export const translations = {
       midCtaPrivacyText:
         "*By entering your information for a free analysis you agree and accept our",
       midCtaPrivacyLink: "Privacy Policy.",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+      midCtaTosText: "*By proceeding you agree and accept our",
       midCtaTosLink: "Terms of Service.",
     },
     faq: {
