@@ -2292,3 +2292,29 @@ margin: 0rem !important;
     top: 30%;
   }
 }
+
+/* Red CTA button (Free Analysis) */
+.button.is-cta-red {
+  background-color: var(--base-color-brand--red, #ff4b4f);
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.button.is-cta-red:hover {
+  background-color: #e0353a;
+  color: #fff;
+}
+
+.button.is-cta-red div {
+  color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .button.is-cta-red {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
