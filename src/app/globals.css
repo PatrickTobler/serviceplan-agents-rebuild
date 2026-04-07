@@ -2300,6 +2300,21 @@ margin: 0rem !important;
   border: none;
   white-space: nowrap;
   transition: background-color 0.2s ease;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Match the Demo button height: 45px icon + 0.25rem top/bottom padding */
+  min-height: calc(45px + 0.5rem);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Demo anfragen button — pill shape in both Navbar and Hero */
+.button-group.nav-button .button {
+  border-radius: 9999px !important;
 }
 
 .button.is-cta-red:hover {
