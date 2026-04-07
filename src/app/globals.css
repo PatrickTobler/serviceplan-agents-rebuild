@@ -9,27 +9,26 @@
 
 .language-toggle span {
   cursor: pointer;
-  color: #999;
   transition: opacity 0.2s ease;
   line-height: 1;
 }
 
 .language-toggle span.active {
   font-weight: 700;
-  color: #000;
+  color: #fff;
 }
 
 .language-toggle span.inactive {
   font-weight: 400;
-  color: #999;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .language-toggle span.inactive:hover {
-  color: #666;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .language-toggle .separator {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.35);
   cursor: default;
   user-select: none;
   font-weight: 300;
