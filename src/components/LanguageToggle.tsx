@@ -27,20 +27,25 @@ export default function LanguageToggle({ locale = "en" }: { locale?: Locale }) {
 
   return (
     <div className="language-toggle">
-      <button
-        type="button"
+      <span
+        role="button"
+        tabIndex={0}
         onClick={() => handleSwitch("en")}
+        onKeyDown={(e) => e.key === "Enter" && handleSwitch("en")}
         className={locale === "en" ? "active" : "inactive"}
       >
         EN
-      </button>
-      <button
-        type="button"
+      </span>
+      <span className="separator">|</span>
+      <span
+        role="button"
+        tabIndex={0}
         onClick={() => handleSwitch("de")}
+        onKeyDown={(e) => e.key === "Enter" && handleSwitch("de")}
         className={locale === "de" ? "active" : "inactive"}
       >
         DE
-      </button>
+      </span>
     </div>
   );
 }
