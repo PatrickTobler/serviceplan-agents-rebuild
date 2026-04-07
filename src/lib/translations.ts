@@ -26,7 +26,7 @@ export const translations = {
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you agree and accept our",
+      tosText: "*By proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/request-a-demo",
     },
@@ -300,7 +300,9 @@ export const translations = {
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
         "*By entering your information for a free analysis you agree and accept our",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+      midCtaTosText: "*By proceeding you agree and accept our",
+      midCtaPrivacyLink: "Privacy Policy.",
+      midCtaTosLink: "Terms of Service.",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -430,10 +432,10 @@ export const translations = {
       websiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you agree and accept our",
-      tosLink: "Terms of Service",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      privacyLink: "Datenschutzerklärung zu.",
+      tosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      tosLink: "Nutzungsbedingungen zu",
       requestDemoHref: "/de/request-a-demo",
     },
     trustIndicators: {
@@ -716,8 +718,10 @@ export const translations = {
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      midCtaTosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      midCtaPrivacyLink: "Datenschutzerklärung zu.",
+      midCtaTosLink: "Nutzungsbedingungen zu.",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
