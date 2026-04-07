@@ -2299,6 +2299,9 @@ margin: 0rem !important;
   color: #fff;
   border: none;
   white-space: nowrap;
+  overflow: visible;
+  width: auto;
+  max-width: none;
   transition: background-color 0.2s ease;
   border-radius: 9999px;
   display: flex;
@@ -2308,8 +2311,8 @@ margin: 0rem !important;
   min-height: calc(45px + 0.5rem);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Demo anfragen button — pill shape in both Navbar and Hero */
