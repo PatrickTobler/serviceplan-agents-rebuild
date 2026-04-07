@@ -2292,3 +2292,126 @@ margin: 0rem !important;
     top: 30%;
   }
 }
+
+/* Step 2 Redesign - Portrait with floating logos */
+.step2-portrait {
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.step2-floating-logos {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.step2-logo {
+  position: absolute;
+  background: white;
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.step2-logo-gwi {
+  top: 8%;
+  right: 5%;
+}
+
+.step2-logo-statista {
+  top: 28%;
+  left: 2%;
+}
+
+.step2-logo-chart {
+  top: 45%;
+  right: 8%;
+  padding: 8px 10px;
+}
+
+.step2-task-card {
+  position: relative;
+  z-index: 3;
+  background: white;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: -20px auto 0;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step2-task-item {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  display: flex;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.step2-task-number {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.agents-work-wrap.second {
+  min-height: 310px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+  overflow: visible;
+}
+
+@media screen and (max-width: 767px) {
+  .step2-portrait {
+    width: 200px;
+  }
+
+  .step2-task-card {
+    max-width: 95%;
+    padding: 14px 16px;
+  }
+
+  .step2-task-item {
+    font-size: 12px;
+  }
+
+  .step2-logo-gwi {
+    top: 5%;
+    right: 8%;
+  }
+
+  .step2-logo-statista {
+    top: 25%;
+    left: 5%;
+  }
+
+  .step2-logo-chart {
+    top: 42%;
+    right: 5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .step2-portrait {
+    width: 280px;
+  }
+
+  .agents-work-wrap.second {
+    min-height: 360px;
+  }
+}

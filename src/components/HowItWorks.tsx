@@ -83,87 +83,48 @@ export default function HowItWorks({ locale = "en" }: { locale?: Locale }) {
                   <div className="step-contetn">
                     <div className="step-img-wrap">
                       <div className="agents-work-wrap second">
-                        <div className="bg-main-text-wrap step-first">
-                          <div className="step-header">
-                            <div className="sub-header-text is-black-20">
-                              {tt.kanbanPriority}
-                            </div>
-                            <div className="bottom-liner light"></div>
+                        {/* Floating brand logos */}
+                        <div className="step2-floating-logos">
+                          <div className="step2-logo step2-logo-gwi">
+                            <span style={{ color: '#FF4B4F', fontWeight: 700, fontSize: '20px', letterSpacing: '-0.02em' }}>GWI.</span>
                           </div>
-                          <div className="bg-text-wrap">
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">{tt.kanbanSeoAudit}</div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanInstagramReview}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">{tt.kanbanKeywordGaps}</div>
-                            </div>
+                          <div className="step2-logo step2-logo-statista">
+                            <span style={{ color: '#1A3D5C', fontWeight: 600, fontSize: '16px' }}>statista</span>
+                            <span style={{ color: '#FF6B00', fontSize: '16px', marginLeft: '1px' }}>&#8226;</span>
+                          </div>
+                          <div className="step2-logo step2-logo-chart">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4 20L11 13L16 17L24 8" stroke="#4CAF50" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              <path d="M18 8H24V14" stroke="#4CAF50" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
                           </div>
                         </div>
-                        <div className="bg-main-text-wrap step-second">
-                          <div className="step-header">
-                            <div className="sub-header-text is-black-20">
-                              {tt.kanbanInProgress}
-                            </div>
-                            <div className="bottom-liner light"></div>
+
+                        {/* Portrait */}
+                        <img
+                          src="/images/hannah-transp.webp"
+                          loading="lazy"
+                          alt=""
+                          className="step2-portrait"
+                        />
+
+                        {/* Task list card */}
+                        <div className="step2-task-card">
+                          <div className="step2-task-item">
+                            <span className="step2-task-number">1.</span>
+                            <span>{tt.step2Task1}</span>
                           </div>
-                          <div className="bg-text-wrap">
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanHomepageSeo}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanCompetitorPricing}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanQ2Keyword}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanBacklinkGap}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanSocialSentiment}
-                              </div>
-                            </div>
+                          <div className="step2-task-item">
+                            <span className="step2-task-number">2.</span>
+                            <span>{tt.step2Task2}</span>
+                          </div>
+                          <div className="step2-task-item">
+                            <span className="step2-task-number">3.</span>
+                            <span>{tt.step2Task3}</span>
                           </div>
                         </div>
-                        <div className="bg-main-text-wrap step-third">
-                          <div className="step-header">
-                            <div className="sub-header-text is-black-20">
-                              {tt.kanbanDone}
-                            </div>
-                            <div className="bottom-liner light"></div>
-                          </div>
-                          <div className="bg-text-wrap">
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanBrandMention}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanCustomerReview}
-                              </div>
-                            </div>
-                            <div className="feature-wrap new">
-                              <div className="text-size-small">
-                                {tt.kanbanSustainability}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+
+                        {/* Gradient blobs */}
                         <div className="green-bg w-embed">
                           <svg
                             width="583"
