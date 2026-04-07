@@ -50,7 +50,7 @@ export const translations = {
       step2Heading: "Agents get to work",
       step2Description:
         "Your agent does the research, pulls from specialized data sources, and puts together your reports \u2013 without you having to step in. Complex tasks get broken down and handed off to other agents automatically.",
-      step2Task1: "Analyze information architecture for conversion",
+      step2Task1: "Analyze information architecture",
       step2Task2: "Evaluate CTA presence and placement",
       step2Task3: "Review trust building after CTA",
       step3Heading: "Results in your inbox",
@@ -460,7 +460,7 @@ export const translations = {
       step2Heading: "Agenten legen los",
       step2Description:
         "Ihr Agent recherchiert, greift auf spezialisierte Datenquellen zu und erstellt Ihre Reports \u2013 ohne dass Sie eingreifen m\u00fcssen. Komplexe Aufgaben werden automatisch aufgeteilt und an weitere Agents delegiert.",
-      step2Task1: "Analysiere Informationsarchitektur f\u00fcr Conversion",
+      step2Task1: "Analysiere Informationsarchitektur",
       step2Task2: "Bewerte CTA-Pr\u00e4senz und -Platzierung",
       step2Task3: "Trustaufbau nach CTA pr\u00fcfen",
       step3Heading: "Ergebnisse im Postfach",
