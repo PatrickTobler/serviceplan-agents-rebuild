@@ -301,7 +301,9 @@ export const translations = {
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
         "*By entering your information for a free analysis you agree and accept our",
+      midCtaPrivacyLink: "Privacy Policy.",
       midCtaTosText: "*By Proceeding you agree and accept our",
+      midCtaTosLink: "Terms of Service.",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -712,14 +714,16 @@ export const translations = {
         "Bereit f\u00fcr Ihre kostenlose Analyse \u2013 ganz unverbindlich?",
       midCtaDescription:
         "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
-      midCtaUrlLabel: "Ihre Website-URL",
+      midCtaUrlLabel: "Zu analysierende Unternehmenswebsite",
       midCtaEmailLabel: "Ihre E-Mail-Adresse",
-      midCtaUrlPlaceholder: "https://ihre-website.de",
+      midCtaUrlPlaceholder: "Website eintragen, die Grundlage für die Analyse wird",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      midCtaPrivacyLink: "Datenschutzerklärung zu.",
+      midCtaTosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      midCtaTosLink: "Nutzungsbedingungen zu.",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
