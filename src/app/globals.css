@@ -6,7 +6,8 @@ html {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: 24px;
+  margin-left: 12px;
+  margin-right: 0;
   font-size: 14px;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
 }
@@ -39,7 +40,7 @@ html {
 }
 
 @media screen and (max-width: 991px) {
-  .nav-cta-links > .language-toggle {
+  .nav-cta-links .language-toggle {
     display: none;
   }
   .language-toggle-mobile {
