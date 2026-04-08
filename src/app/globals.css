@@ -2292,3 +2292,53 @@ margin: 0rem !important;
     top: 30%;
   }
 }
+
+/* Red CTA button (Free Analysis) */
+.button.is-cta-red {
+  background-color: var(--base-color-brand--red, #ff4b4f);
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+  overflow: visible;
+  width: auto;
+  max-width: none;
+  transition: background-color 0.2s ease;
+  border-radius: 9999px;
+  /* Override .w-inline-block display:inline-block and .button justify-content:space-between */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  /* Match the Demo button height: 45px icon + 0.25rem top/bottom padding */
+  min-height: calc(45px + 0.5rem);
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* Demo anfragen button — pill shape in both Navbar and Hero */
+.button-group.nav-button .button {
+  border-radius: 9999px !important;
+}
+
+.button.is-cta-red:hover {
+  background-color: #e0353a;
+  color: #fff;
+}
+
+.button.is-cta-red div {
+  color: #fff;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .button.is-cta-red {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
