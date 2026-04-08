@@ -2579,19 +2579,95 @@ margin: 0rem !important;
   width: 100%;
 }
 
+.sp-testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
 .sp-testimonials-heading {
   font-size: 36px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 48px;
-  text-align: center;
+  margin-bottom: 0;
+  text-align: left;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
 }
 
-.sp-testimonials-grid {
+/* Slider Navigation Arrows */
+.sp-slider-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.sp-slider-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.sp-slider-arrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.sp-slider-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Slider Container */
+.sp-slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.sp-slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.sp-slide {
+  min-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 48px;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* Dot Indicators */
+.sp-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.sp-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.sp-slider-dot-active {
+  background: #fff;
+  width: 24px;
+  border-radius: 4px;
 }
 
 .sp-testimonial-card {
@@ -2703,12 +2779,6 @@ margin: 0rem !important;
 
   .sp-testimonials-heading {
     font-size: 28px;
-    margin-bottom: 36px;
-  }
-
-  .sp-testimonials-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 36px;
   }
 
   .sp-testimonial-quote {
@@ -2735,12 +2805,10 @@ margin: 0rem !important;
 
   .sp-testimonials-heading {
     font-size: 24px;
-    margin-bottom: 28px;
   }
 
-  .sp-testimonials-grid {
+  .sp-slide {
     grid-template-columns: 1fr;
-    gap: 32px;
   }
 
   .sp-testimonial-quote {

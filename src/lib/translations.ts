@@ -200,7 +200,7 @@ export const translations = {
         },
         {
           name: "Michael Wolff",
-          role: "General Manager, Plan.Net Journey",
+          role: "General Manager, thaltegos GmbH",
           quote: "I use it already heavily for my sales activities - it's just mind blowing how fast to go forward within your sales conversation. Especially with the premium data sources which are not available on public makes a big trustful difference!",
           initials: "MW",
           image: "/images/michael-wolff.png",
@@ -644,7 +644,7 @@ export const translations = {
         },
         {
           name: "Michael Wolff",
-          role: "General Manager, Plan.Net Journey",
+          role: "General Manager, thaltegos GmbH",
           quote: "Ich nutze es bereits intensiv f\u00fcr meine Vertriebsaktivit\u00e4ten \u2013 es ist einfach verbl\u00fcffend, wie schnell man im Verkaufsgespr\u00e4ch vorankommt mit der Hilfe von Hannah. Besonders die Premium-Datenquellen, die \u00f6ffentlich nicht verf\u00fcgbar sind, machen einen enormen und vertrauensw\u00fcrdigen Unterschied!",
           initials: "MW",
           image: "/images/michael-wolff.png",
