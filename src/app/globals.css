@@ -2555,18 +2555,19 @@ margin: 0rem !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
 }
 
-.sp-logo-text {
-  font-size: 15px;
-  font-weight: 700;
-  color: #999;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
-  user-select: none;
+.sp-logo-item img {
+  height: 32px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.sp-logo-item img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
 }
 
 /* ===== Social Proof: Testimonials ===== */
@@ -2701,8 +2702,8 @@ margin: 0rem !important;
     padding: 32px 20px;
   }
 
-  .sp-logo-text {
-    font-size: 13px;
+  .sp-logo-item img {
+    height: 28px;
   }
 }
 
@@ -2741,11 +2742,7 @@ margin: 0rem !important;
     border-radius: 12px;
   }
 
-  .sp-logo-item {
-    padding: 6px 10px;
-  }
-
-  .sp-logo-text {
-    font-size: 12px;
+  .sp-logo-item img {
+    height: 24px;
   }
 }

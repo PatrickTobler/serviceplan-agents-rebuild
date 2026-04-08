@@ -1,27 +1,28 @@
 import { Locale, t } from "@/lib/translations";
 
-const COMPANY_LOGOS = [
-  "Allianz",
-  "BVG",
-  "Stroer",
-  "Pfisterer",
-  "Deutsche Telekom",
-  "Cardano Foundation",
-  "Serviceplan Group",
-  "Ravensburger",
-  "Lufthansa",
-  "OMR",
-  "Lunendonk",
-  "Vion Food Group",
-  "NMKR",
-  "Input Output",
-  "Emurgo",
-  "TDK",
-  "ARD",
-  "B/S/H/",
-  "Golden Touch",
-  "dpa",
-  "Samsung",
+const companyLogos = [
+  { name: "Allianz", src: "/images/logos/allianz.svg" },
+  { name: "BVG", src: "/images/logos/bvg.svg" },
+  { name: "Str\u00f6er", src: "/images/logos/stroer.svg" },
+  { name: "Pfisterer", src: "/images/logos/pfisterer.svg" },
+  { name: "Deutsche Telekom", src: "/images/logos/telekom.svg" },
+  { name: "Cardano Foundation", src: "/images/logos/cardano-foundation.svg" },
+  { name: "Serviceplan Group", src: "/images/logos/serviceplan-group.svg" },
+  { name: "Ravensburger", src: "/images/logos/ravensburger.svg" },
+  { name: "Lufthansa", src: "/images/logos/lufthansa.svg" },
+  { name: "OMR", src: "/images/logos/omr.svg" },
+  { name: "L\u00fcnendonk", src: "/images/logos/lunendonk.svg" },
+  { name: "Vion Food Group", src: "/images/logos/vion-food.svg" },
+  { name: "NMKR", src: "/images/logos/nmkr.svg" },
+  { name: "Input Output", src: "/images/logos/iohk.svg" },
+  { name: "Bizzlogic", src: "/images/logos/bizzlogic.svg" },
+  { name: "Emurgo", src: "/images/logos/emurgo.svg" },
+  { name: "TDK", src: "/images/logos/tdk.svg" },
+  { name: "ARD", src: "/images/logos/ard.svg" },
+  { name: "B/S/H/", src: "/images/logos/bsh.svg" },
+  { name: "Golden Touch", src: "/images/logos/golden-touch.svg" },
+  { name: "dpa", src: "/images/logos/dpa.svg" },
+  { name: "Samsung", src: "/images/logos/samsung.svg" },
 ];
 
 export default function Companies({ locale = "en" }: { locale?: Locale }) {
@@ -41,9 +42,14 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                 </h2>
                 <div className="spacer-small"></div>
                 <div className="sp-logo-grid">
-                  {COMPANY_LOGOS.map((name) => (
-                    <div key={name} className="sp-logo-item">
-                      <span className="sp-logo-text">{name}</span>
+                  {companyLogos.map((logo) => (
+                    <div key={logo.name} className="sp-logo-item">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
+                        loading="lazy"
+                      />
                     </div>
                   ))}
                 </div>
