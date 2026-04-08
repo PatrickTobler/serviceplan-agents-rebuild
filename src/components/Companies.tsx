@@ -1,7 +1,68 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Locale, t } from "@/lib/translations";
+
+interface Testimonial {
+  name: string;
+  role: string;
+  quote: string;
+  initials: string;
+  image: string | null;
+  linkedin: string | null;
+}
+
+const companyLogos = [
+  { name: "Allianz", src: "/images/logos/allianz.svg" },
+  { name: "BVG", src: "/images/logos/bvg.svg" },
+  { name: "Str\u00f6er", src: "/images/logos/stroer.svg" },
+  { name: "Pfisterer", src: "/images/logos/pfisterer.svg" },
+  { name: "Deutsche Telekom", src: "/images/logos/telekom.svg" },
+  { name: "Cardano Foundation", src: "/images/logos/cardano-foundation.svg" },
+  { name: "Serviceplan Group", src: "/images/logos/serviceplan-group.svg" },
+  { name: "Ravensburger", src: "/images/logos/ravensburger.svg" },
+  { name: "Lufthansa", src: "/images/logos/lufthansa.svg" },
+  { name: "OMR", src: "/images/logos/omr.svg" },
+  { name: "L\u00fcnendonk", src: "/images/logos/lunendonk.svg" },
+  { name: "Vion Food Group", src: "/images/logos/vion-food.svg" },
+  { name: "NMKR", src: "/images/logos/nmkr.svg" },
+  { name: "Input Output", src: "/images/logos/iohk.svg" },
+  { name: "Bizzlogic", src: "/images/logos/bizzlogic.svg" },
+  { name: "Emurgo", src: "/images/logos/emurgo.svg" },
+  { name: "TDK", src: "/images/logos/tdk.svg" },
+  { name: "ARD", src: "/images/logos/ard.svg" },
+  { name: "B/S/H/", src: "/images/logos/bsh.svg" },
+  { name: "Golden Touch", src: "/images/logos/golden-touch.svg" },
+  { name: "dpa", src: "/images/logos/dpa.svg" },
+  { name: "Samsung", src: "/images/logos/samsung.svg" },
+];
 
 export default function Companies({ locale = "en" }: { locale?: Locale }) {
   const tt = t(locale).companies;
+  const testimonials = tt.testimonials as readonly Testimonial[];
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const slidesPerView = isMobile ? 1 : 2;
+  const totalSlides = Math.ceil(testimonials.length / slidesPerView);
+  const maxSlide = totalSlides - 1;
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Clamp currentSlide when switching between mobile/desktop
+  useEffect(() => {
+    setCurrentSlide((prev) => Math.min(prev, maxSlide));
+  }, [maxSlide]);
+
+  const handlePrev = () => setCurrentSlide((prev) => Math.max(0, prev - 1));
+  const handleNext = () => setCurrentSlide((prev) => Math.min(maxSlide, prev + 1));
 
   return (
     <div className="section-wrapper">
@@ -10,110 +71,28 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
           <div className="red-gradinet"></div>
           <div className="container-large">
             <div className="logo-content-wrap">
-              <h2 className="bentocard-heding max-width-500">
-                {tt.heading}
-              </h2>
-              <div className="spacer-small"></div>
-
-              <div className="logo-wrap-grid hide">
-                <div className="logo-wrapper">
-                  <img src="/images/bmw.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/vector.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/vector-1.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/vector-3.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/vector-2.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/gwi-logo.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/path1.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/vector-5.svg" loading="lazy" alt="" />
-                </div>
-                <div className="logo-wrapper">
-                  <img src="/images/vector-6.svg" loading="lazy" alt="" />
-                </div>
-              </div>
-
-              <div className="spacer-huge hide"></div>
-
-              <div className="frame-1597884547">
-                <div className="testimonials-wrap">
-                  <div className="testimonial-grid-bento">
-                    <div className="testimonial-wrapper">
-                      <div className="test-text-wrapper">
-                        <div>
-                          <div>
-                            <div className="testimonial-info">
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img
-                                src="/images/florian-von-keyserlingk.webp"
-                                loading="lazy"
-                                alt="Man in a black t-shirt looking thoughtfully out of a window with his hand resting on his chin."
-                                className="testimonial-img"
-                              />
-                              <div>
-                                <p className="testimonial-name">{tt.testimonial1Name}</p>
-                                <p className="testimonial-author-role">{tt.testimonial1Role}</p>
-                              </div>
-                            </div>
-                            <p className="testimonial-text">&quot;{tt.testimonial1Quote}&quot;</p>
-                          </div>
-                        </div>
-                      </div>
+              {/* Section 1: Credibility Logo Bar */}
+              <div className="sp-logo-section">
+                <h2 className="bentocard-heding max-width-500">
+                  {tt.heading}
+                </h2>
+                <div className="spacer-small"></div>
+                <div className="sp-logo-grid">
+                  {companyLogos.map((logo) => (
+                    <div key={logo.name} className="sp-logo-item">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
+                        loading="lazy"
+                      />
                     </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/testimonial-chat-img.avif"
-                      loading="lazy"
-                      sizes="100vw"
-                      alt="Screenshot of a chat conversation about analyzing the premium pet food market in France, discussing market size, growth, demographics, and a shared PDF report titled Premium_Pet_Food_FR.pdf."
-                      className="chat-screens"
-                    />
-                  </div>
-                  <div className="testimonial-grid-bento">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/testimonial-chat-img-2.avif"
-                      loading="lazy"
-                      sizes="100vw"
-                      alt="Chat conversation about coordinating a product launch timeline and marketing asset production with a Risk_Assessment.pdf attachment."
-                      className="chat-screens"
-                    />
-                    <div className="testimonial-wrapper">
-                      <div className="test-text-wrapper">
-                        <div>
-                          <div>
-                            <div className="testimonial-info">
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img
-                                src="/images/michael-trautmann.webp"
-                                loading="lazy"
-                                alt="Smiling middle-aged man with short gray hair wearing a blue blazer and white shirt."
-                                className="testimonial-img"
-                              />
-                              <div className="div-block-59">
-                                <p className="testimonial-name">{tt.testimonial2Name}</p>
-                                <p className="testimonial-author-role">{tt.testimonial2Role}</p>
-                              </div>
-                            </div>
-                            <p className="testimonial-text">&quot;{tt.testimonial2Quote}&quot;</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
+
+                <div className="spacer-small"></div>
+
+                {/* Stats Row */}
                 <div className="footer-section">
                   <div className="container-37">
                     <div className="footer-text">
@@ -126,13 +105,6 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                       {tt.stat1Description}
                     </div>
                   </div>
-                  <img
-                    src="/images/Line-326.svg"
-                    loading="lazy"
-                    width={63}
-                    alt="divider-line"
-                    className="line-325"
-                  />
                   <div className="container-37">
                     <div className="footer-text">
                       <div className="footer-text">
@@ -144,13 +116,6 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                       {tt.stat2Description}
                     </div>
                   </div>
-                  <img
-                    src="/images/Line-326.svg"
-                    loading="lazy"
-                    width={63}
-                    alt="divider-line"
-                    className="line-325"
-                  />
                   <div className="number-wrap no-border">
                     <div className="footer-text">
                       <div className="footer-text">
@@ -163,39 +128,113 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                     </div>
                   </div>
                 </div>
-                <div className="container-39">
-                  <div className="bottom-text">
-                    {tt.downloadHeading} <br />
-                    {tt.downloadSubheading}
-                  </div>
-                  <a
-                    href="https://cdn.prod.website-files.com/6990b006d2c582acd039bf7e/699bdf2d60e7f039bd38487e_260218%20-%20Plan_Net_Hannah_User%20Guide_EN.pdf"
-                    target="_blank"
-                    className="link-with-arrow is-white w-inline-block"
-                  >
-                    <div className="icon w-embed">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clipPath="url(#clip0_39_70_companies)">
-                          <path
-                            d="M23.3408 11.0952L23.7314 11.4585L23.3428 11.8247L15.3428 19.3638L14.6572 18.6353L21.6729 12.0229H5.9502C5.71855 13.1641 4.70947 14.0229 3.5 14.0229C2.11931 14.0229 1.00004 12.9036 1 11.5229C1 10.1422 2.11929 9.02295 3.5 9.02295C4.70952 9.02295 5.7186 9.88178 5.9502 11.0229H21.7988L14.6592 4.36475L15.3408 3.63428L23.3408 11.0952ZM3.5 10.0229C2.67157 10.0229 2 10.6945 2 11.5229C2.00004 12.3513 2.67159 13.0229 3.5 13.0229C4.32841 13.0229 4.99996 12.3513 5 11.5229C5 10.6945 4.32843 10.0229 3.5 10.0229Z"
-                            fill="#FF4B4F"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_39_70_companies">
-                            <rect width="24" height="24" fill="white" />
-                          </clipPath>
-                        </defs>
+              </div>
+
+              {/* Section 2: Testimonial Quotes Slider */}
+              <div className="sp-testimonials-section">
+                <div className="sp-testimonials-header">
+                  <h2 className="sp-testimonials-heading">
+                    {tt.testimonialsHeading}
+                  </h2>
+                  <div className="sp-slider-nav">
+                    <button
+                      className="sp-slider-arrow sp-slider-prev"
+                      onClick={handlePrev}
+                      disabled={currentSlide === 0}
+                      aria-label="Previous testimonials"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <div className="text-size-regular">{tt.downloadButton}</div>
-                  </a>
+                    </button>
+                    <button
+                      className="sp-slider-arrow sp-slider-next"
+                      onClick={handleNext}
+                      disabled={currentSlide === maxSlide}
+                      aria-label="Next testimonials"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="sp-slider-container">
+                  <div
+                    className="sp-slider-track"
+                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  >
+                    {Array.from({ length: totalSlides }).map((_, slideIdx) => (
+                      <div className="sp-slide" key={slideIdx}>
+                        {testimonials
+                          .slice(slideIdx * slidesPerView, slideIdx * slidesPerView + slidesPerView)
+                          .map((testimonial, idx) => {
+                            const globalIdx = slideIdx * slidesPerView + idx;
+                            return (
+                              <div key={globalIdx} className="sp-testimonial-card">
+                                <div className="sp-testimonial-divider"></div>
+                                <div className="sp-testimonial-number">
+                                  {String(globalIdx + 1).padStart(2, "0")}
+                                </div>
+                                <div className="sp-testimonial-content">
+                                  <p className="sp-testimonial-quote">
+                                    &ldquo;{testimonial.quote}&rdquo;
+                                  </p>
+                                  <div className="sp-testimonial-author">
+                                    {testimonial.image ? (
+                                      <div className="sp-testimonial-avatar">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                          src={testimonial.image}
+                                          alt={testimonial.name}
+                                          className="sp-testimonial-avatar-img"
+                                          loading="lazy"
+                                        />
+                                      </div>
+                                    ) : (
+                                      <div className="sp-testimonial-avatar-placeholder">
+                                        {testimonial.initials}
+                                      </div>
+                                    )}
+                                    <div className="sp-testimonial-author-info">
+                                      <p className="sp-testimonial-name">
+                                        {testimonial.linkedin ? (
+                                          <a
+                                            href={testimonial.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="sp-testimonial-name-link"
+                                          >
+                                            {testimonial.name}
+                                          </a>
+                                        ) : (
+                                          <span>{testimonial.name}</span>
+                                        )}
+                                      </p>
+                                      <p className="sp-testimonial-role">
+                                        {testimonial.role}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="sp-slider-dots">
+                  {Array.from({ length: totalSlides }).map((_, idx) => (
+                    <button
+                      key={idx}
+                      className={`sp-slider-dot ${currentSlide === idx ? "sp-slider-dot-active" : ""}`}
+                      onClick={() => setCurrentSlide(idx)}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
