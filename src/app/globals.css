@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .language-toggle {
   display: flex;
   align-items: center;

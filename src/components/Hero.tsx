@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useRef, useEffect, FormEvent } from "react";
 import { submitAnalysisForm } from "@/lib/submitForm";
 import { Locale, t } from "@/lib/translations";
 import LanguageToggle from "@/components/LanguageToggle";
@@ -11,6 +11,29 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
   const [email, setEmail] = useState("");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function handleAgentClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    e.preventDefault();
+    setDropdownOpen(false);
+    setMenuOpen(false);
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -119,18 +142,22 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
             </a>
             <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
               <div className="navigation-link-wrap">
-                <div className="uui-navbar08_menu-dropdown-2 w-dropdown">
-                  <div className="uui-navbar08_dropdown-toggle-2 w-dropdown-toggle">
+                <div className="uui-navbar08_menu-dropdown-2 w-dropdown" ref={dropdownRef}>
+                  <div
+                    className="uui-navbar08_dropdown-toggle-2 w-dropdown-toggle"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <div className="uui-dropdown-icon-2 w-embed">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 7.5L10 12.5L15 7.5" stroke="CurrentColor" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
-                    <div>Agents</div>
+                    <div>{navTt.agents}</div>
                   </div>
-                  <nav className="uui-navbar08_dropdown-list-2 is-resources w-dropdown-list">
+                  <nav className={`uui-navbar08_dropdown-list-2 is-resources w-dropdown-list${dropdownOpen ? " w--open" : ""}`} style={{ display: dropdownOpen ? "block" : "none", backgroundColor: "rgba(10, 10, 10, 0.35)", backdropFilter: "blur(60px)", WebkitBackdropFilter: "blur(60px)", border: "1px solid rgba(16, 16, 16, 0.35)", borderRadius: "0.75rem" }}>
                     <div className="uui-navbar08_dropdown-link-list-2 is-resources">
-                      <a href="#hannah" className="uui-navbar08_dropdown-link-2 w-inline-block">
+                      <a href="#hannah" className="uui-navbar08_dropdown-link-2 w-inline-block" onClick={(e) => handleAgentClick(e, "#hannah")}>
                         <div className="uui-navbar08_icon-wrapper-2 hide">
                           <img loading="lazy" src="/images/group-9664.svg" alt="" className="nav-icon-1x1-xsmall" />
                         </div>
@@ -147,7 +174,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                           <div className="uui-text-size-small-4 hide">Find information to grow your business.</div>
                         </div>
                       </a>
-                      <a href="#elena" className="uui-navbar08_dropdown-link-2 w-inline-block">
+                      <a href="#elena" className="uui-navbar08_dropdown-link-2 w-inline-block" onClick={(e) => handleAgentClick(e, "#elena")}>
                         <div className="uui-navbar08_icon-wrapper-2 hide">
                           <img loading="lazy" src="/images/group-9664.svg" alt="" className="nav-icon-1x1-xsmall" />
                         </div>
@@ -164,7 +191,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                           <div className="uui-text-size-small-4 hide">Find information to grow your business.</div>
                         </div>
                       </a>
-                      <a href="#alex" className="uui-navbar08_dropdown-link-2 w-inline-block">
+                      <a href="#alex" className="uui-navbar08_dropdown-link-2 w-inline-block" onClick={(e) => handleAgentClick(e, "#alex")}>
                         <div className="uui-navbar08_icon-wrapper-2 hide">
                           <img loading="lazy" src="/images/group-9664.svg" alt="" className="nav-icon-1x1-xsmall" />
                         </div>
