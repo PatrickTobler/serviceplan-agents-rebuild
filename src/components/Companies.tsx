@@ -1,5 +1,14 @@
 import { Locale, t } from "@/lib/translations";
 
+interface Testimonial {
+  name: string;
+  role: string;
+  quote: string;
+  initials: string;
+  image: string | null;
+  linkedin: string | null;
+}
+
 const companyLogos = [
   { name: "Allianz", src: "/images/logos/allianz.svg" },
   { name: "BVG", src: "/images/logos/bvg.svg" },
@@ -116,7 +125,7 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                   {tt.testimonialsHeading}
                 </h2>
                 <div className="sp-testimonials-grid">
-                  {tt.testimonials.map((testimonial, index) => (
+                  {(tt.testimonials as readonly Testimonial[]).map((testimonial, index) => (
                     <div key={index} className="sp-testimonial-card">
                       <div className="sp-testimonial-divider"></div>
                       <div className="sp-testimonial-number">
@@ -128,13 +137,15 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                         </p>
                         <div className="sp-testimonial-author">
                           {testimonial.image ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              src={testimonial.image}
-                              alt={testimonial.name}
-                              className="sp-testimonial-avatar"
-                              loading="lazy"
-                            />
+                            <div className="sp-testimonial-avatar">
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                className="sp-testimonial-avatar-img"
+                                loading="lazy"
+                              />
+                            </div>
                           ) : (
                             <div className="sp-testimonial-avatar-placeholder">
                               {testimonial.initials}
@@ -142,7 +153,18 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                           )}
                           <div className="sp-testimonial-author-info">
                             <p className="sp-testimonial-name">
-                              {testimonial.name}
+                              {testimonial.linkedin ? (
+                                <a
+                                  href={testimonial.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="sp-testimonial-name-link"
+                                >
+                                  {testimonial.name}
+                                </a>
+                              ) : (
+                                <span>{testimonial.name}</span>
+                              )}
                             </p>
                             <p className="sp-testimonial-role">
                               {testimonial.role}
