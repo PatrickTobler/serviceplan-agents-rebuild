@@ -2298,6 +2298,191 @@ margin: 0rem !important;
   }
 }
 
+/* Step 2 Redesign - Portrait with floating logos */
+.step2-portrait {
+  position: relative;
+  z-index: 2;
+  width: 260px;
+  max-width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+.step2-floating-logos {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.step2-logo {
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  padding: 7px 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.step2-logo-gwi {
+  top: 8%;
+  right: 8%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step2-logo-statista {
+  top: 22%;
+  left: 0%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step2-logo-elena {
+  top: 42%;
+  right: 16%;
+  padding: 0;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.step2-elena-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.step2-logo-alex {
+  top: 50%;
+  right: 4%;
+  padding: 0;
+  background: white;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.step2-alex-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.step2-task-card {
+  position: relative;
+  z-index: 3;
+  background: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: -30px auto 10px;
+  max-width: 88%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.step2-task-item {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1a1a1a;
+  display: flex;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.step2-task-number {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.agents-work-wrap.second {
+  min-height: 340px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+  overflow: visible;
+}
+
+/* Force gradient blobs behind portrait */
+.agents-work-wrap.second .green-bg {
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.agents-work-wrap.second .red-bg {
+  z-index: 0;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 767px) {
+  .step2-portrait {
+    width: 220px;
+  }
+
+  .step2-task-card {
+    max-width: 95%;
+    padding: 12px 14px;
+  }
+
+  .step2-task-item {
+    font-size: 11px;
+  }
+
+  .step2-logo-gwi {
+    top: 5%;
+    right: 8%;
+  }
+
+  .step2-logo-statista {
+    top: 20%;
+    left: 3%;
+  }
+
+  .step2-logo-elena {
+    top: 38%;
+    right: 14%;
+  }
+
+  .step2-logo-alex {
+    top: 45%;
+    right: 3%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .step2-portrait {
+    width: 290px;
+  }
+
+  .agents-work-wrap.second {
+    min-height: 380px;
+  }
+}
+
 /* Red CTA button (Free Analysis) */
 .button.is-cta-red {
   background-color: var(--base-color-brand--red, #ff4b4f);
