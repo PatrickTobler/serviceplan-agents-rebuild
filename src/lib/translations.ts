@@ -4,7 +4,10 @@ export const translations = {
   en: {
     navbar: {
       agents: "Agents",
+      agentsHref: "#agents",
       pricing: "Pricing",
+      contact: "Contact",
+      contactHref: "/request-a-demo",
       requestDemo: "Request a Demo",
       freeAnalysis: "Free Analysis",
       freeAnalysisHref: "#free-analysis",
@@ -447,7 +450,10 @@ export const translations = {
   de: {
     navbar: {
       agents: "Agents",
+      agentsHref: "#agents",
       pricing: "Preise",
+      contact: "Kontakt",
+      contactHref: "/de/request-a-demo",
       requestDemo: "Demo anfragen",
       freeAnalysis: "Kostenlose Analyse",
       freeAnalysisHref: "#free-analysis",

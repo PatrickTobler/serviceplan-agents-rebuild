@@ -119,8 +119,9 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
             </a>
             <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
               <div className="navigation-link-wrap">
+                <a href={navTt.agentsHref} className="nav-menu is-white w-nav-link">{navTt.agents}</a>
                 <a href="#pricing" className="nav-menu is-white w-nav-link">{navTt.pricing}</a>
-
+                <a href={navTt.contactHref} className="nav-menu is-white w-nav-link">{navTt.contact}</a>
               </div>
               <div className="nav-cta-links">
                 <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
