@@ -1,36 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .language-toggle {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-right: 16px;
+  margin-left: 16px;
   font-size: 14px;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
 }
 
-.language-toggle a {
-  text-decoration: none;
-  color: #000;
+.language-toggle span {
   cursor: pointer;
   transition: opacity 0.2s ease;
+  line-height: 1;
 }
 
-.language-toggle a.active {
-  opacity: 1;
-  font-weight: 600;
+.language-toggle span.active {
+  font-weight: 700;
+  color: #fff;
 }
 
-.language-toggle a.inactive {
-  opacity: 0.5;
+.language-toggle span.inactive {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.language-toggle a.inactive:hover {
-  opacity: 0.8;
+.language-toggle span.inactive:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .language-toggle .separator {
-  opacity: 0.5;
-  color: #000;
+  color: rgba(255, 255, 255, 0.35);
+  cursor: default;
   user-select: none;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 991px) {
@@ -2475,5 +2480,55 @@ margin: 0rem !important;
 
   .agents-work-wrap.second {
     min-height: 380px;
+  }
+}
+
+/* Red CTA button (Free Analysis) */
+.button.is-cta-red {
+  background-color: var(--base-color-brand--red, #ff4b4f);
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+  overflow: visible;
+  width: auto;
+  max-width: none;
+  transition: background-color 0.2s ease;
+  border-radius: 9999px;
+  /* Override .w-inline-block display:inline-block and .button justify-content:space-between */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  /* Match the Demo button height: 45px icon + 0.25rem top/bottom padding */
+  min-height: calc(45px + 0.5rem);
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* Demo anfragen button — pill shape in both Navbar and Hero */
+.button-group.nav-button .button {
+  border-radius: 9999px !important;
+}
+
+.button.is-cta-red:hover {
+  background-color: #e0353a;
+  color: #fff;
+}
+
+.button.is-cta-red div {
+  color: #fff;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .button.is-cta-red {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }

@@ -14,19 +14,21 @@ export const translations = {
     hero: {
       heading: "AI Coworkers for",
       headingLine2: "Your Marketing.",
-      headingLine3: "By Serviceplan.",
+      headingLine3: "By Europe\u2019s",
+      headingLine4: "Leading Agency.",
       description:
-        "Europe\u2019s leading agency \u2013 now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
+        "The quality of the Serviceplan Group now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
       formHeading: "Try your AI Coworker free \u2013 no strings attached",
       formDescription:
         "Enter your website URL and our AI Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
       websiteLabel: "Your website URL (for competitive analysis)",
+      websitePlaceholder: "https://your-website.com",
       submitButton: "Get your free analysis ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
       privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you agree and accept our",
+      tosText: "*By proceeding you agree and accept our",
       tosLink: "Terms of Service",
       requestDemoHref: "/request-a-demo",
     },
@@ -303,7 +305,9 @@ export const translations = {
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
         "*By entering your information for a free analysis you agree and accept our",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+      midCtaPrivacyLink: "Privacy Policy.",
+      midCtaTosText: "*By proceeding you agree and accept our",
+      midCtaTosLink: "Terms of Service.",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -423,20 +427,22 @@ export const translations = {
     hero: {
       heading: "AI Coworker f\u00fcr",
       headingLine2: "Ihr Marketing.",
-      headingLine3: "Von Serviceplan.",
+      headingLine3: "Von Europas",
+      headingLine4: "f\u00fchrender Agentur.",
       description:
-        "Europas f\u00fchrende Agentur \u2013 jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
+        "Die Qualit\u00e4t der Serviceplan Gruppe jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
       formHeading: "AI Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
         "Geben Sie Ihre Website-URL ein und unser AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
-      websiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
+      websiteLabel: "Zu analysierende Unternehmenswebsite",
+      websitePlaceholder: "Website eintragen, die Grundlage f\u00fcr die Analyse wird",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you agree and accept our",
-      tosLink: "Terms of Service",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      privacyLink: "Datenschutzerklärung zu.",
+      tosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      tosLink: "Nutzungsbedingungen zu",
       requestDemoHref: "/de/request-a-demo",
     },
     trustIndicators: {
@@ -716,14 +722,16 @@ export const translations = {
         "Bereit f\u00fcr Ihre kostenlose Analyse \u2013 ganz unverbindlich?",
       midCtaDescription:
         "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
-      midCtaUrlLabel: "Ihre Website-URL",
+      midCtaUrlLabel: "Zu analysierende Unternehmenswebsite",
       midCtaEmailLabel: "Ihre E-Mail-Adresse",
-      midCtaUrlPlaceholder: "https://ihre-website.de",
+      midCtaUrlPlaceholder: "Website eintragen, die Grundlage für die Analyse wird",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      midCtaPrivacyLink: "Datenschutzerklärung zu.",
+      midCtaTosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      midCtaTosLink: "Nutzungsbedingungen zu.",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
@@ -802,12 +810,12 @@ export const translations = {
         "Sie sehen echte Anwendungsf\u00e4lle, konkrete Beispiele und reale Ergebnisse, die Ihr Team direkt nutzen k\u00f6nnte. Kein Verkaufsgespr\u00e4ch, kein Druck \u2013 nur ein ehrlicher Blick darauf, ob Serviceplan Agents f\u00fcr Ihr Team Sinn machen.",
       formNameLabel: "Name",
       formEmailLabel: "Ihre E-Mail-Adresse",
-      formWebsiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
+      formWebsiteLabel: "Zu analysierende Unternehmenswebsite",
       formCategoryLabel:
         "Wo braucht Ihr Team die meiste Unterst\u00fctzung?",
       formNamePlaceholder: "John Smith",
       formEmailPlaceholder: "name@company.com",
-      formWebsitePlaceholder: "https://your-website.com",
+      formWebsitePlaceholder: "Website eintragen, die Grundlage für die Analyse wird",
       formCategoryPlaceholder:
         "Marktanalyse, Projektmanagement, Social-Media-Analysen...",
       formButton: "Senden",

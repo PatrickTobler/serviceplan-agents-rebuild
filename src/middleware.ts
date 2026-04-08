@@ -18,33 +18,34 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if the user has already been redirected (cookie)
-  const localeCookie = request.cookies.get("locale");
-  if (localeCookie) {
-    if (localeCookie.value === "de") {
-      return NextResponse.redirect(new URL(`/de${pathname}`, request.url));
+  // Allow ?lang= query param to override cookie (e.g. ?lang=en or ?lang=de)
+  const langParam = request.nextUrl.searchParams.get("lang");
+  if (langParam === "en" || langParam === "de") {
+    const cleanUrl = new URL(request.url);
+    cleanUrl.searchParams.delete("lang");
+
+    if (langParam === "de") {
+      cleanUrl.pathname = `/de${pathname}`;
+    } else {
+      cleanUrl.pathname = pathname;
     }
-    return NextResponse.next();
+
+    const response = NextResponse.redirect(cleanUrl);
+    response.cookies.set("locale", langParam, {
+      maxAge: 60 * 60 * 24 * 365,
+      path: "/",
+    });
+    return response;
   }
 
-  // Detect language from Accept-Language header
-  const acceptLanguage = request.headers.get("accept-language") || "";
-  const languages = acceptLanguage.split(",").map((lang) => lang.split(";")[0].trim());
-  const isGerman = languages.some((lang) =>
-    GERMAN_LOCALES.some((de) => lang.toLowerCase().startsWith(de.toLowerCase()))
-  );
+  // Only redirect based on explicit user preference (cookie set by language toggle)
+  const localeCookie = request.cookies.get("locale");
+  if (localeCookie && localeCookie.value === "de") {
+    return NextResponse.redirect(new URL(`/de${pathname}`, request.url));
+  }
 
-  // Set cookie so we only redirect once
-  const response = isGerman
-    ? NextResponse.redirect(new URL(`/de${pathname}`, request.url))
-    : NextResponse.next();
-
-  response.cookies.set("locale", isGerman ? "de" : "en", {
-    maxAge: 60 * 60 * 24 * 365,
-    path: "/",
-  });
-
-  return response;
+  // Default: serve English (no auto-detection from browser headers)
+  return NextResponse.next();
 }
 
 export const config = {
