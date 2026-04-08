@@ -362,7 +362,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                                         className="form_input w-input"
                                         maxLength={256}
                                         name="website_url"
-                                        placeholder="https://your-website.com"
+                                        placeholder={tt.websitePlaceholder}
                                         type="text"
                                         id="website_url"
                                         required

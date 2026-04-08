@@ -22,6 +22,7 @@ export const translations = {
         "Enter your website URL and our AI Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
       websiteLabel: "Your website URL (for competitive analysis)",
+      websitePlaceholder: "https://your-website.com",
       submitButton: "Get your free analysis ",
       privacyText:
         "*By entering your information for a free analysis you agree and accept our",
@@ -300,7 +301,9 @@ export const translations = {
       midCtaButton: "Get your free analysis",
       midCtaPrivacyText:
         "*By entering your information for a free analysis you agree and accept our",
+      midCtaPrivacyLink: "Privacy Policy.",
       midCtaTosText: "*By Proceeding you agree and accept our",
+      midCtaTosLink: "Terms of Service.",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -427,13 +430,14 @@ export const translations = {
       formDescription:
         "Geben Sie Ihre Website-URL ein und unser AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
-      websiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
+      websiteLabel: "Zu analysierende Unternehmenswebsite",
+      websitePlaceholder: "Website eintragen, die Grundlage f\u00fcr die Analyse wird",
       submitButton: "Kostenlose Analyse starten ",
       privacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      privacyLink: "Privacy Policy.",
-      tosText: "*By Proceeding you agree and accept our",
-      tosLink: "Terms of Service",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      privacyLink: "Datenschutzerklärung zu.",
+      tosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      tosLink: "Nutzungsbedingungen zu",
       requestDemoHref: "/de/request-a-demo",
     },
     trustIndicators: {
@@ -710,14 +714,16 @@ export const translations = {
         "Bereit f\u00fcr Ihre kostenlose Analyse \u2013 ganz unverbindlich?",
       midCtaDescription:
         "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
-      midCtaUrlLabel: "Ihre Website-URL",
+      midCtaUrlLabel: "Zu analysierende Unternehmenswebsite",
       midCtaEmailLabel: "Ihre E-Mail-Adresse",
-      midCtaUrlPlaceholder: "https://ihre-website.de",
+      midCtaUrlPlaceholder: "Website eintragen, die Grundlage für die Analyse wird",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
       midCtaPrivacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      midCtaTosText: "*By Proceeding you agree and accept our",
+        "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
+      midCtaPrivacyLink: "Datenschutzerklärung zu.",
+      midCtaTosText: "*Mit dem Fortfahren stimmen Sie unseren",
+      midCtaTosLink: "Nutzungsbedingungen zu.",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
@@ -796,12 +802,12 @@ export const translations = {
         "Sie sehen echte Anwendungsf\u00e4lle, konkrete Beispiele und reale Ergebnisse, die Ihr Team direkt nutzen k\u00f6nnte. Kein Verkaufsgespr\u00e4ch, kein Druck \u2013 nur ein ehrlicher Blick darauf, ob Serviceplan Agents f\u00fcr Ihr Team Sinn machen.",
       formNameLabel: "Name",
       formEmailLabel: "Ihre E-Mail-Adresse",
-      formWebsiteLabel: "Ihre Website-Adresse (f\u00fcr die Wettbewerbsanalyse)",
+      formWebsiteLabel: "Zu analysierende Unternehmenswebsite",
       formCategoryLabel:
         "Wo braucht Ihr Team die meiste Unterst\u00fctzung?",
       formNamePlaceholder: "John Smith",
       formEmailPlaceholder: "name@company.com",
-      formWebsitePlaceholder: "https://your-website.com",
+      formWebsitePlaceholder: "Website eintragen, die Grundlage für die Analyse wird",
       formCategoryPlaceholder:
         "Marktanalyse, Projektmanagement, Social-Media-Analysen...",
       formButton: "Senden",

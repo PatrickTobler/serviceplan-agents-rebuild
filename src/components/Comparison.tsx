@@ -134,7 +134,7 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                                 className="links-legal"
                                 rel="noreferrer"
                               >
-                                <span>Privacy Policy.</span>
+                                <span>{tt.midCtaPrivacyLink}</span>
                               </a>
                             </div>
                           </div>
@@ -168,7 +168,7 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <span className="links-legal">Terms of Service.</span>
+                            <span className="links-legal">{tt.midCtaTosLink}</span>
                           </a>
                         </div>
                       </div>
