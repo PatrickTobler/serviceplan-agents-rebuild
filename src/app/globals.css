@@ -2532,3 +2532,220 @@ margin: 0rem !important;
     justify-content: center;
   }
 }
+
+/* ===== Social Proof: Logo Bar ===== */
+.sp-logo-section {
+  width: 100%;
+}
+
+.sp-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 32px;
+  padding: 40px 24px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sp-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+.sp-logo-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #999;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+  user-select: none;
+}
+
+/* ===== Social Proof: Testimonials ===== */
+.sp-testimonials-section {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 64px 48px;
+  margin-top: 48px;
+  width: 100%;
+}
+
+.sp-testimonials-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 48px;
+  text-align: center;
+  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+}
+
+.sp-testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 48px;
+}
+
+.sp-testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-testimonial-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 24px;
+}
+
+.sp-testimonial-number {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+}
+
+.sp-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.sp-testimonial-quote {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: normal;
+  margin: 0;
+}
+
+.sp-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.sp-testimonial-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sp-testimonial-avatar-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #333;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+}
+
+.sp-testimonial-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px 0;
+  font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
+}
+
+.sp-testimonial-role {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive: Tablet */
+@media screen and (max-width: 991px) {
+  .sp-testimonials-section {
+    padding: 48px 32px;
+  }
+
+  .sp-testimonials-heading {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+
+  .sp-testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 36px;
+  }
+
+  .sp-testimonial-quote {
+    font-size: 16px;
+  }
+
+  .sp-logo-grid {
+    gap: 10px 24px;
+    padding: 32px 20px;
+  }
+
+  .sp-logo-text {
+    font-size: 13px;
+  }
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 767px) {
+  .sp-testimonials-section {
+    padding: 40px 20px;
+    margin-top: 32px;
+    border-radius: 16px;
+  }
+
+  .sp-testimonials-heading {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .sp-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .sp-testimonial-quote {
+    font-size: 16px;
+  }
+
+  .sp-testimonial-avatar,
+  .sp-testimonial-avatar-placeholder {
+    width: 52px;
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .sp-logo-grid {
+    gap: 8px 16px;
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  .sp-logo-item {
+    padding: 6px 10px;
+  }
+
+  .sp-logo-text {
+    font-size: 12px;
+  }
+}

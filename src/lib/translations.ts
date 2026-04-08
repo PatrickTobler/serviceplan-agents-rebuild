@@ -164,16 +164,44 @@ export const translations = {
     },
     companies: {
       heading: "Over 500 companies use agents on Sokosumi.",
-      testimonial1Name: "Florian von Keyserlingk",
-      testimonial1Role:
-        "Owner and Sound Engineer, iftyfour audio post production",
-      testimonial1Quote:
-        '"For a small business like mine who would never do the research myself and never pay someone to do it, I think this is the best tool to develop an actionable and effective online strategy."',
-      testimonial2Name: "Michael Trautmann",
-      testimonial2Role:
-        "Former Global CMO of Audi, entrepreneur, author, and podcaster",
-      testimonial2Quote:
-        '"What Plan.Net Studios are doing is exactly the mindset our industry needs right now: Instead of complaining that "advertising is dead" or that AI will ruin everything, they\u2019re building real tools that make us better, faster, smarter."',
+      testimonialsHeading: "What Our Users Say",
+      testimonials: [
+        {
+          name: "Arne Tiddens",
+          role: "CEO & Co-Founder, Lumoview Building Analytics",
+          quote: "Pretty amazing what Hannah is producing. This agent crew is brutally expanding our capabilities for a super fair price tag.",
+          initials: "AT",
+          image: null,
+        },
+        {
+          name: "Michael Trautmann",
+          role: "Former Global CMO of Audi, entrepreneur, author, and podcaster",
+          quote: "What Plan.Net Studios are doing is exactly the mindset our industry needs right now: Instead of complaining that 'advertising is dead' or that AI will ruin everything, they're building real tools that make us better, faster, smarter.",
+          initials: "MT",
+          image: "/images/michael-trautmann.webp",
+        },
+        {
+          name: "Stevan Paul",
+          role: "Food journalist and author",
+          quote: "The Serviceplan agents showed me things about my business that I had sensed but could never quite articulate: that while I may be 'Germany's most decorated food journalist,' my digital reach doesn't reflect that. They gave me a clear roadmap to solve these issues. Fantastic! Thank you for these tools.",
+          initials: "SP",
+          image: null,
+        },
+        {
+          name: "Florian von Keyserlingk",
+          role: "Owner and Sound Engineer, fiftyfour audio post production",
+          quote: "For a small business like mine who would never do the research myself and never pay someone to do it, I think this is the best tool to develop an actionable and effective online strategy.",
+          initials: "FK",
+          image: "/images/florian-von-keyserlingk.webp",
+        },
+        {
+          name: "Michael Wolff",
+          role: "General Manager, Plan.Net Journey",
+          quote: "I use it already heavily for my sales activities - it's just mind blowing how fast to go forward within your sales conversation. Especially with the premium data sources which are not available on public makes a big trustful difference!",
+          initials: "MW",
+          image: null,
+        },
+      ],
       stat1Value: "20",
       stat1Label: "min",
       stat1Description: "Average delivery time for research",
@@ -183,9 +211,6 @@ export const translations = {
       stat3Value: "from 10",
       stat3Label: "EUR",
       stat3Description: "vs. 5,000 \u20ac agency retainer",
-      downloadHeading: "New to agents?",
-      downloadSubheading: "Download the Quick Start Guide.",
-      downloadButton: "Download guide",
     },
     pricing: {
       heading: "Plans That Grow with Your Business.",
@@ -578,16 +603,44 @@ export const translations = {
     },
     companies: {
       heading: "Over 500 companies use agents on Sokosumi.",
-      testimonial1Name: "Florian von Keyserlingk",
-      testimonial1Role:
-        "Florian von Keyserlingk, Inhaber und Sound Engineer, iftyfour audio post production",
-      testimonial1Quote:
-        "F\u00fcr ein kleines Unternehmen wie meines, f\u00fcr das ich selbst niemals eine solche Recherche machen und auch niemanden daf\u00fcr bezahlen w\u00fcrde, ist das meiner Meinung nach das beste Tool, um eine umsetzbare und effektive Online-Strategie zu entwickeln.",
-      testimonial2Name: "Michael Trautmann",
-      testimonial2Role:
-        "Ex Global CMO Audi, Unternehmer, Autor und Podcaster",
-      testimonial2Quote:
-        "Plan.Net Studios zeigt genau die Haltung, die unsere Branche jetzt braucht: Statt dar\u00fcber zu klagen, dass \u2018Werbung tot ist\u2019 oder dass KI alles ruinieren wird, bauen sie echte Tools, die uns besser, schneller und smarter machen.",
+      testimonialsHeading: "Was unsere Nutzer sagen",
+      testimonials: [
+        {
+          name: "Arne Tiddens",
+          role: "CEO & Co-Founder, Lumoview Building Analytics",
+          quote: "Beeindruckend, was Hannah da rumschickt. Dieses Agenten-Team erweitert unsere M\u00f6glichkeiten massiv \u2013 und das zu einem wirklich fairen Preis.",
+          initials: "AT",
+          image: null,
+        },
+        {
+          name: "Michael Trautmann",
+          role: "Ex Global CMO Audi, Unternehmer, Autor und Podcaster",
+          quote: "Plan.Net Studios zeigt genau die Haltung, die unsere Branche jetzt braucht: Statt dar\u00fcber zu klagen, dass \u2018Werbung tot ist\u2019 oder dass KI alles ruinieren wird, bauen sie echte Tools, die uns besser, schneller und smarter machen.",
+          initials: "MT",
+          image: "/images/michael-trautmann.webp",
+        },
+        {
+          name: "Stevan Paul",
+          role: "Journalist und Autor",
+          quote: "Die Serviceplan Agenten haben mir Dinge \u00fcber mein Business aufgezeigt, die ich zwar ahnte, aber nie fassen konnte: ich sei zwar \u2018der meistdekorierte Foodjournalist Deutschlands\u2019 \u2013 aber meine digitale Reichweite spiegele das nicht wider. Sie haben mir eine klare Roadmap gegeben, um die Probleme zu l\u00f6sen. Toll! Danke f\u00fcr diese Tools.",
+          initials: "SP",
+          image: null,
+        },
+        {
+          name: "Florian von Keyserlingk",
+          role: "Inhaber und Sound Engineer, fiftyfour audio post production",
+          quote: "F\u00fcr ein kleines Unternehmen wie meines, f\u00fcr das ich selbst niemals eine solche Recherche machen und auch niemanden daf\u00fcr bezahlen w\u00fcrde, ist das meiner Meinung nach das beste Tool, um eine umsetzbare und effektive Online-Strategie zu entwickeln.",
+          initials: "FK",
+          image: "/images/florian-von-keyserlingk.webp",
+        },
+        {
+          name: "Michael Wolff",
+          role: "General Manager, Plan.Net Journey",
+          quote: "Ich nutze es bereits intensiv f\u00fcr meine Vertriebsaktivit\u00e4ten \u2013 es ist einfach verbl\u00fcffend, wie schnell man im Verkaufsgespr\u00e4ch vorankommt mit der Hilfe von Hannah. Besonders die Premium-Datenquellen, die \u00f6ffentlich nicht verf\u00fcgbar sind, machen einen enormen und vertrauensw\u00fcrdigen Unterschied!",
+          initials: "MW",
+          image: null,
+        },
+      ],
       stat1Value: "20",
       stat1Label: "Min",
       stat1Description: "Durchschnittliche Lieferzeit f\u00fcr Research",
@@ -597,10 +650,6 @@ export const translations = {
       stat3Value: "ab 10",
       stat3Label: "EUR",
       stat3Description: "statt 5.000 \u20ac Agenturhonorar",
-      downloadHeading:
-        "Erste Schritte mit KI-Agenten? Unser Guide hilft.",
-      downloadSubheading: "Laden Sie den Schnellstart-Guide herunter.",
-      downloadButton: "Guide laden",
     },
     pricing: {
       heading: "Pakete, die zu Ihnen passen.",
