@@ -86,7 +86,7 @@ export default function HowItWorks({ locale = "en" }: { locale?: Locale }) {
                         {/* Floating brand logos */}
                         <div className="step2-floating-logos">
                           <div className="step2-logo step2-logo-gwi">
-                            <span style={{ color: '#FF4B4F', fontWeight: 700, fontSize: '20px', letterSpacing: '-0.02em' }}>GWI.</span>
+                            <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '20px', letterSpacing: '-0.02em' }}>GWI.</span>
                           </div>
                           <div className="step2-logo step2-logo-statista">
                             <svg width="80" height="16" viewBox="0 0 119 23" fill="none" xmlns="http://www.w3.org/2000/svg">
