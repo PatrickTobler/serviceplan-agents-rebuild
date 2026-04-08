@@ -2331,7 +2331,10 @@ margin: 0rem !important;
 .step2-logo-statista {
   top: 22%;
   left: 0%;
-  background: #1A3D5C;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .step2-logo-elena {
