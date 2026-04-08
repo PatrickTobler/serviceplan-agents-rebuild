@@ -6,7 +6,7 @@ html {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: 16px;
+  margin-left: 24px;
   font-size: 14px;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
 }
@@ -2493,7 +2493,7 @@ margin: 0rem !important;
   width: auto;
   max-width: none;
   transition: background-color 0.2s ease;
-  border-radius: 9999px;
+  border-radius: 0;
   /* Override .w-inline-block display:inline-block and .button justify-content:space-between */
   display: flex !important;
   align-items: center !important;
@@ -2509,7 +2509,7 @@ margin: 0rem !important;
 
 /* Demo anfragen button — pill shape in both Navbar and Hero */
 .button-group.nav-button .button {
-  border-radius: 9999px !important;
+  border-radius: 0 !important;
 }
 
 .button.is-cta-red:hover {
