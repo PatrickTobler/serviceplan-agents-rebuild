@@ -61,7 +61,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
                 <div>{tt.agents}</div>
               </div>
               {dropdownOpen && (
-                <nav className="uui-navbar08_dropdown-list-2 is-resources w-dropdown-list" style={{ display: "block" }}>
+                <nav className="uui-navbar08_dropdown-list-2 is-resources w-dropdown-list w--open" style={{ display: "block" }}>
                   <div className="uui-navbar08_dropdown-link-list-2 is-resources">
                     {agents.map((agent) => (
                       <a

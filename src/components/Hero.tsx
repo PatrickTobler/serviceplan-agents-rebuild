@@ -155,7 +155,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                     </div>
                     <div>{navTt.agents}</div>
                   </div>
-                  <nav className="uui-navbar08_dropdown-list-2 is-resources w-dropdown-list" style={{ display: dropdownOpen ? "block" : "none" }}>
+                  <nav className={`uui-navbar08_dropdown-list-2 is-resources w-dropdown-list${dropdownOpen ? " w--open" : ""}`} style={{ display: dropdownOpen ? "block" : "none" }}>
                     <div className="uui-navbar08_dropdown-link-list-2 is-resources">
                       <a href="#hannah" className="uui-navbar08_dropdown-link-2 w-inline-block" onClick={(e) => handleAgentClick(e, "#hannah")}>
                         <div className="uui-navbar08_icon-wrapper-2 hide">
