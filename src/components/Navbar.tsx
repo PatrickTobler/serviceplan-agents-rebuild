@@ -22,7 +22,6 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
             <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">{tt.pricing}</a>
           </div>
           <div className="nav-cta-links">
-            <LanguageToggle locale={locale} />
             <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <a href={tt.freeAnalysisHref} className="button is-cta-red w-inline-block">
                 <div>{tt.freeAnalysis}</div>
@@ -37,9 +36,10 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
                 </div>
               </a>
             </div>
+            <LanguageToggle locale={locale} />
           </div>
         </nav>
-        <div className="language-toggle-mobile" style={{ display: 'none' }}>
+        <div className="language-toggle-mobile">
           <LanguageToggle locale={locale} />
         </div>
         <div

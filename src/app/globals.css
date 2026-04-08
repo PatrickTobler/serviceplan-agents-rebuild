@@ -2,35 +2,36 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-right: 16px;
+  margin-left: 16px;
   font-size: 14px;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
 }
 
-.language-toggle a {
-  text-decoration: none;
-  color: #000;
+.language-toggle span {
   cursor: pointer;
   transition: opacity 0.2s ease;
+  line-height: 1;
 }
 
-.language-toggle a.active {
-  opacity: 1;
-  font-weight: 600;
+.language-toggle span.active {
+  font-weight: 700;
+  color: #fff;
 }
 
-.language-toggle a.inactive {
-  opacity: 0.5;
+.language-toggle span.inactive {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.language-toggle a.inactive:hover {
-  opacity: 0.8;
+.language-toggle span.inactive:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .language-toggle .separator {
-  opacity: 0.5;
-  color: #000;
+  color: rgba(255, 255, 255, 0.35);
+  cursor: default;
   user-select: none;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 991px) {
