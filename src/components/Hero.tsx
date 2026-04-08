@@ -189,7 +189,10 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
               </div>
               <div className="nav-cta-links">
                 <LanguageToggle locale={locale} />
-                <div className="button-group nav-button">
+                <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                  <a href={navTt.freeAnalysisHref} className="button is-cta-red navigation w-inline-block">
+                    <div>{navTt.freeAnalysis}</div>
+                  </a>
                   <a href={tt.requestDemoHref} className="button navigation w-inline-block">
                     <div>{navTt.requestDemo}</div>
                     <div className="arrow-icon w-embed">
