@@ -2,11 +2,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.nav-cta-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0;
+}
+
 .language-toggle {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: 12px;
+  margin-left: 16px;
   margin-right: 0;
   font-size: 14px;
   font-family: var(--_serviceplan-styles---demi), 'Avenir LT Pro', sans-serif;
@@ -40,7 +47,7 @@ html {
 }
 
 @media screen and (max-width: 991px) {
-  .nav-cta-links .language-toggle {
+  .nav-cta-links > .language-toggle {
     display: none;
   }
   .language-toggle-mobile {
