@@ -607,7 +607,7 @@ export const translations = {
       learnMore: "Mehr \u00fcber Sokosumi erfahren",
     },
     companies: {
-      heading: "Over 500 companies use agents on Sokosumi.",
+      heading: "Über 500 Unternehmen nutzen Agents auf Sokosumi.",
       testimonialsHeading: "Was unsere Nutzer sagen",
       testimonials: [
         {
