@@ -2297,12 +2297,12 @@ margin: 0rem !important;
 .step2-portrait {
   position: relative;
   z-index: 2;
-  width: 240px;
-  max-width: 70%;
+  width: 260px;
+  max-width: 75%;
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .step2-floating-logos {
@@ -2315,51 +2315,51 @@ margin: 0rem !important;
 .step2-logo {
   position: absolute;
   background: white;
-  border-radius: 12px;
-  padding: 8px 14px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 7px 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
   display: flex;
   align-items: center;
   gap: 2px;
 }
 
 .step2-logo-gwi {
-  top: 8%;
-  right: 5%;
+  top: 4%;
+  right: 2%;
 }
 
 .step2-logo-statista {
-  top: 28%;
-  left: 2%;
+  top: 22%;
+  left: 0%;
 }
 
 .step2-logo-chart {
-  top: 45%;
-  right: 8%;
-  padding: 8px 10px;
+  top: 50%;
+  right: 4%;
+  padding: 7px 9px;
 }
 
 .step2-task-card {
   position: relative;
   z-index: 3;
   background: white;
-  border-radius: 14px;
+  border-radius: 12px;
   padding: 12px 16px;
-  margin: -20px auto 8px;
-  max-width: 85%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: -30px auto 10px;
+  max-width: 88%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .step2-task-item {
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.4;
   color: #1a1a1a;
   display: flex;
   gap: 6px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .step2-task-number {
@@ -2368,59 +2368,61 @@ margin: 0rem !important;
 }
 
 .agents-work-wrap.second {
-  min-height: 310px;
+  min-height: 340px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 20px;
+  padding-top: 10px;
   overflow: visible;
 }
 
 /* Force gradient blobs behind portrait */
 .agents-work-wrap.second .green-bg {
   z-index: 0;
+  opacity: 0.85;
 }
 
 .agents-work-wrap.second .red-bg {
   z-index: 0;
+  opacity: 0.85;
 }
 
 @media screen and (max-width: 767px) {
   .step2-portrait {
-    width: 200px;
+    width: 220px;
   }
 
   .step2-task-card {
     max-width: 95%;
-    padding: 14px 16px;
+    padding: 12px 14px;
   }
 
   .step2-task-item {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .step2-logo-gwi {
-    top: 5%;
-    right: 8%;
+    top: 2%;
+    right: 5%;
   }
 
   .step2-logo-statista {
-    top: 25%;
-    left: 5%;
+    top: 20%;
+    left: 3%;
   }
 
   .step2-logo-chart {
-    top: 42%;
-    right: 5%;
+    top: 45%;
+    right: 3%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .step2-portrait {
-    width: 280px;
+    width: 290px;
   }
 
   .agents-work-wrap.second {
-    min-height: 360px;
+    min-height: 380px;
   }
 }
