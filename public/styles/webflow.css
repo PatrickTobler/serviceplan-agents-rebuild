@@ -4252,7 +4252,7 @@ figcaption {
 }
 
 .acc-head.active {
-  border-bottom-width: 0;
+  border-bottom-color: transparent;
 }
 
 .toggle-arrow {
@@ -4276,14 +4276,14 @@ figcaption {
 }
 
 .acc-item.active {
-  border-top-width: 0;
+  border-top-color: transparent;
   border-bottom-color: var(--base-color-neutral--black);
   border-radius: var(--_serviceplan-styles---24px);
   background-color: var(--base-color-neutral--black);
 }
 
 .acc-item.bottom {
-  border-bottom-width: 0;
+  border-bottom-color: transparent;
 }
 
 .toggle-arrow-2 {
@@ -4994,7 +4994,7 @@ figcaption {
 
 .vector {
   border-style: solid;
-  border-width: undefinedpx;
+  border-width: 1px;
   object-fit: cover;
   border-color: #fff;
 }
@@ -5292,7 +5292,7 @@ figcaption {
 
 .line-325 {
   border-style: solid;
-  border-width: undefinedpx;
+  border-width: 1px;
   opacity: .3;
   object-fit: cover;
   border-color: #dbdbdb;
@@ -7701,7 +7701,7 @@ figcaption {
   }
 
   .line-step {
-    right: -30%;
+    right: 0;
   }
 }
 
