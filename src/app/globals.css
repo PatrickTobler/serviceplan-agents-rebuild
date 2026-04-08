@@ -2334,6 +2334,28 @@ margin: 0rem !important;
   background: #1A3D5C;
 }
 
+.step2-logo-elena {
+  top: 42%;
+  right: 16%;
+  padding: 0;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.step2-elena-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .step2-logo-alex {
   top: 50%;
   right: 4%;
@@ -2346,6 +2368,7 @@ margin: 0rem !important;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: 3;
 }
 
 .step2-alex-avatar {
@@ -2425,6 +2448,11 @@ margin: 0rem !important;
   .step2-logo-statista {
     top: 20%;
     left: 3%;
+  }
+
+  .step2-logo-elena {
+    top: 38%;
+    right: 14%;
   }
 
   .step2-logo-alex {

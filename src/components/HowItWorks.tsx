@@ -103,6 +103,16 @@ export default function HowItWorks({ locale = "en" }: { locale?: Locale }) {
                               <path d="M47.4945 0.0371523C48.7524 0.00190339 50.0968 0.0199284 51.3613 0.0152368C51.3325 1.13481 51.3538 2.30876 51.3585 3.43271C50.0803 3.4245 48.802 3.42771 47.5238 3.44234C47.5289 2.59754 47.5835 0.825962 47.4945 0.0371523Z" fill="white"/>
                             </svg>
                           </div>
+                          <div className="step2-logo step2-logo-elena">
+                            <img
+                              src="/images/elena.png"
+                              loading="lazy"
+                              width={30}
+                              height={30}
+                              alt=""
+                              className="step2-elena-avatar"
+                            />
+                          </div>
                           <div className="step2-logo step2-logo-alex">
                             <img
                               src="/images/alex-2.png"
