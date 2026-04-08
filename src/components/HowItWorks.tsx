@@ -89,8 +89,12 @@ export default function HowItWorks({ locale = "en" }: { locale?: Locale }) {
                             <span style={{ color: '#FF4B4F', fontWeight: 700, fontSize: '20px', letterSpacing: '-0.02em' }}>GWI.</span>
                           </div>
                           <div className="step2-logo step2-logo-statista">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '4px', flexShrink: 0 }}>
+                              <rect x="1" y="9" width="3" height="6" rx="0.5" fill="#1A3D5C"/>
+                              <rect x="5.5" y="5" width="3" height="10" rx="0.5" fill="#1A3D5C"/>
+                              <rect x="10" y="1" width="3" height="14" rx="0.5" fill="#1A3D5C"/>
+                            </svg>
                             <span style={{ color: '#1A3D5C', fontWeight: 600, fontSize: '16px' }}>statista</span>
-                            <span style={{ color: '#FF6B00', fontSize: '16px', marginLeft: '1px' }}>&#8226;</span>
                           </div>
                           <div className="step2-logo step2-logo-chart">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
