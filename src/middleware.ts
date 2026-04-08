@@ -18,33 +18,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if the user has already been redirected (cookie)
+  // Only redirect based on explicit user preference (cookie set by language toggle)
   const localeCookie = request.cookies.get("locale");
-  if (localeCookie) {
-    if (localeCookie.value === "de") {
-      return NextResponse.redirect(new URL(`/de${pathname}`, request.url));
-    }
-    return NextResponse.next();
+  if (localeCookie && localeCookie.value === "de") {
+    return NextResponse.redirect(new URL(`/de${pathname}`, request.url));
   }
 
-  // Detect language from Accept-Language header
-  const acceptLanguage = request.headers.get("accept-language") || "";
-  const languages = acceptLanguage.split(",").map((lang) => lang.split(";")[0].trim());
-  const isGerman = languages.some((lang) =>
-    GERMAN_LOCALES.some((de) => lang.toLowerCase().startsWith(de.toLowerCase()))
-  );
-
-  // Set cookie so we only redirect once
-  const response = isGerman
-    ? NextResponse.redirect(new URL(`/de${pathname}`, request.url))
-    : NextResponse.next();
-
-  response.cookies.set("locale", isGerman ? "de" : "en", {
-    maxAge: 60 * 60 * 24 * 365,
-    path: "/",
-  });
-
-  return response;
+  // Default: serve English (no auto-detection from browser headers)
+  return NextResponse.next();
 }
 
 export const config = {
