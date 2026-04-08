@@ -2331,12 +2331,28 @@ margin: 0rem !important;
 .step2-logo-statista {
   top: 22%;
   left: 0%;
+  background: #1A3D5C;
 }
 
-.step2-logo-chart {
+.step2-logo-alex {
   top: 50%;
   right: 4%;
-  padding: 7px 9px;
+  padding: 0;
+  background: white;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.step2-alex-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .step2-task-card {
@@ -2411,7 +2427,7 @@ margin: 0rem !important;
     left: 3%;
   }
 
-  .step2-logo-chart {
+  .step2-logo-alex {
     top: 45%;
     right: 3%;
   }
