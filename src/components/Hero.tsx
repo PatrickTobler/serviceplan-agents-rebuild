@@ -229,7 +229,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
               <div className="hero-content">
                 <div className="hero-text-wrap">
                   <div className="margin-bottom margin-large">
-                    <h1>{tt.heading} <br />{tt.headingLine2} <br />{tt.headingLine3}</h1>
+                    <h1>{tt.heading} <br />{tt.headingLine2} <br /><span style={{ fontFamily: 'AvenirLTProLight, Arial, sans-serif', fontWeight: 300 }}>{tt.headingLine3}{tt.headingLine4 && <><br />{tt.headingLine4}</>}</span></h1>
                   </div>
                   <div className="hero-description">
                     <div className="text-size-regular is-white">

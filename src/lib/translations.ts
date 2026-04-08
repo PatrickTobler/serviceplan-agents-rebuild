@@ -14,9 +14,10 @@ export const translations = {
     hero: {
       heading: "AI Coworkers for",
       headingLine2: "Your Marketing.",
-      headingLine3: "By Serviceplan.",
+      headingLine3: "By Europe\u2019s",
+      headingLine4: "Leading Agency.",
       description:
-        "Europe\u2019s leading agency \u2013 now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
+        "The quality of the Serviceplan Group now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
       formHeading: "Try your AI Coworker free \u2013 no strings attached",
       formDescription:
         "Enter your website URL and our AI Coworker will deliver a free competitive analysis straight to your inbox.",
@@ -423,9 +424,10 @@ export const translations = {
     hero: {
       heading: "AI Coworker f\u00fcr",
       headingLine2: "Ihr Marketing.",
-      headingLine3: "Von Serviceplan.",
+      headingLine3: "Von Europas",
+      headingLine4: "f\u00fchrender Agentur.",
       description:
-        "Europas f\u00fchrende Agentur \u2013 jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
+        "Die Qualit\u00e4t der Serviceplan Gruppe jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
       formHeading: "AI Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
         "Geben Sie Ihre Website-URL ein und unser AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
