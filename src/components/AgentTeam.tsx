@@ -177,7 +177,7 @@ export default function AgentTeam({ locale = "en" }: { locale?: Locale }) {
                     {tt.growingTeam}
                   </h5>
                   <div className="spacer-medium"></div>
-                  <a href="#free-analysis" className="button is-red secondary w-button">
+                  <a href="https://www.sokosumi.com/sign-up" className="button is-red secondary w-button">
                     {tt.getNotified}
                   </a>
                 </div>
