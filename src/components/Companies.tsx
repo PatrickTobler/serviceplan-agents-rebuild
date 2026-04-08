@@ -105,14 +105,6 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                       {tt.stat1Description}
                     </div>
                   </div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/Line-326.svg"
-                    loading="lazy"
-                    width={63}
-                    alt="divider-line"
-                    className="line-325"
-                  />
                   <div className="container-37">
                     <div className="footer-text">
                       <div className="footer-text">
@@ -124,14 +116,6 @@ export default function Companies({ locale = "en" }: { locale?: Locale }) {
                       {tt.stat2Description}
                     </div>
                   </div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/Line-326.svg"
-                    loading="lazy"
-                    width={63}
-                    alt="divider-line"
-                    className="line-325"
-                  />
                   <div className="number-wrap no-border">
                     <div className="footer-text">
                       <div className="footer-text">
