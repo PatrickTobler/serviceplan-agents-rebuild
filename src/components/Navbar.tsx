@@ -18,7 +18,6 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
         </a>
         <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
           <div className="navigation-link-wrap">
-            <a href="#" className="nav-menu w-nav-link">{tt.agents}</a>
             <a href="https://www.sokosumi.com/#how-it-works" className="nav-menu w-nav-link">{tt.pricing}</a>
           </div>
           <div className="nav-cta-links">
