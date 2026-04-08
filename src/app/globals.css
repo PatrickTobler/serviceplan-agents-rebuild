@@ -15,7 +15,7 @@
 
 .language-toggle span.active {
   font-weight: 700;
-  color: #fff;
+  color: #00e676;
 }
 
 .language-toggle span.inactive {
@@ -34,9 +34,14 @@
   font-weight: 300;
 }
 
+.language-toggle-desktop {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 991px) {
-  .nav-cta-links > .language-toggle {
-    display: none;
+  .language-toggle-desktop {
+    display: none !important;
   }
   .language-toggle-mobile {
     display: flex !important;
