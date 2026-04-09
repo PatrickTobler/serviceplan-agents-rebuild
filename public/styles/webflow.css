@@ -6246,7 +6246,7 @@ figcaption {
 }
 
 .section-wrapper {
-  padding: var(--_serviceplan-styles---20px);
+  padding: var(--_serviceplan-styles---32px);
   background-color: var(--base-color-brand--bg-option);
 }
 
@@ -8652,7 +8652,7 @@ figcaption {
   }
 
   .section-wrapper {
-    padding: var(--_serviceplan-styles---8px);
+    padding: var(--_serviceplan-styles---20px);
   }
 
   .code-embed-4 {
