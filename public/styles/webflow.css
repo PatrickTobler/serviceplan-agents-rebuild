@@ -4530,6 +4530,8 @@ figcaption {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   display: flex;
 }
 
@@ -4540,6 +4542,8 @@ figcaption {
   align-items: center;
   text-decoration: none;
   display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .link-with-arrow.is-white {
@@ -6246,7 +6250,7 @@ figcaption {
 }
 
 .section-wrapper {
-  padding: var(--_serviceplan-styles---32px);
+  padding: var(--_serviceplan-styles---20px);
   background-color: var(--base-color-brand--bg-option);
 }
 
@@ -6847,6 +6851,7 @@ figcaption {
   max-height: 650px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1.5rem;
   position: relative;
   overflow: hidden;
   transform: scale(.9);
@@ -8652,7 +8657,7 @@ figcaption {
   }
 
   .section-wrapper {
-    padding: var(--_serviceplan-styles---20px);
+    padding: var(--_serviceplan-styles---8px);
   }
 
   .code-embed-4 {
@@ -8771,6 +8776,7 @@ figcaption {
   }
 
   .dashboard-wrapper {
+    padding: 1rem;
     display: none;
   }
 
