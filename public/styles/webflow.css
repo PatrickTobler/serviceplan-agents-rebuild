@@ -4252,7 +4252,7 @@ figcaption {
 }
 
 .acc-head.active {
-  border-bottom-width: 0;
+  border-bottom-color: transparent;
 }
 
 .toggle-arrow {
@@ -4276,14 +4276,14 @@ figcaption {
 }
 
 .acc-item.active {
-  border-top-width: 0;
+  border-top-color: transparent;
   border-bottom-color: var(--base-color-neutral--black);
   border-radius: var(--_serviceplan-styles---24px);
   background-color: var(--base-color-neutral--black);
 }
 
 .acc-item.bottom {
-  border-bottom-width: 0;
+  border-bottom-color: transparent;
 }
 
 .toggle-arrow-2 {
@@ -4530,6 +4530,9 @@ figcaption {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 6rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   display: flex;
 }
 
@@ -4540,6 +4543,8 @@ figcaption {
   align-items: center;
   text-decoration: none;
   display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .link-with-arrow.is-white {
@@ -4994,7 +4999,7 @@ figcaption {
 
 .vector {
   border-style: solid;
-  border-width: undefinedpx;
+  border-width: 1px;
   object-fit: cover;
   border-color: #fff;
 }
@@ -5292,7 +5297,7 @@ figcaption {
 
 .line-325 {
   border-style: solid;
-  border-width: undefinedpx;
+  border-width: 1px;
   opacity: .3;
   object-fit: cover;
   border-color: #dbdbdb;
@@ -6847,6 +6852,7 @@ figcaption {
   max-height: 650px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1.5rem;
   position: relative;
   overflow: hidden;
   transform: scale(.9);
@@ -7701,7 +7707,7 @@ figcaption {
   }
 
   .line-step {
-    right: -30%;
+    right: 0;
   }
 }
 
@@ -8771,6 +8777,7 @@ figcaption {
   }
 
   .dashboard-wrapper {
+    padding: 1rem;
     display: none;
   }
 
@@ -8791,6 +8798,10 @@ figcaption {
   .glass-wrapper {
     padding: var(--_serviceplan-styles---18px) var(--_serviceplan-styles---28px);
     bottom: 3%;
+  }
+
+  .sokosumi-content {
+    padding-top: 4rem;
   }
 }
 
@@ -9230,6 +9241,10 @@ figcaption {
     padding-right: var(--_serviceplan-styles---20px);
     padding-left: var(--_serviceplan-styles---20px);
     bottom: 15%;
+  }
+
+  .sokosumi-content {
+    padding-top: 3rem;
   }
 }
 
