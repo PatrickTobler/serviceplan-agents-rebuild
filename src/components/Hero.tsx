@@ -1,9 +1,15 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useRef, useEffect, FormEvent } from "react";
 import { submitAnalysisForm } from "@/lib/submitForm";
 import { Locale, t } from "@/lib/translations";
 import LanguageToggle from "@/components/LanguageToggle";
+
+const agents = [
+  { name: "Hannah", href: "#hannah", image: "/images/user-image.png" },
+  { name: "Elena", href: "#elena", image: "/images/elena.png" },
+  { name: "Alex", href: "#alex", image: "/images/alex-2.png" },
+];
 
 export default function Hero({ children, locale = "en" }: { children?: React.ReactNode; locale?: Locale }) {
   const tt = t(locale).hero;
@@ -11,6 +17,29 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
   const [email, setEmail] = useState("");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function handleAgentClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    e.preventDefault();
+    setDropdownOpen(false);
+    setMenuOpen(false);
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -119,8 +148,48 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
             </a>
             <nav role="navigation" className="navbar-menu-content-wrap w-nav-menu" {...(menuOpen ? { "data-nav-menu-open": "" } : {})}>
               <div className="navigation-link-wrap">
+                <div className="uui-navbar08_menu-dropdown-2 w-dropdown" ref={dropdownRef}>
+                  <div
+                    className="uui-navbar08_dropdown-toggle-2 w-dropdown-toggle"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <div className="uui-dropdown-icon-2 w-embed">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    <div>{navTt.agents}</div>
+                  </div>
+                  {dropdownOpen && (
+                    <nav className="uui-navbar08_dropdown-list-2 is-resources w-dropdown-list w--open" style={{ display: "block", backgroundColor: "rgba(10, 10, 10, 0.35)", backdropFilter: "blur(60px)", WebkitBackdropFilter: "blur(60px)", border: "1px solid rgba(16, 16, 16, 0.35)", borderRadius: "0.75rem" }}>
+                      <div className="uui-navbar08_dropdown-link-list-2 is-resources">
+                        {agents.map((agent) => (
+                          <a
+                            key={agent.name}
+                            href={agent.href}
+                            className="uui-navbar08_dropdown-link-2 w-inline-block"
+                            onClick={(e) => handleAgentClick(e, agent.href)}
+                          >
+                            <div className="uui-navbar08_item-right-2">
+                              <div className="uui-navbar08_text-wrapper-2">
+                                <img src={agent.image} loading="lazy" alt="" style={{ width: "1.5rem", height: "1.5rem", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+                                <div className="uui-navbar08_item-heading-2">{agent.name}</div>
+                                <div className="navbar_heading-arrow w-embed">
+                                  <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </nav>
+                  )}
+                </div>
                 <a href="#pricing" className="nav-menu is-white w-nav-link">{navTt.pricing}</a>
-
+                <a href="mailto:support@serviceplan-agents.com?subject=Reaching%20out%20to%20you%20reading%20Serviceplan-agents.com" className="nav-menu is-white w-nav-link">{navTt.contact}</a>
               </div>
               <div className="nav-cta-links">
                 <div className="button-group nav-button" style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>

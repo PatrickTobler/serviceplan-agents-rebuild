@@ -4,7 +4,10 @@ export const translations = {
   en: {
     navbar: {
       agents: "Agents",
+      agentsHref: "#agents",
       pricing: "Pricing",
+      contact: "Contact",
+      contactHref: "mailto:support@serviceplan-agents.com?subject=Reaching%20out%20to%20you%20reading%20Serviceplan-agents.com",
       requestDemo: "Request a Demo",
       freeAnalysis: "Free Analysis",
       freeAnalysisHref: "#free-analysis",
@@ -392,7 +395,7 @@ export const translations = {
       pricing: "Pricing",
       column2Header: "Resources",
       contact: "Contact",
-      contactHref: "/request-a-demo",
+      contactHref: "mailto:support@serviceplan-agents.com?subject=Reaching%20out%20to%20you%20reading%20Serviceplan-agents.com",
       column3Header: "Legal",
       imprint: "Imprint",
       privacyPolicy: "Privacy Policy",
@@ -447,7 +450,10 @@ export const translations = {
   de: {
     navbar: {
       agents: "Agents",
+      agentsHref: "#agents",
       pricing: "Preise",
+      contact: "Kontakt",
+      contactHref: "mailto:support@serviceplan-agents.com?subject=Reaching%20out%20to%20you%20reading%20Serviceplan-agents.com",
       requestDemo: "Demo anfragen",
       freeAnalysis: "Kostenlose Analyse",
       freeAnalysisHref: "#free-analysis",
@@ -840,7 +846,7 @@ export const translations = {
       pricing: "Preise",
       column2Header: "Resources",
       contact: "Kontakt",
-      contactHref: "/de/request-a-demo",
+      contactHref: "mailto:support@serviceplan-agents.com?subject=Reaching%20out%20to%20you%20reading%20Serviceplan-agents.com",
       column3Header: "Legal",
       imprint: "Impressum",
       privacyPolicy: "Datenschutzerkl\u00e4rung",
