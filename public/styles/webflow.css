@@ -4530,6 +4530,7 @@ figcaption {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 6rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   display: flex;
@@ -8798,6 +8799,10 @@ figcaption {
     padding: var(--_serviceplan-styles---18px) var(--_serviceplan-styles---28px);
     bottom: 3%;
   }
+
+  .sokosumi-content {
+    padding-top: 4rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -9236,6 +9241,10 @@ figcaption {
     padding-right: var(--_serviceplan-styles---20px);
     padding-left: var(--_serviceplan-styles---20px);
     bottom: 15%;
+  }
+
+  .sokosumi-content {
+    padding-top: 3rem;
   }
 }
 
