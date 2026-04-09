@@ -173,7 +173,7 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                           >
                             <div className="uui-navbar08_item-right-2">
                               <div className="uui-navbar08_text-wrapper-2">
-                                <img src={agent.image} loading="lazy" alt="" />
+                                <img src={agent.image} loading="lazy" alt="" style={{ width: "1.5rem", height: "1.5rem", borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
                                 <div className="uui-navbar08_item-heading-2">{agent.name}</div>
                                 <div className="navbar_heading-arrow w-embed">
                                   <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
