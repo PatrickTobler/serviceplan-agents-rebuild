@@ -31,12 +31,12 @@ export default function Sokosumi({ locale = "en" }: { locale?: Locale }) {
       </div>
       <div className="spacer-medium"></div>
       <div className="max-width-large">
-        <h3 className="text-align-center">{tt.heading} <br/>{tt.headingLine2}</h3>
+        <h3 className="text-align-center">{tt.heading} <br/><a href="https://www.sokosumi.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline", textUnderlineOffset: "0.2em" }}>{tt.headingLine2}</a></h3>
         <div className="spacer-small"></div>
         <div>
           <h4 className="text-align-center">{tt.subheading}</h4>
           <div className="spacer-medium"></div>
-          <div className="text-align-center">{tt.description}<br/></div>
+          <div className="text-align-center" style={{ wordWrap: "break-word", overflowWrap: "break-word" }}>{tt.description}</div>
         </div>
       </div>
     </div>
