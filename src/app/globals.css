@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .nav-cta-links {
@@ -66,6 +67,24 @@ html {
   }
 }
 
+/* Fix mobile navigation border artifacts */
+@media screen and (max-width: 991px) {
+  .navbar-menu-content-wrap[data-nav-menu-open] {
+    border: none !important;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .navbar_component .w-nav-overlay {
+    border: none;
+  }
+
+  .navigation-link-wrap {
+    border: none !important;
+  }
+}
+
 /* Webflow visibility control — keeps IX-animated elements hidden until ready */
 [data-wf-page] .w-ix-emptyfix::after {
   content: "";
@@ -104,6 +123,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 /* Focus state style for keyboard navigation for the focusable elements */
@@ -133,6 +153,15 @@ body {
 .container-medium,.container-small, .container-large {
 	margin-right: auto !important;
   margin-left: auto !important;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .container-medium, .container-small, .container-large {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* 
@@ -2062,14 +2091,16 @@ margin: 0rem !important;
 }
 
 .step-text-wrapper.new {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   position: absolute;
   inset: 82% auto 0% -28%;
 }
 
 .all-agents {
   z-index: 2;
-  width: 640px;
+  width: 100%;
+  max-width: 640px;
   position: absolute;
   inset: auto 0% -10%;
 }
@@ -2124,7 +2155,7 @@ margin: 0rem !important;
 
 @media screen and (max-width: 991px) {
   .step-text-wrapper.new {
-    width: 290px;
+    max-width: 290px;
   }
 
   .code-embed-5 {
@@ -2169,7 +2200,7 @@ margin: 0rem !important;
 
 @media screen and (max-width: 479px) {
   .step-text-wrapper.new {
-    width: 350px;
+    max-width: 350px;
   }
 
   .code-embed-5 {
@@ -2185,7 +2216,7 @@ margin: 0rem !important;
   }
 
   .all-agents {
-    width: 300px;
+    max-width: 300px;
   }
 }
 
@@ -2277,8 +2308,8 @@ margin: 0rem !important;
     grid-row-gap: var(--_serviceplan-styles---20px);
   }
 
-  .pricing-card.corner, .pricing-card.mid {
-    border-bottom: 1px solid var(--base-color-brand--black-20);
+  .pricing-card.corner, .pricing-card.mid, .pricing-card.center {
+    border-bottom: 1px solid var(--base-color-brand--black-20, rgba(0, 0, 0, 0.2));
   }
 
   .number {
@@ -2301,7 +2332,7 @@ margin: 0rem !important;
   }
 
   .step-text-wrapper.new {
-    width: 350px;
+    max-width: 350px;
   }
 
   .code-embed-5-copy-copy {
@@ -2544,9 +2575,25 @@ margin: 0rem !important;
   }
 }
 
+/* ===== Comparison Table: Mobile overflow fix ===== */
+@media screen and (max-width: 767px) {
+  .table-style {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+}
+
 /* ===== Social Proof: Logo Bar ===== */
+.logo-content-wrap {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .sp-logo-section {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .sp-logo-grid {
@@ -2559,6 +2606,9 @@ margin: 0rem !important;
   background: #f5f5f5;
   border-radius: 16px;
   margin-bottom: 40px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .sp-logo-item {
@@ -2843,5 +2893,23 @@ margin: 0rem !important;
   .sp-logo-item img {
     height: 22px;
     max-width: 100px;
+  }
+}
+
+/* Responsive: Mobile Portrait */
+@media screen and (max-width: 479px) {
+  .sp-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+    padding: 24px 16px;
+  }
+
+  .sp-logo-item img {
+    height: 20px;
+    max-width: 90px;
+  }
+
+  .sp-testimonials-section {
+    padding: 32px 16px;
   }
 }
