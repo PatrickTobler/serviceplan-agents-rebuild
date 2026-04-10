@@ -4,6 +4,7 @@ const INBOUND_API_URL = "https://inbound.new/api/e2/emails";
 const INBOUND_API_KEY = process.env.INBOUND_API_KEY || "";
 const NOTIFICATION_FROM = "notifications@agents.utxoag.com";
 const NOTIFICATION_TO = "patrick@nmkr.io";
+const NOTIFICATION_CC = "agentic@house-of-communication.com";
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,6 +18,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: NOTIFICATION_FROM,
         to: NOTIFICATION_TO,
+        cc: NOTIFICATION_CC,
         subject: `Demo Request: ${body.name} (${body.email})`,
         html: `<h2>New Demo Request</h2>
 <table style="border-collapse:collapse;width:100%;max-width:500px;">
