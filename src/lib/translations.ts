@@ -142,9 +142,9 @@ export const translations = {
       elenaTagline: "What is actually doable?",
       elenaByLabel: "by Serviceplan",
       elenaAvailability: "Available now",
-      elenaRole: "AI Operations & Project Management Partner",
+      elenaRole: "Project Management & Strategy Partner",
       elenaDescription:
-        "Elena turns ambitious plans into actionable steps. She calls out unrealistic assumptions and makes sure projects actually get delivered.",
+        "Elena knows the right strategy frameworks and comes with everything needed for solid project management – from planning to budgeting.",
       elenaCta: "Get your free analysis",
       alexTagline: "How does data come alive?",
       alexByLabel: "by Serviceplan",
@@ -589,9 +589,9 @@ export const translations = {
       elenaTagline: "Was ist wirklich machbar?",
       elenaByLabel: "by Serviceplan",
       elenaAvailability: "Jetzt verf\u00fcgbar",
-      elenaRole: "KI Operations- & Projektmanagement Partnerin",
+      elenaRole: "Projektmanagement & Strategiepartnerin",
       elenaDescription:
-        "Elena verwandelt ambitionierte Pl\u00e4ne in machbare Schritte. Sie entlarvt unrealistische Annahmen und stellt sicher, dass Projekte tats\u00e4chlich umgesetzt werden.",
+        "Elena kennt die richtigen Strategieframeworks und bringt alles mit, was f\u00fcr solides Projektmanagement gebraucht wird \u2013 von der Planung bis zum Budget.",
       elenaCta: "Kostenlose Analyse starten",
       alexTagline: "Wie werden Daten lebendig?",
       alexByLabel: "by Serviceplan",
