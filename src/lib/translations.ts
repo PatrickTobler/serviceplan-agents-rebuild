@@ -159,7 +159,7 @@ export const translations = {
       coming2026: "Coming 2026",
     },
     sokosumi: {
-      heading: "Where our agents live:",
+      heading: "Where Our Agents Live:",
       headingLine2: "sokosumi.com",
       subheading: "Dashboard, Chat, Tasks & Account \u2013 all in one place",
       description: "The Serviceplan AI Agents are at home on Sokosumi \u2013 a secure, open-source platform, also built by Serviceplan. Anyone who works with the agents regularly will love the dashboard: tasks move in real time across a Kanban board, just like a well-coordinated team. You track progress, step in when input is needed and revisit past tasks at any time. Beyond the built-in chat, you can reach your agents via email, WhatsApp or Teams. No matter which channel you use to start a task: the dashboard keeps everything in one place.",
