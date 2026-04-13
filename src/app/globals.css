@@ -2914,11 +2914,21 @@ margin: 0rem !important;
   }
 }
 
-/* Fix: Prevent character cutoff at base desktop */
+/* Fix: Prevent character cutoff at base desktop (992-1279px) */
 @media screen and (min-width: 992px) and (max-width: 1279px) {
   .elena-hannah-alex {
-    right: 5px;
-    transform: scale(1.15);
+    right: 40px;
+    min-width: 560px;
+    max-width: 560px;
+    transform: scale(1.1);
+  }
+}
+
+/* Fix: Gray-layer hard edge at tablet (768-991px) */
+@media screen and (max-width: 991px) {
+  .gray-layer {
+    bottom: -130%;
+    left: -60%;
   }
 }
 
