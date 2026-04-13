@@ -7545,10 +7545,16 @@ figcaption {
     inset: auto 10% 20% auto;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
+  .glass-chip.sub-text-elena {
     padding-top: var(--_serviceplan-styles---12px);
     padding-bottom: var(--_serviceplan-styles---12px);
     inset: 20% 13% auto auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    padding-top: var(--_serviceplan-styles---12px);
+    padding-bottom: var(--_serviceplan-styles---12px);
+    inset: 58% 8% auto auto;
   }
 
   .bg-text-wrapper {
@@ -7690,11 +7696,15 @@ figcaption {
   }
 
   .glass-chip.sub-text {
-    right: 16%;
+    inset: auto 16% 20% auto;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
-    right: 18%;
+  .glass-chip.sub-text-elena {
+    inset: 22% 18% auto auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    inset: 60% 12% auto auto;
   }
 
   .dashboard-wrapper {
@@ -8095,8 +8105,12 @@ figcaption {
     grid-template-columns: 2fr;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
-    inset: auto 11% 8% auto;
+  .glass-chip.sub-text-elena {
+    inset: auto 11% 16% auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    inset: auto 6% 4% auto;
   }
 
   .bg-main-text-wrap._1, .bg-main-text-wrap._1-copy {
@@ -9166,9 +9180,14 @@ figcaption {
     bottom: 6%;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
-    bottom: 5%;
+  .glass-chip.sub-text-elena {
+    bottom: 14%;
     right: 39%;
+  }
+
+  .glass-chip.sub-text-alex {
+    bottom: 2%;
+    right: 32%;
   }
 
   .bg-main-text-wrap.step-first {
