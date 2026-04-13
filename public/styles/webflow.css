@@ -7356,6 +7356,42 @@ figcaption {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+  .marketing-team-card {
+    min-height: 540px;
+  }
+
+  .hannah-ai {
+    max-width: 480px;
+    min-width: auto;
+    left: 36%;
+  }
+
+  .elena-ai {
+    max-width: 450px;
+    min-width: auto;
+    left: 40%;
+  }
+
+  .alex-ai {
+    max-width: 450px;
+    min-width: auto;
+    left: 40%;
+  }
+
+  .glass-chip.sub-text {
+    inset: auto 14% 20% auto;
+  }
+
+  .glass-chip.sub-text-elena {
+    inset: 24% 14% auto auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    inset: 60% 10% auto auto;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   h1 {
     font-size: var(--_serviceplan-styles---64px);
@@ -8073,8 +8109,14 @@ figcaption {
     grid-template-columns: 2fr;
   }
 
+  .marketing-team-card {
+    min-height: 480px;
+  }
+
   .hannah-ai {
     min-width: auto;
+    max-width: 380px;
+    left: 32%;
   }
 
   .ai-coworker-details {
@@ -8083,6 +8125,8 @@ figcaption {
 
   .elena-ai {
     min-width: auto;
+    max-width: 360px;
+    left: 38%;
   }
 
   .mid-cta-wrapper {
@@ -8105,12 +8149,16 @@ figcaption {
     grid-template-columns: 2fr;
   }
 
+  .glass-chip.sub-text {
+    inset: auto 16% 18% auto;
+  }
+
   .glass-chip.sub-text-elena {
-    inset: auto 11% 16% auto;
+    inset: auto 14% 16% auto;
   }
 
   .glass-chip.sub-text-alex {
-    inset: auto 6% 4% auto;
+    inset: auto 10% 4% auto;
   }
 
   .bg-main-text-wrap._1, .bg-main-text-wrap._1-copy {
@@ -8179,6 +8227,8 @@ figcaption {
 
   .alex-ai {
     min-width: auto;
+    max-width: 360px;
+    left: 38%;
   }
 
   .glass-wrapper {
