@@ -2913,3 +2913,19 @@ margin: 0rem !important;
     padding: 32px 16px;
   }
 }
+
+/* Fix: Prevent character cutoff at base desktop */
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  .elena-hannah-alex {
+    right: 5px;
+    transform: scale(1.15);
+  }
+}
+
+/* Fix: Reduce shadow overlap at ultra-wide viewports */
+@media screen and (min-width: 1920px) {
+  .gray-layer {
+    left: -35%;
+    bottom: -28%;
+  }
+}
