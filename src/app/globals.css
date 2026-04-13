@@ -2914,28 +2914,106 @@ margin: 0rem !important;
   }
 }
 
-/* Fix: Prevent character cutoff at base desktop (992-1279px) */
+/* ==========================================================================
+   Hero section responsiveness fixes
+
+   IMPORTANT: !important is required here because webflow.css is loaded via
+   <link> tag AFTER globals.css (which Next.js injects as a <style> block).
+   At equal specificity, webflow.css wins by cascade order. Without !important,
+   these overrides are silently ignored.
+   ========================================================================== */
+
+/* Fix: Prevent character cutoff at base desktop (992-1279px).
+   At this range, the base webflow.css rules apply (610px image, scale 1.2, right -10px).
+   The image overflows .hero-section-wrapper (which has overflow:hidden + border-radius).
+   We shrink the image and pull it inward so it fits within the visible hero area. */
 @media screen and (min-width: 992px) and (max-width: 1279px) {
+  .heroimage-wrapper {
+    max-width: 520px !important;
+    inset: 0% 0% auto auto !important;
+  }
   .elena-hannah-alex {
-    right: 40px;
-    min-width: 560px;
-    max-width: 560px;
-    transform: scale(1.1);
+    right: 20px !important;
+    min-width: 520px !important;
+    max-width: 520px !important;
+    transform: scale(1.05) !important;
+    transform-origin: top right !important;
+  }
+  .gray-layer {
+    bottom: -100% !important;
+    left: -50% !important;
   }
 }
 
-/* Fix: Gray-layer hard edge at tablet (768-991px) */
-@media screen and (max-width: 991px) {
+/* Fix: At 1280-1439px, webflow.css sets right:140px and scale(1.4) which
+   pushes Hannah off the right edge. We widen the wrapper, reduce the right
+   offset, and use transform-origin:top right so scaling only expands left. */
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .heroimage-wrapper {
+    max-width: 660px !important;
+    inset: -10% 0% auto auto !important;
+  }
+  .elena-hannah-alex {
+    min-width: 640px !important;
+    max-width: 640px !important;
+    right: 10px !important;
+    top: 80px !important;
+    transform: scale(1.3) !important;
+    transform-origin: top right !important;
+  }
+}
+
+/* Fix: Gray-layer hard edge at tablet (768-991px).
+   At this range, the DESKTOP heroimage-wrapper is still visible (display:block).
+   The mobile one only shows below 767px. The gray-layer SVG has limited viewBox
+   so Gaussian blur edges can create a visible hard line. We push it further down
+   and scale it wider so the blur fades naturally into the hero background. */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .heroimage-wrapper {
+    max-width: 440px !important;
+    inset: 5% 0% auto auto !important;
+  }
+  .elena-hannah-alex {
+    min-width: 440px !important;
+    max-width: 440px !important;
+    right: 0px !important;
+    transform: scale(1.1) !important;
+    transform-origin: top right !important;
+  }
   .gray-layer {
-    bottom: -130%;
-    left: -60%;
+    bottom: -150% !important;
+    left: -80% !important;
+    right: -30% !important;
+    width: 200% !important;
+  }
+}
+
+/* Fix: Gray-layer at mobile (max-width: 767px).
+   Below 767px, the mobile heroimage-wrapper.mobile is displayed.
+   The gray-layer inside it can also show a hard edge. */
+@media screen and (max-width: 767px) {
+  .heroimage-wrapper.mobile .gray-layer {
+    bottom: -120% !important;
+    left: -80% !important;
+    right: -30% !important;
+    width: 200% !important;
+  }
+}
+
+/* Fix: Gray-layer at small mobile (max-width: 479px) */
+@media screen and (max-width: 479px) {
+  .heroimage-wrapper.mobile .gray-layer {
+    bottom: -60% !important;
+    left: -100% !important;
+    right: -30% !important;
+    width: 250% !important;
   }
 }
 
 /* Fix: Reduce shadow overlap at ultra-wide viewports */
 @media screen and (min-width: 1920px) {
   .gray-layer {
-    left: -35%;
-    bottom: -28%;
+    left: -35% !important;
+    bottom: -28% !important;
   }
 }
