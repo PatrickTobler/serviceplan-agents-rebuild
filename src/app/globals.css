@@ -2914,102 +2914,18 @@ margin: 0rem !important;
   }
 }
 
-/* ==========================================================================
-   Hero viewport fixes (refined):
-   1. Fix shadow overlap by spreading gray-layer positioning, NOT slashing opacity
-   2. Prevent rightmost character (Alex) from being clipped at medium viewports
-   3. Use overflow-x:clip on wrapper so vertical layers are not clipped
-   4. Keep colored glow (.color-bg) prominent at all viewports
-   ========================================================================== */
-
-/* --- Overflow fix: allow vertical overflow while clipping horizontal --- */
-.hero-section-wrapper {
-  overflow-x: clip;
-  overflow-y: visible;
-}
-
-/* --- Base desktop (992px - 1279px): prevent character cutoff --- */
+/* Fix: Prevent character cutoff at base desktop */
 @media screen and (min-width: 992px) and (max-width: 1279px) {
-  .heroimage-wrapper {
-    max-width: 460px;
-  }
-
   .elena-hannah-alex {
-    max-width: 530px;
-    min-width: 530px;
-    right: 20px;
-    transform: scale(1.1);
-  }
-
-  .gray-layer {
-    opacity: 0.85;
-    left: -60%;
-    right: -20%;
-  }
-
-  .color-bg {
-    left: -55%;
+    right: 5px;
+    transform: scale(1.15);
   }
 }
 
-/* --- 1280px - 1439px: adjust positioning to prevent clipping --- */
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
-  .elena-hannah-alex {
-    max-width: 620px;
-    right: 50px;
-    transform: scale(1.25);
-  }
-
-  .gray-layer {
-    opacity: 0.85;
-    bottom: -85%;
-    left: -20%;
-    right: -15%;
-  }
-
-  .color-bg {
-    left: -55%;
-    right: -25%;
-  }
-}
-
-/* --- 1440px - 1919px: spread shadow circles wider for natural depth --- */
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .elena-hannah-alex {
-    right: 30px;
-    transform: scale(1.25);
-  }
-
-  .gray-layer {
-    opacity: 0.8;
-    bottom: -10%;
-    left: -55%;
-    right: -25%;
-  }
-
-  .color-bg {
-    left: -55%;
-    right: -25%;
-  }
-}
-
-/* --- 1920px+: spread shadows wider to reduce bunching, keep dramatic look --- */
+/* Fix: Reduce shadow overlap at ultra-wide viewports */
 @media screen and (min-width: 1920px) {
   .gray-layer {
-    opacity: 0.8;
-    bottom: -25%;
-    left: -30%;
-    right: -15%;
-  }
-
-  .elena-hannah-alex {
-    min-width: 970px;
-    max-width: 970px;
-    top: -60px;
-  }
-
-  .color-bg {
-    left: -45%;
-    right: -45%;
+    left: -35%;
+    bottom: -28%;
   }
 }
