@@ -168,7 +168,7 @@ export default function AgentTeam({ locale = "en" }: { locale?: Locale }) {
                 loading="lazy"
                 width={722}
                 sizes="(max-width: 767px) 100vw, 722px"
-                alt="Ai coworkers Hannah Elena Alex"
+                alt="AI-Coworkers Hannah Elena Alex"
                 className="agent-list-images"
               />
               <div className="div-block-22">
