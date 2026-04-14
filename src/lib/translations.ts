@@ -15,15 +15,15 @@ export const translations = {
       requestDemoHref: "/request-a-demo",
     },
     hero: {
-      heading: "AI Coworkers for",
+      heading: "AI-Coworkers for",
       headingLine2: "Your Marketing.",
       headingLine3: "By Europe\u2019s",
       headingLine4: "Leading Agency.",
       description:
-        "The quality of the Serviceplan Group now in your inbox. Serviceplan Agents are AI coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
-      formHeading: "Try your AI Coworker free \u2013 no strings attached",
+        "The quality of the Serviceplan Group now in your inbox. Serviceplan Agents are AI-Coworkers for market research, project management, and strategy \u2013 built for companies, start-ups, and solopreneurs. They work via email, WhatsApp, or Teams, get to know your business, and tap into a network of specialized agents.",
+      formHeading: "Try your AI-Coworker free \u2013 no strings attached",
       formDescription:
-        "Enter your website URL and our AI Coworker will deliver a free competitive analysis straight to your inbox.",
+        "Enter your website URL and our AI-Coworker will deliver a free competitive analysis straight to your inbox.",
       emailLabel: "Your email address",
       websiteLabel: "Your website URL (for competitive analysis)",
       websitePlaceholder: "https://your-website.com",
@@ -82,7 +82,7 @@ export const translations = {
         "Serviceplan Agents deliver ready-to-use results \u2013 not raw data, not chat logs. Documents you can walk into your next meeting with.",
       hannahQuote:
         "\u201cI get excited when high-quality data starts to reveal something true. I get less excited when someone asks me to make weak findings look convincing.\u201d",
-      hannahQuoteAttribution: "Hannah, Research Partner, AI Coworker",
+      hannahQuoteAttribution: "Hannah, Research Partner, AI-Coworker",
       accordionItems: [
         {
           title: "Competitive Analyses",
@@ -330,7 +330,7 @@ export const translations = {
       midCtaHeading:
         "Ready for your free analysis \u2013 no strings attached?",
       midCtaDescription:
-        "Enter your URL and your AI Coworker analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
+        "Enter your URL and your AI-Coworker analyzes your competition \u2013 in just a few minutes. Free, no strings attached. The fastest way to see what Serviceplan Agents can do.",
       midCtaUrlLabel: "Your website URL",
       midCtaEmailLabel: "Your email address",
       midCtaUrlPlaceholder: "https://your-website.com",
@@ -461,15 +461,15 @@ export const translations = {
       requestDemoHref: "/de/request-a-demo",
     },
     hero: {
-      heading: "AI Coworker f\u00fcr",
+      heading: "AI-Coworker f\u00fcr",
       headingLine2: "Ihr Marketing.",
       headingLine3: "Von Europas",
       headingLine4: "f\u00fchrender Agentur.",
       description:
         "Die Qualit\u00e4t der Serviceplan Gruppe jetzt in Ihrem Postfach. Serviceplan Agents sind AI-Coworker f\u00fcr Marktforschung, Projektmanagement und Strategie \u2013 entwickelt f\u00fcr Unternehmen, Start-ups und Selbstst\u00e4ndige. Sie arbeiten per E-Mail, WhatsApp oder Teams, lernen Ihr Business kennen und greifen auf ein Netzwerk spezialisierter Agenten zu.",
-      formHeading: "AI Coworker kostenlos testen \u2013 ganz unverbindlich",
+      formHeading: "AI-Coworker kostenlos testen \u2013 ganz unverbindlich",
       formDescription:
-        "Geben Sie Ihre Website-URL ein und unser AI Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
+        "Geben Sie Ihre Website-URL ein und unser AI-Coworker liefert Ihnen eine kostenlose Wettbewerbsanalyse direkt in Ihr Postfach.",
       emailLabel: "Ihre E-Mail-Adresse",
       websiteLabel: "Zu analysierende Unternehmenswebsite",
       websitePlaceholder: "Website eintragen, die Grundlage f\u00fcr die Analyse wird",
@@ -529,7 +529,7 @@ export const translations = {
         "Serviceplan Agents liefern fertige Ergebnisse \u2013 keine Rohdaten, keine Chat-Protokolle. Dokumente, die Sie direkt im Meeting nutzen k\u00f6nnen.",
       hannahQuote:
         "\u201eIch bin begeistert, wenn hochwertige Daten zu echten Erkenntnissen f\u00fchren. Weniger begeistert bin ich, wenn mich jemand bittet, schwache Ergebnisse \u00fcberzeugend darzustellen.\u201c",
-      hannahQuoteAttribution: "Hannah, Research Partnerin, AI Coworker",
+      hannahQuoteAttribution: "Hannah, Research Partnerin, AI-Coworker",
       accordionItems: [
         {
           title: "Wettbewerbsanalysen",
@@ -786,7 +786,7 @@ export const translations = {
       midCtaHeading:
         "Bereit f\u00fcr Ihre kostenlose Analyse \u2013 ganz unverbindlich?",
       midCtaDescription:
-        "URL eingeben und Ihr AI Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
+        "URL eingeben und Ihr AI-Coworker analysiert Ihren Wettbewerb \u2013 in wenigen Minuten. Kostenlos und unverbindlich. So erleben Sie am schnellsten, was Serviceplan Agents leisten.",
       midCtaUrlLabel: "Zu analysierende Unternehmenswebsite",
       midCtaEmailLabel: "Ihre E-Mail-Adresse",
       midCtaUrlPlaceholder: "Website eintragen, die Grundlage für die Analyse wird",

@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title:
     "AI Marketing Agents by Serviceplan | Research, Strategy & Project Management",
   description:
-    "AI coworkers by Europe's leading agency. The quality of the Serviceplan Group delivered to your inbox. Get competitive research, market analysis & project plans. Try your AI Coworker free.",
+    "AI-Coworkers by Europe's leading agency. The quality of the Serviceplan Group delivered to your inbox. Get competitive research, market analysis & project plans. Try your AI-Coworker free.",
   openGraph: {
     title:
       "AI Marketing Agents by Serviceplan | Research, Strategy & Project Management",
     description:
-      "AI coworkers by Europe's leading agency. The quality of the Serviceplan Group delivered to your inbox. Get competitive research, market analysis & project plans. Try your AI Coworker free.",
+      "AI-Coworkers by Europe's leading agency. The quality of the Serviceplan Group delivered to your inbox. Get competitive research, market analysis & project plans. Try your AI-Coworker free.",
     type: "website",
     images: [{ url: "/images/og-img.png" }],
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title:
       "AI Marketing Agents by Serviceplan | Research, Strategy & Project Management",
     description:
-      "AI coworkers by Europe's leading agency. The quality of the Serviceplan Group delivered to your inbox. Get competitive research, market analysis & project plans. Try your AI Coworker free.",
+      "AI-Coworkers by Europe's leading agency. The quality of the Serviceplan Group delivered to your inbox. Get competitive research, market analysis & project plans. Try your AI-Coworker free.",
     images: ["/images/og-img.png"],
   },
   icons: {
