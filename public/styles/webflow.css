@@ -7356,6 +7356,42 @@ figcaption {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+  .marketing-team-card {
+    min-height: 540px;
+  }
+
+  .hannah-ai {
+    max-width: 480px;
+    min-width: auto;
+    left: 36%;
+  }
+
+  .elena-ai {
+    max-width: 450px;
+    min-width: auto;
+    left: 40%;
+  }
+
+  .alex-ai {
+    max-width: 450px;
+    min-width: auto;
+    left: 40%;
+  }
+
+  .glass-chip.sub-text {
+    inset: auto 14% 20% auto;
+  }
+
+  .glass-chip.sub-text-elena {
+    inset: 24% 14% auto auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    inset: 60% 10% auto auto;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   h1 {
     font-size: var(--_serviceplan-styles---64px);
@@ -7545,10 +7581,16 @@ figcaption {
     inset: auto 10% 20% auto;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
+  .glass-chip.sub-text-elena {
     padding-top: var(--_serviceplan-styles---12px);
     padding-bottom: var(--_serviceplan-styles---12px);
     inset: 20% 13% auto auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    padding-top: var(--_serviceplan-styles---12px);
+    padding-bottom: var(--_serviceplan-styles---12px);
+    inset: 58% 8% auto auto;
   }
 
   .bg-text-wrapper {
@@ -7690,11 +7732,15 @@ figcaption {
   }
 
   .glass-chip.sub-text {
-    right: 16%;
+    inset: auto 16% 20% auto;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
-    right: 18%;
+  .glass-chip.sub-text-elena {
+    inset: 22% 18% auto auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    inset: 60% 12% auto auto;
   }
 
   .dashboard-wrapper {
@@ -8063,8 +8109,14 @@ figcaption {
     grid-template-columns: 2fr;
   }
 
+  .marketing-team-card {
+    min-height: 480px;
+  }
+
   .hannah-ai {
     min-width: auto;
+    max-width: 380px;
+    left: 32%;
   }
 
   .ai-coworker-details {
@@ -8073,6 +8125,8 @@ figcaption {
 
   .elena-ai {
     min-width: auto;
+    max-width: 360px;
+    left: 38%;
   }
 
   .mid-cta-wrapper {
@@ -8095,8 +8149,16 @@ figcaption {
     grid-template-columns: 2fr;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
-    inset: auto 11% 8% auto;
+  .glass-chip.sub-text {
+    inset: auto 16% 18% auto;
+  }
+
+  .glass-chip.sub-text-elena {
+    inset: auto 14% 16% auto;
+  }
+
+  .glass-chip.sub-text-alex {
+    inset: auto 10% 4% auto;
   }
 
   .bg-main-text-wrap._1, .bg-main-text-wrap._1-copy {
@@ -8165,6 +8227,8 @@ figcaption {
 
   .alex-ai {
     min-width: auto;
+    max-width: 360px;
+    left: 38%;
   }
 
   .glass-wrapper {
@@ -9166,9 +9230,14 @@ figcaption {
     bottom: 6%;
   }
 
-  .glass-chip.sub-text-elena, .glass-chip.sub-text-alex {
-    bottom: 5%;
+  .glass-chip.sub-text-elena {
+    bottom: 14%;
     right: 39%;
+  }
+
+  .glass-chip.sub-text-alex {
+    bottom: 2%;
+    right: 32%;
   }
 
   .bg-main-text-wrap.step-first {
