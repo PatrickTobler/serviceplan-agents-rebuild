@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { appendSignupRow } from "@/lib/sheets";
 
 const ONBOARDING_URL = "https://elena.serviceplan-agents.com/onboarding/submit";
 const INBOUND_API_URL = "https://inbound.new/api/e2/emails";
@@ -6,10 +7,27 @@ const INBOUND_API_KEY = process.env.INBOUND_API_KEY || "";
 const NOTIFICATION_FROM = "notifications@agents.utxoag.com";
 const NOTIFICATION_TO = "patrick@nmkr.io";
 
+function detectLocale(req: NextRequest): string {
+  const referer = req.headers.get("referer") || "";
+  return referer.includes("/de/") || referer.endsWith("/de") ? "de" : "en";
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { email, website_url } = body;
+    const locale = detectLocale(req);
+
+    appendSignupRow([
+      new Date().toISOString(),
+      "analysis",
+      "",
+      email ?? "",
+      website_url ?? "",
+      "",
+      locale,
+      "free-analysis",
+    ]).catch(() => {});
 
     // Submit to elena onboarding
     const res = await fetch(ONBOARDING_URL, {

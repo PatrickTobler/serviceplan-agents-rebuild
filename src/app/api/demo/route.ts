@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { appendSignupRow } from "@/lib/sheets";
 
 const INBOUND_API_URL = "https://inbound.new/api/e2/emails";
 const INBOUND_API_KEY = process.env.INBOUND_API_KEY || "";
@@ -6,9 +7,27 @@ const NOTIFICATION_FROM = "notifications@agents.utxoag.com";
 const NOTIFICATION_TO = "patrick@nmkr.io";
 const NOTIFICATION_CC = "agentic@house-of-communication.com";
 
+function detectLocale(req: NextRequest): string {
+  const referer = req.headers.get("referer") || "";
+  return referer.includes("/de/") || referer.endsWith("/de") ? "de" : "en";
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+    const locale = detectLocale(req);
+
+    appendSignupRow([
+      new Date().toISOString(),
+      "demo",
+      body.name ?? "",
+      body.email ?? "",
+      body.websiteUrl ?? "",
+      body.category ?? "",
+      locale,
+      "request-a-demo",
+    ]).catch(() => {});
+
     const res = await fetch(INBOUND_API_URL, {
       method: "POST",
       headers: {
