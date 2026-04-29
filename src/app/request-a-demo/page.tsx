@@ -706,14 +706,11 @@ export default function RequestADemo({ locale = "en" }: { locale?: Locale }) {
                       </div>
                       <input type="submit" data-wait="Please wait..." className="button is-red w-button" value={tt.formButton} />
                       <div className="spacer-small"></div>
-                      <div className="text-size-tiny text-style-italic is-grey">
-                        {tt.legalText}{" "}
-                        <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal is-black">{tt.legalTos}</a>
-                        {" "}{tt.legalAndNote}
-                        <span className="links-legal"> </span>
-                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank"><span className="links-legal is-black">{tt.legalPrivacy}</span></a>
-                        {" "}{tt.legalOfOur}{" "}
-                        <a href="https://www.sokosumi.com/" target="_blank" className="links-legal is-black">{tt.legalSokosumi}</a>{tt.legalSuffix}
+                      <div className="text-size-tiny text-style-italic is-grey" style={{ fontSize: '0.75rem', color: 'rgba(0,0,0,0.5)', lineHeight: '1.4' }}>
+                        {tt.legalDisclaimer}{" "}
+                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank" className="links-legal is-black">{tt.legalDisclaimerPrivacy}</a>
+                        {" "}{tt.legalDisclaimerAnd}{" "}
+                        <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal is-black">{tt.legalDisclaimerTos}</a>
                       </div>
                     </form>
                   </div>

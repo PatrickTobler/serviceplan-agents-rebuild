@@ -126,17 +126,6 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                               id="URL"
                               required
                             />
-                            <div className="text-size-tiny text-style-italic is-white">
-                              {tt.midCtaPrivacyText}{" "}
-                              <a
-                                href="https://www.sokosumi.com/privacy-policy"
-                                target="_blank"
-                                className="links-legal"
-                                rel="noreferrer"
-                              >
-                                <span>{tt.midCtaPrivacyLink}</span>
-                              </a>
-                            </div>
                           </div>
                           <div className="form-input-wrap">
                             <label htmlFor="Email" className="form_label">
@@ -161,14 +150,24 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                           value={tt.midCtaButton}
                         />
                         <div className="spacer-small"></div>
-                        <div className="text-size-tiny text-style-italic is-white">
-                          {tt.midCtaTosText}{" "}
+                        <div className="text-size-tiny text-style-italic is-white" style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.4' }}>
+                          {tt.midCtaDisclaimer}{" "}
+                          <a
+                            href="https://www.sokosumi.com/privacy-policy"
+                            target="_blank"
+                            className="links-legal"
+                            rel="noreferrer"
+                          >
+                            {tt.midCtaDisclaimerPrivacy}
+                          </a>
+                          {" "}{tt.midCtaDisclaimerAnd}{" "}
                           <a
                             href="https://www.sokosumi.com/terms-of-service"
                             target="_blank"
+                            className="links-legal"
                             rel="noreferrer"
                           >
-                            <span className="links-legal">{tt.midCtaTosLink}</span>
+                            {tt.midCtaDisclaimerTos}
                           </a>
                         </div>
                       </div>
