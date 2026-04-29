@@ -367,10 +367,6 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                       />
-                                      <div className="text-size-tiny text-style-italic is-white">
-                                        {tt.privacyText}{" "}
-                                        <a href="https://www.sokosumi.com/privacy-policy" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.privacyLink}</a>
-                                      </div>
                                     </div>
                                     <div className="form-input-wrap">
                                       <label htmlFor="website_url" className="form_label">{tt.websiteLabel}</label>
@@ -391,9 +387,11 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                                 <div className="div-block-10">
                                   <input type="submit" className="button is-red w-button" value={tt.submitButton} />
                                   <div className="spacer-small"></div>
-                                  <div className="text-size-tiny text-style-italic is-white">
-                                    {tt.tosText}{" "}
-                                    <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.tosLink}</a>.
+                                  <div className="text-size-tiny text-style-italic is-white" style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.4' }}>
+                                    {tt.ctaDisclaimer}{" "}
+                                    <a href="https://www.sokosumi.com/privacy-policy" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.ctaDisclaimerPrivacy}</a>
+                                    {" "}{tt.ctaDisclaimerAnd}{" "}
+                                    <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.ctaDisclaimerTos}</a>
                                   </div>
                                 </div>
                               </div>

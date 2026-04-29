@@ -28,11 +28,11 @@ export const translations = {
       websiteLabel: "Your website URL (for competitive analysis)",
       websitePlaceholder: "https://your-website.com",
       submitButton: "Get your free analysis ",
-      privacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      privacyLink: "Privacy Policy.",
-      tosText: "*By proceeding you agree and accept our",
-      tosLink: "Terms of Service",
+      ctaDisclaimer:
+        "*By entering your data for a free analysis, you agree to our",
+      ctaDisclaimerPrivacy: "Privacy Policy",
+      ctaDisclaimerAnd: "and",
+      ctaDisclaimerTos: "Terms of Use.",
       requestDemoHref: "/request-a-demo",
     },
     trustIndicators: {
@@ -336,11 +336,11 @@ export const translations = {
       midCtaUrlPlaceholder: "https://your-website.com",
       midCtaEmailPlaceholder: "name@company.com",
       midCtaButton: "Get your free analysis",
-      midCtaPrivacyText:
-        "*By entering your information for a free analysis you agree and accept our",
-      midCtaPrivacyLink: "Privacy Policy.",
-      midCtaTosText: "*By proceeding you agree and accept our",
-      midCtaTosLink: "Terms of Service.",
+      midCtaDisclaimer:
+        "*By entering your data for a free analysis, you agree to our",
+      midCtaDisclaimerPrivacy: "Privacy Policy",
+      midCtaDisclaimerAnd: "and",
+      midCtaDisclaimerTos: "Terms of Use.",
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -433,14 +433,11 @@ export const translations = {
       formCategoryPlaceholder:
         "Market analysis, project management, social media audits...",
       formButton: "Send",
-      legalText:
-        'By clicking "Continue", you confirm that you agree to our',
-      legalTos: "Terms of Service",
-      legalAndNote: "and have taken note of the",
-      legalPrivacy: "Privacy Statements",
-      legalOfOur: "of our",
-      legalSokosumi: "Sokosumi Marketplace",
-      legalSuffix: ".",
+      legalDisclaimer:
+        "*By entering your data for a free analysis, you agree to our",
+      legalDisclaimerPrivacy: "Privacy Policy",
+      legalDisclaimerAnd: "and",
+      legalDisclaimerTos: "Terms of Use.",
       modalHeading: "Thank you!",
       modalSubheading: "We\u2019ve received your details.",
       modalBody:
@@ -474,11 +471,11 @@ export const translations = {
       websiteLabel: "Zu analysierende Unternehmenswebsite",
       websitePlaceholder: "Website eintragen, die Grundlage f\u00fcr die Analyse wird",
       submitButton: "Kostenlose Analyse starten ",
-      privacyText:
+      ctaDisclaimer:
         "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
-      privacyLink: "Datenschutzerklärung zu.",
-      tosText: "*Mit dem Fortfahren stimmen Sie unseren",
-      tosLink: "Nutzungsbedingungen zu",
+      ctaDisclaimerPrivacy: "Datenschutzerklärung",
+      ctaDisclaimerAnd: "und",
+      ctaDisclaimerTos: "Nutzungsbedingungen zu.",
       requestDemoHref: "/de/request-a-demo",
     },
     trustIndicators: {
@@ -792,11 +789,11 @@ export const translations = {
       midCtaUrlPlaceholder: "Website eintragen, die Grundlage für die Analyse wird",
       midCtaEmailPlaceholder: "name@unternehmen.de",
       midCtaButton: "Kostenlose Analyse starten",
-      midCtaPrivacyText:
+      midCtaDisclaimer:
         "*Mit der Eingabe Ihrer Daten für eine kostenlose Analyse stimmen Sie unserer",
-      midCtaPrivacyLink: "Datenschutzerklärung zu.",
-      midCtaTosText: "*Mit dem Fortfahren stimmen Sie unseren",
-      midCtaTosLink: "Nutzungsbedingungen zu.",
+      midCtaDisclaimerPrivacy: "Datenschutzerklärung",
+      midCtaDisclaimerAnd: "und",
+      midCtaDisclaimerTos: "Nutzungsbedingungen zu.",
     },
     faq: {
       heading: "H\u00e4ufig gestellte Fragen",
@@ -884,14 +881,11 @@ export const translations = {
       formCategoryPlaceholder:
         "Marktanalyse, Projektmanagement, Social-Media-Analysen...",
       formButton: "Senden",
-      legalText:
-        "Mit dem Absenden des Formulars best\u00e4tigen Sie, dass Sie den",
-      legalTos: "Nutzungsbedingungen",
-      legalAndNote: "zustimmen und die",
-      legalPrivacy: "Datenschutzhinweise",
-      legalOfOur: "unseres",
-      legalSokosumi: "Sokosumi Marktplatzes",
-      legalSuffix: "zur Kenntnis genommen haben.",
+      legalDisclaimer:
+        "*Mit der Eingabe Ihrer Daten f\u00fcr eine kostenlose Analyse stimmen Sie unserer",
+      legalDisclaimerPrivacy: "Datenschutzerkl\u00e4rung",
+      legalDisclaimerAnd: "und",
+      legalDisclaimerTos: "Nutzungsbedingungen zu.",
       modalHeading: "Danke.",
       modalSubheading: "Hannah ist schon dran.",
       modalBody:
