@@ -34,13 +34,6 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
                 >
                   Sokosumi
                 </a>
-                <a
-                  href="https://www.house-of-communication.com/de/en/brands/plan-net/landingpages/agentic-services/legal-ai-coworkers.html"
-                  target="_blank"
-                  className="footer-links"
-                >
-                  Serviceplan Agents Legal
-                </a>
               </div>
               <div className="footer-content-wrat">
                 <div className="fiiter-link-header">{tt.column2Header}</div>
@@ -88,6 +81,13 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
                   className="footer-links"
                 >
                   {tt.cookiePolicy}
+                </a>
+                <a
+                  href="https://www.house-of-communication.com/de/en/brands/plan-net/landingpages/agentic-services/legal-ai-coworkers.html"
+                  target="_blank"
+                  className="footer-links"
+                >
+                  Serviceplan Agents Legal
                 </a>
               </div>
             </div>
