@@ -392,6 +392,8 @@ export default function Hero({ children, locale = "en" }: { children?: React.Rea
                                     <a href="https://www.sokosumi.com/privacy-policy" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.ctaDisclaimerPrivacy}</a>
                                     {" "}{tt.ctaDisclaimerAnd}{" "}
                                     <a href="https://www.sokosumi.com/terms-of-service" target="_blank" className="links-legal" rel="noopener noreferrer">{tt.ctaDisclaimerTos}</a>
+                                    {" · "}
+                                    <a href="https://www.house-of-communication.com/de/en/brands/plan-net/landingpages/agentic-services/legal-ai-coworkers.html" target="_blank" className="links-legal" rel="noopener noreferrer">Serviceplan Agents Legal</a>
                                   </div>
                                 </div>
                               </div>

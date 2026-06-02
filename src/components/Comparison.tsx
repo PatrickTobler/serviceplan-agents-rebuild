@@ -169,6 +169,15 @@ export default function Comparison({ locale = "en" }: { locale?: Locale }) {
                           >
                             {tt.midCtaDisclaimerTos}
                           </a>
+                          {" · "}
+                          <a
+                            href="https://www.house-of-communication.com/de/en/brands/plan-net/landingpages/agentic-services/legal-ai-coworkers.html"
+                            target="_blank"
+                            className="links-legal"
+                            rel="noreferrer"
+                          >
+                            Serviceplan Agents Legal
+                          </a>
                         </div>
                       </div>
                     </div>
